@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 # ##############################################################################
 # 								TIMERS ACTION
 # Timer donne l heure toutes les heures

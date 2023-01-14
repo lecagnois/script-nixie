@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import urllib
 makey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 #cles airvisual a changer tous les ans

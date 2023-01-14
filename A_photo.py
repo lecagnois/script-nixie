@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def imagephoto() :
 
 	# si open cv deja lancer

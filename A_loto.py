@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import random
 
 def loto(phrase,the,chance,fin) :

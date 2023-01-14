@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 #########################################
 # MotorDualPwm.py
 # moteur pour plateforme inmoov
