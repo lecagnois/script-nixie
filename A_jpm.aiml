@@ -542,6 +542,15 @@
 				 </mrl>
 			</oob></template>
 </category>
+<category><pattern>DONNE MOI LE DERNIER TIRAGE DU LOTO</pattern>
+<template><oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>tirage()</param>
+				 </mrl>
+			</oob></template>
+</category>
 <category><pattern>PLANNING</pattern>
 <template><oob>
 				<mrl>

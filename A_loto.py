@@ -37,18 +37,12 @@ def loto(phrase,the,chance,fin) :
     table1.sort()
     i01.speakBlocking(phrase)
     i01.speakBlocking(the+str(table1[0]))
-    sleep(2)
     i01.speakBlocking(the+str(table1[1]))
-    sleep(2)
     i01.speakBlocking(the+str(table1[2]))
-    sleep(2)
     i01.speakBlocking(the+str(table1[3]))
-    sleep(2)
     i01.speakBlocking(the+str(table1[4]))
-    sleep(2)
     compl = str((random.randint(1,10)))
     i01.speakBlocking(chance+compl)
-    sleep(2)
     i01.speakBlocking(fin)
      
     # vérification si existe fichier sav loto si oui on ajoute numeros
