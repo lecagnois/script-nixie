@@ -60,9 +60,6 @@ def envoi(message,adresse):
 		msg['Charset'] = codage  # <= modif
 		msg['Content-Type'] = 'text/plain; charset=UTF-8' # <--modif
 		body = message
-		#if ami == "lecagnois@wanadoo.fr":
-		#	typetexte = 'text/plain' # <= modif
-		#else:
 		typetexte = 'plain'
 		msg.attach(MIMEText(body, typetexte, 'UTF-8')) # <= modif
 		#msg.attach(MIMEText(body, 'text/plain'))
@@ -110,7 +107,6 @@ def liremail(destinataire):
 					
 					#Rechercher message dans expediteur
 					result, data = mail.uid('search', None, '(FROM "'+ligne[6]+'")')
-					#result, data = mail.uid('search', None, '(FROM "lecagnois")')
 					i = len(data[0].split()) # data[0] supprime espace
 					Totalmsg = re.findall('\d+', str(nbMessages))[0]
 					print (result + ' Nombre de messages = ' + str(Totalmsg))
