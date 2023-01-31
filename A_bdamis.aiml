@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: A_bdamis.aiml -->
+  <!--  -->
+  <!-- initialisaion routine -->
+  <category><pattern>CREER UN ANNUAIRE</pattern>
+<template>
+    <srai>ANNUAIRE<star/></srai>
+</template>
+</category>
+
+
+  <category>
+    <pattern>ANNUAIRE</pattern>
+    <template>
+      <think>
+        <set name="anuuaire">started</set>
+      </think>
+      <think>
+        <set name="topic">anuuaire</set>
+      </think>
+      ok , je vais créer un annuaire de tes amis
+      Je t'écoute. quel est son prénom ?
+    </template>
+  </category>
+  
+  <topic name="anuuaire">
+    <category>
+      <pattern>#</pattern>
+      <that># QUEL EST SON prénom #</that>
+      <template>
+        <set name="questionanuuaire">Si son prénom est <star />, répond par oui ou non</set>
+        <think>
+          <set name="tmpamis">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+
+    <category>
+      <pattern>#</pattern>
+      <that># PUIS JE AVOIR SA DATE DE NAISSANCE  #</that>
+      <template>
+        <set name="questionanuuaire">Si sa date de naissance est <star />, répond par oui ou non</set>
+        <think>
+          <set name="tmpamis">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+
+    <category>
+      <pattern># OUI #</pattern>
+      <that># SI SON prénom EST #</that>
+      <template>
+          puis-je avoir sa date de naissance au format 01 01 2023 ?
+	        <think><set name="sonprénom"><get name="tmpamis" /></set></think></template>
+    </category>
+
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si sa date de naissance est #</that>
+      <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>bdamis("<get name="sonprénom"/>","<get name="tmpamis"/>")</param>
+		       </mrl>
+		     </oob>
+    
+      </template>
+    </category>
+
+    <category>
+      <pattern># NON #</pattern>
+      <that># SI SON prénom EST #</that>
+      <template>
+        On recommence alors. Je t'écoute. Quel est son prénom?
+      </template>
+    </category>
+
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si sa date de naissance est #</that>
+      <template>
+        On recommence alors. Je t'écoute. Puis-je avoir sa date de naissance au bon format?
+      </template>
+    </category>
+    
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questionanuuaire" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+
+
+</aiml>

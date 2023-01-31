@@ -7,6 +7,7 @@
 #########################################
 # port com de l arduino du plateau motorise
 port="COM6"
+#i01.speakBlocking("lancement des moteurs ")
 #declaration  2 moteurs 
 arduino = Runtime.start("arduino","Arduino")
 motor1 = Runtime.start("motor1","MotorDualPwm")
@@ -30,8 +31,9 @@ def onRange(distance):
         motor2.stop()
         sr04.stopRanging()
         myRange = sr04.range()
-        print ("obstacle a " + str(distance) + " cm")
-        #i01.speakBlocking("oups un obstacle a " + str(distance) + u"centimètre")
+        print myRange
+        #print "obstacle a " + str(distance) + " cm"
+        #i01.speakBlocking("oups un obstacle a " + str(distance) + "centimetre")
         
 def avance() :
     motor1.move(1)

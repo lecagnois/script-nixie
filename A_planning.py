@@ -1,8 +1,9 @@
+# -- coding: utf-8 --
 import csv
 
 def planning():
 	#declaration de varaibles 
-	fname = "c:/planning.csv"
+	fname = "data/planning.csv"
 	file = open(fname, "r")
 	dataJ=[]  # tableau de donnees
 	dataJ2=[]

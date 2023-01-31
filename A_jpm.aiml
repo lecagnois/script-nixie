@@ -26,27 +26,13 @@
 <template><li>
         <random>
 		  <li>bonjour <star index="1"/> bienvenu chez moi </li>
-		  <li>salut <star index="1"/> tu est bien habillé aujourd huit</li>
-          <li> bonjour <star index="1"/> tu à l'air en pleine forme </li>
-          <li>enchanté de te connaître <star index="1"/></li>
+		  <li>salut <star index="1"/> tu est bien habillé aujourd huit .</li>
+          <li> bonjour <star index="1"/> tu à l'air en pleine forme . </li>
+          <li>enchanté de te connaître . <star index="1"/></li>
 		</random>
+		Si tu veux que je me souvienne de toi dis ANNUAIRE.
     </li>
-	  <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>vie()</param>
-        </mrl>
-		 </oob></template>
-</category>
-<category><pattern>ANIMATION</pattern>
-<template><oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>neo()</param>
-        </mrl>
-      </oob></template>
+	 </template>
 </category>
 <category><pattern>OUVRE TA MAIN *</pattern>
 <template><think>
@@ -497,6 +483,7 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>ANNIVERSAIRE</pattern>
 <template><oob>                   
 			<mrl>             
@@ -506,51 +493,19 @@
 			</mrl>            
 		</oob></template>
 </category>
-<category><pattern>ANNIVERSAIRE DE</pattern>
-<template><srai>anniversaire<star/></srai></template>
-</category>
-<category><pattern>FETE DE</pattern>
-<template><srai>anniversaire<star/></srai></template>
-</category>
-<category><pattern># ALLUME #</pattern>
+
+<category>
+<pattern>ANNIVERSAIRE DE *</pattern>
 <template><oob>                   
 			<mrl>             
 				<service>python</service>   
 				<method>exec</method>      
-				<param>allume("votre ordre est executer")</param>
-				                       
-				
+				<param>anniversaire()</param>
 			</mrl>            
 		</oob></template>
 </category>
-<category><pattern>ALLUME LE SALON</pattern>
-<template><srai>#allume#<star/></srai></template>
-</category>
-<category><pattern>ALLUMER LE SALON</pattern>
-<template><srai>#allume#<star/></srai></template>
-</category>
-<category><pattern>ALLUMER</pattern>
-<template><srai>#allume#<star/></srai></template>
-</category>
-<category><pattern>LUMIÈRE</pattern>
-<template><srai>#allume#<star/></srai></template>
-</category>
-<category><pattern># ÉTEINS #</pattern>
-<template><oob>                   
-				<mrl>                
-					<service>python</service>   
-					<method>exec</method>     
-					<param>eteins("votre ordre est executer")</param>
-				                       
-				</mrl>             
-			</oob></template>
-</category>
-<category><pattern>ÉTEINS LE SALON</pattern>
-<template><srai>#éteins#<star/></srai></template>
-</category>
-<category><pattern>ÉTEINDRE *</pattern>
-<template><srai>#éteins#<star/></srai></template>
-</category>
+
+
 <category><pattern>NUMÉRO DU LOTO</pattern>
 <template><oob>                 
 			<mrl>                
@@ -615,15 +570,6 @@
 			</mrl>              
 		</oob></template>
 </category>
-<category><pattern>OUI PHOTOS</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>photoui()</param>
-				 </mrl>
-			</oob></template>
-</category>
 <category><pattern>ENVOYER UNE PHOTO À *</pattern>
 <template><think><set name="destinataire"><star/></set></think>
 			<oob>
@@ -635,7 +581,6 @@
 			</oob></template>
 </category>
 
-
 <category><pattern>VIENS</pattern>
 <template><oob>
 	    <mrl>
@@ -646,6 +591,15 @@
       </oob></template>
 </category>
 <category><pattern>MARCHE</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>avance()</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>AVANCE</pattern>
 <template><oob>
 	    <mrl>
           <service>python</service>
@@ -699,7 +653,7 @@
         </mrl>
       </oob></template>
 </category>
-<category><pattern>TOURNE A DROITE</pattern>
+<category><pattern>TOURNE À DROITE</pattern>
 <template><oob>
 	    <mrl>
           <service>python</service>
@@ -717,7 +671,7 @@
         </mrl>
       </oob></template>
 </category>
-<category><pattern>TOURNE A GAUCHE</pattern>
+<category><pattern>TOURNE À GAUCHE</pattern>
 <template><oob>
 	    <mrl>
           <service>python</service>
@@ -725,5 +679,84 @@
           <param>tourneG()</param>
         </mrl>
       </oob></template>
+</category>
+<category><pattern>ACTIVE HUMEUR</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstart()</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>STOP HUMEUR</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstop()</param>
+        </mrl>
+      </oob></template>
+</category>
+
+<category><pattern>ALLUME LE *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoAllume("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+<category><pattern>ALLUME LA *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoAllume("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+<category><pattern>ÉTEINS LE *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoEteint("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+<category><pattern>ÉTEINS  LA *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoEteint("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+<category><pattern>TEMPÉRATURE DE LA *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoTemperature("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+<category><pattern>TEMPÉRATURE DU *</pattern>
+<template><think><set name="terminal"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>domoTemperature("<get name="terminal"/>")</param>
+				 </mrl>
+			</oob></template>
 </category>
 </aiml>

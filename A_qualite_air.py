@@ -1,13 +1,13 @@
 # -- coding: utf-8 --
 import urllib
-makey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-#cles airvisual a changer tous les ans
+makey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#a changer tous les ans
 
 def airqualite(ville,region):
 	try:
 		#lecture du flux de API en parametres ville et region
 		url = urllib.urlopen("https://api.airvisual.com/v2/city?city="+ville+"&state="+region+"&country=France&key="+makey)
-		# exemple https://api.airvisual.com/v2/city?city=nice&state=paca&country=France&key=XXXXXXXXXXXXXXXXXXXXXXXXXXX
+		# exemple https://api.airvisual.com/v2/city?city=nice&state=paca&country=France&key=xxxxxxxxxxxxxxxxxxxxxxxxxx
 		f = url.read()
 
 		# creation tableau a partir de API airvisual et suppresion des virgules

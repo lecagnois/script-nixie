@@ -1,10 +1,18 @@
 # -- coding: utf-8 --
 import urllib
+import sys
+import socket
 
-#adresseip de votre decodeur orange
 adresseip = "192.168.1.19:8080"
+ipsocket =  "192.168.1.19"
+port = 8080
+
 def decodeur(commande):
 	try:
+		# verifier si serveur actif
+		#i01.speakBlocking(u"je vérifie si le décodeur est allumé" )
+		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+		sock.connect((ipsocket, port))
 		if (commande == "10"):
 			url='http://'+adresseip+'/remoteControl/cmd?operation=01&key=513&mode=0'
 			urllib.urlopen(url)
@@ -99,12 +107,10 @@ def decodeur(commande):
 			url='http://'+adresseip+'/remoteControl/cmd?operation=01&key='+commande+'&mode=0'
 			urllib.urlopen(url)
 		
-	except IOError:
-		talk("le serveur est hors service ")
-	except OSError:
-		talkBlocking("oups il y a une erreur")
 	except ValueError:
-		talkBlocking("oups il y a une erreur ")
+		i01.speakBlocking("oups il y a une erreur ")
+	except socket.error:
+		i01.speakBlocking(u"le decodeur est hors service ")
 	except:
 		print(sys.exc_info()[0])
 		raise
