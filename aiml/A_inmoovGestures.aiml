@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>METS TOI AU REPOS #</pattern>
+<template><random>
+          <li>Ah, C EST moins fatiguant.</li>
+          <li>Repos</li>
+          <li>Merci, je commençais à avoir des crampes</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rest()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CONNECT LA TÊTE</pattern>
+<template><srai>CONNECTE LA TÊTE</srai></template>
+</category>
+<category><pattern>DÉCONNECTE LA TÊTE</pattern>
+<template>Je déconnecte ma tête.
+        <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LES YEUX</pattern>
+<template>Je déconnecte les moteurs de mes yeux.
+        <oob><mrl><service>i01.head.eyeY</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LA MAIN DROITE</pattern>
+<template>Je déconnecte ma main droite.
+        <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LA MAIN GAUCHE</pattern>
+<template>Ma main gauche est déconnecte.
+        <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE TOUT</pattern>
+<template>J'ai tout déconnecté.
+        <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DECONNECTE TOUT</pattern>
+<template><srai>DÉCONNECTE TOUT</srai></template>
+</category>
+<category><pattern>DÉTACHE TOUT</pattern>
+<template><srai>DÉCONNECTE TOUT</srai></template>
+</category>
+<category><pattern>DETACHE TOUT</pattern>
+<template><srai>DÉCONNECTE TOUT</srai></template>
+</category>
+<category><pattern>DÉCONNECTE LE BRAS GAUCHE</pattern>
+<template>Déconnection de mon bras gauche.
+        <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LE BRAS DROIT</pattern>
+<template>Déconnection de mon bras droit.
+        <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE TORSE</pattern>
+<template>Déconnection de mon torse.
+        <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LE TORSE</pattern>
+<template><srai>DÉCONNECTE TORSE</srai></template>
+</category>
+<category><pattern>DÉCONNECTE LA MÂCHOIRE</pattern>
+<template>Déconnection de ma mâchoire.
+        <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DÉCONNECTE LA ROUE</pattern>
+<template>Je n'ai pas de roue.
+        <oob><mrl><service>directionServo</service><method>disable</method></mrl><mrl><service>forwardServo</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>CHERCHE LES HUMAINS</pattern>
+<template>Je scanne les visages.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>DÉTECTION DE VISAGE</pattern>
+<template>I'm looking for faces.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+</category>
+<category><pattern># REGARDE MOI #</pattern>
+<template>Je vais te suivre du regard jusqu'a ce que tu me dise arrête de me regarder.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE DE ME REGARDER #</pattern>
+<template><srai>ARRÊTE DE CHERCHER</srai></template>
+</category>
+<category><pattern>ARRÊTE DE CHERCHER #</pattern>
+<template>J'arrête le scanner.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+</category>
+<category><pattern>SUIS LE POINT</pattern>
+<template>Je suis le point du regard.
+        <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE LE TRACKING</pattern>
+<template>J'arrête mon tracking
+        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+</category>
+<category><pattern>DÉMARRE LA CAMERA</pattern>
+<template>Je démarre ma caméra.
+        <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
+</category>
+<category><pattern>ÉTEINS LA CAMERA</pattern>
+<template>J'éteins ma caméra.
+        <oob><mrl><service>i01</service><method>cameraOff</method></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE LA CAMERA</pattern>
+<template><srai>éTEINS LA CAMERA</srai></template>
+</category>
+<category><pattern>CAPTURE LES GESTUELLES</pattern>
+<template>Je mémorise les positions de mes servo moteurs.
+        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+</category>
+<category><pattern>MANUEL</pattern>
+<template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp"/>. Le mot clé peut être configuré dans ire . config
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
+</category>
+<category><pattern>VOICE CONTROL</pattern>
+<template>J'écoute à nouveau.
+        <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE D ÉCOUTER</pattern>
+<template>Je coupe mon micro.
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
+</category>
+<category><pattern>RELAX</pattern>
+<template>Relax.
+        <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
+</category>
+<category><pattern>À PROPOS DE TOI</pattern>
+<template>Je vais me décrire.
+        <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
+</category>
+<category><pattern>ÉTEINS TOUT</pattern>
+<template>Power down.
+        <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
+</category>
+<category><pattern>ET UN TOUT</pattern>
+<template><srai>ÉTEINS TOUT</srai></template>
+</category>
+<category><pattern>ALLUME TOUT</pattern>
+<template>Power up.
+        <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND</pattern>
+<template><random>
+          <li>Je suis heureuse de te connaître</li>
+          <li>Attention! ma main est fragile</li>
+          <li>Je suis heureuse de serrer une main humaine</li>
+          <li>Tu as la peau douce</li>
+          <li>Je viens en paix</li>
+          <li>C'est une sensation étrange de serrer une main biologique</li>
+          <li>Je suis heureuse que ce ne soit pas le président treumepeu qui me sert la main</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+<template><random>
+          <li>Pas de soucis, la prochaine fois</li>
+          <li>je suis triste que tu ne veuilles pas me serrer la main</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+<template><random>
+          <li>Rapproche toi, viens me serrer la main</li>
+          <li>N'es pas peur, je ne mord pas</li>
+          <li>Rapproche toi</li>
+        </random></template>
+</category>
+<category><pattern>ARRÊTE CE QUE TU FAIS</pattern>
+<template>J'arrête ce que je fais.
+        <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
+</category>
+<category><pattern>NIVEAU DE LA BATTERIE</pattern>
+<template><random>
+          <li>Le niveau de batterie est</li>
+          <li>Pour l'instant la batterie est a</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>batterylevel()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>APPRENTISSAGE DE VISAGE</pattern>
+<template>Je démarre le module d'apprentissage des visages<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>RECONNAISSANCE FACIALE</pattern>
+<template><srai>CHERCHE LES HUMAINS</srai></template>
+</category>
+<category><pattern>RECONNAISSANCE DE VISAGE</pattern>
+<template><srai>CHERCHE LES HUMAINS</srai></template>
+</category>
+<category><pattern>RECONNAIT UN VISAGE</pattern>
+<template><srai>CHERCHE LES HUMAINS</srai></template>
+</category>
+<category><pattern>ARRÊTE LA RECONNAISSANCE FACIALE</pattern>
+<template>J'arrête la reconnaissance faciale
+      <srai>ARRÊTE DE CHERCHER</srai></template>
+</category>
+<category><pattern>RÉPARE LE MICROPHONE</pattern>
+<template>D'accord <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+</category>
+<category><pattern>DÉMARRE FACEBOOK</pattern>
+<template><random>
+          <li>Je démarre facebook</li>
+          <li>Je suis en train de démarrer facebook</li>
+          <li>Tout de suite Monsieur super social!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>BareBonesBrowserLaunch.openURL("http://www.facebook.com")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ROBOT RECHERCHE *</pattern>
+<template><random>
+          <li>Démarrage du navigateur</li>
+          <li>Je cherche pour vous!</li>
+          <li>Je cherche SÛR internet!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>BareBonesBrowserLaunch.openURL("https://encrypted.google.com/#q=<star/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ROBOTIQUE RECHERCHE *</pattern>
+<template>D'accord C EST parti
+        <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>YOUTUBE *</pattern>
+<template>Voici des propositions de vidéo
+        <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>MODE DE VIE ALÉATOIRE</pattern>
+<template>Merci
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+</category>
+<category><pattern>VIE ALÉATOIRE</pattern>
+<template><srai>MODE DE VIE ALÉATOIRE</srai></template>
+</category>
+<category><pattern>STOP MODE DE VIE ALÉATOIRE</pattern>
+<template>D accord
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+</category>
+<category><pattern>STOP VIE ALÉATOIRE</pattern>
+<template><srai>STOP MODE DE VIE ALÉATOIRE</srai></template>
+</category>
+<category><pattern>CONNECTE LA TÊTE</pattern>
+<template>Je connecte ma tête.
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE LES YEUX</pattern>
+<template>Mes yeux sont attachés.
+        <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE TES YEUX</pattern>
+<template><srai>CONNECTE LES YEUX</srai></template>
+</category>
+<category><pattern>CONNECT * YEUX</pattern>
+<template><srai>CONNECTE LES YEUX</srai></template>
+</category>
+<category><pattern>CONNECT YEUX</pattern>
+<template><srai>CONNECTE LES YEUX</srai></template>
+</category>
+<category><pattern>CONNECT LISIEUX</pattern>
+<template><srai>CONNECTE LES YEUX</srai></template>
+</category>
+<category><pattern>CONNECTE MAIN DROITE</pattern>
+<template>Connection de ma main droite.
+        <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE LA MAIN DROITE</pattern>
+<template><srai>CONNECTE MAIN DROITE</srai></template>
+</category>
+<category><pattern>CONNECTE TA MAIN DROITE</pattern>
+<template><srai>CONNECTE MAIN DROITE</srai></template>
+</category>
+<category><pattern>CONNECT MAIN DROITE</pattern>
+<template><srai>CONNECTE MAIN DROITE</srai></template>
+</category>
+<category><pattern>CONNECT LA MAIN DROITE</pattern>
+<template><srai>CONNECTE MAIN DROITE</srai></template>
+</category>
+<category><pattern>CONNECTE MAIN GAUCHE</pattern>
+<template>Je connecte ma main gauche.
+        <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE TA MAIN GAUCHE</pattern>
+<template><srai>CONNECTE MAIN GAUCHE</srai></template>
+</category>
+<category><pattern>CONNECTE LA MAIN GAUCHE</pattern>
+<template><srai>CONNECTE MAIN GAUCHE</srai></template>
+</category>
+<category><pattern>CONNECT MAIN GAUCHE</pattern>
+<template><srai>CONNECTE MAIN GAUCHE</srai></template>
+</category>
+<category><pattern>CONNECT LA MAIN GAUCHE</pattern>
+<template><srai>CONNECTE MAIN GAUCHE</srai></template>
+</category>
+<category><pattern>ATTACHES TOUT</pattern>
+<template>J'ai tout connecté.
+        <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECT TO</pattern>
+<template><srai>ATTACHES TOUT</srai></template>
+</category>
+<category><pattern>CONNECTE TOUT</pattern>
+<template><srai>ATTACHES TOUT</srai></template>
+</category>
+<category><pattern>CONNECTE LE BRAS GAUCHE</pattern>
+<template>Connection de mon bras gauche.
+        <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE BRAS DROIT</pattern>
+<template>Connection de mon bras droit.
+        <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE LE BRAS DROIT</pattern>
+<template><srai>CONNECTE BRAS DROIT</srai></template>
+</category>
+<category><pattern>CONNECTE TORSE</pattern>
+<template>Connection de mon torse.
+        <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>CONNECTE LE TORSE</pattern>
+<template><srai>CONNECTE TORSE</srai></template>
+</category>
+<category><pattern>CONNECTE LA MÂCHOIRE</pattern>
+<template>Connection de ma mâchoire.
+        <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
+</category>
+</aiml>

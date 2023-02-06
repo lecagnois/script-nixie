@@ -10,7 +10,13 @@ def anniversaire():
     if os.path.exists('data/bdamis.csv'):
         #date en francais
         locale.setlocale(locale.LC_TIME,'')
-        i01.speakBlocking(time.strftime(u'Nous sommes le %A %d %B %Y,',time.localtime()))
+        # probleme gython et utf8 nixie
+        if time.strftime('%m')=="02":
+            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d'+'' + "FAIVRIER"+ '%Y,',time.localtime()))
+        elif time.strftime('%m')=="12" :
+            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d'+'' + "DAICEMBRE"+ '%Y,',time.localtime()))
+        else:
+            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d %B %Y,',time.localtime()))
 
         # declartion des variables locale
         anniversaire = time.strftime('%d-%m')  # variable du jour format Jour-Mois (17-01)
@@ -44,7 +50,7 @@ def anniversaire():
             if (anniversaire == ligne[4]):
                 flag=1
                 age = annee - int(ligne[3])
-                i01.speakBlocking(u"bon anniversaire " + ligne[0] + str(age) +" printemps ,tu ne les fais pas")
+                i01.speakBlocking(u"bon anniversaire " + ligne[0] + str(age) +u" printemps ,tu ne les fais pas")
             if (jmoins1 == ligne[4]):
                 age = annee - int(ligne[3])
                 flag=1

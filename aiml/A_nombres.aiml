@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern># TABLES DE MULTIPLICATION</pattern>
+<template>oui , mon maitre ma apris a compter , interroge moi</template>
+</category>
+<category><pattern># COMPTER</pattern>
+<template>bien sur ,  interroge moi , Tu peux utiliser le mot calcul pour le résultat</template>
+</category>
+<category><pattern>* X *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>* PAR *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>CALCUL * X *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>* + *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> + <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>CALCUL * + *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> + <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>* - *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> - <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>CALCUL * *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> - <star index="2"/> );
+		myMath;
+	</javascript></template>
+</category>
+<category><pattern>* / *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> / <star index="2"/> );
+		myMath = myMath*100;
+		myMath = Math.round(myMath);
+		myMath = myMath/100;
+		myMath;
+    </javascript></template>
+</category>
+<category><pattern>CALCUL * / *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> / <star index="2"/> );
+		myMath = myMath*100;
+		myMath = Math.round(myMath);
+		myMath = myMath/100;
+		myMath;
+    </javascript></template>
+</category>
+<category><pattern>* % DE *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> / 100);
+		myMath;
+    </javascript></template>
+</category>
+<category><pattern>CALCUL * % DE *</pattern>
+<template><javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> / 100);
+		myMath;
+    </javascript></template>
+</category>
+</aiml>

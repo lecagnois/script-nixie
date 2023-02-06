@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>DÉMARRE LA MUSIQUE AU HASARD</pattern>
+<template><random>
+        <li>je joue de la musique au hasard</li>
+        <li>Bien sur!</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>playRandom()</param></mrl></oob></template>
+</category>
+<category><pattern>DÉMARRE LA MUSIQUE</pattern>
+<template><random>
+        <li>Bien sur!</li>
+        <li>Je mets de la musique</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>play()</param></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE LA MUSIQUE</pattern>
+<template><random>
+        <li>À vos souhaits</li>
+        <li>J'arrête la musique</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>stop()</param></mrl></oob></template>
+</category>
+<category><pattern>MUSIQUE SUIVANTE</pattern>
+<template><random>
+        <li>À vos souhaits</li>
+        <li>morceau suivant</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>nextsong()</param></mrl></oob></template>
+</category>
+<category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
+<template><random>
+        <li>Musique en pause</li>
+        <li>Je mets la musique en pause</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>pause()</param></mrl></oob></template>
+</category>
+<category><pattern>REMETS LA MUSIQUE</pattern>
+<template><random>
+        <li>Je remets la musique</li>
+        <li>Bien sur!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>resume()</param></mrl></oob></template>
+</category>
+</aiml>
