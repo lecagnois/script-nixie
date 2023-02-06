@@ -26,31 +26,31 @@
 		myMath;
 	</javascript></template>
 </category>
-<category><pattern>* + *</pattern>
+<category><pattern>* plus *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> + <star index="2"/> );
 		myMath;
 	</javascript></template>
 </category>
-<category><pattern>CALCUL * + *</pattern>
+<category><pattern>CALCUL * PLUS *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> + <star index="2"/> );
 		myMath;
 	</javascript></template>
 </category>
-<category><pattern>* - *</pattern>
+<category><pattern>* moins *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> - <star index="2"/> );
 		myMath;
 	</javascript></template>
 </category>
-<category><pattern>CALCUL * *</pattern>
+<category><pattern>CALCUL * moins *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> - <star index="2"/> );
 		myMath;
 	</javascript></template>
 </category>
-<category><pattern>* / *</pattern>
+<category><pattern>* divisé PAR *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> / <star index="2"/> );
 		myMath = myMath*100;
@@ -59,7 +59,7 @@
 		myMath;
     </javascript></template>
 </category>
-<category><pattern>CALCUL * / *</pattern>
+<category><pattern>CALCUL * divisé PAR *</pattern>
 <template><javascript>
 		myMath = eval( <star index="1"/> / <star index="2"/> );
 		myMath = myMath*100;
