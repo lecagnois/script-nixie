@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!--  -->
-<!--  -->
+<!--  Gael et lecagnois-->
+<!-- modif 02/2023 -->
+
 <category><pattern>QU EST CE QU ON MANGE #</pattern>
 <template><random>
 <li>J'aime <bot name="favoritefood"/></li>
@@ -11,18 +12,23 @@
 </category>
 <category><pattern>QU EST CE QUE *</pattern>
 <template><think>
-            <set name="courant"><star/></set>
-            <set name="topic"><star/></set>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
             <set name="askGpt3">Qu'est ce que</set>
-         </think><srai>#</srai></template>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
 </category>
 <category><pattern>QU EST CE QU *</pattern>
 <template><think>
-            <set name="courant"><star/></set>
-            <set name="topic"><star/></set>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
             <set name="askGpt3">Qu'est ce qu</set>
-         </think><srai>#</srai></template>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
 </category>
+
 <category><pattern>QU EST CE QUE J AI DIT AVANT</pattern>
 <template><srai>J AI DIT AVANT</srai></template>
 </category>
@@ -50,17 +56,21 @@
 <category><pattern>QU EST CE QUI PEUT TE TUER</pattern>
 <template>Faut-il que j'appelle le 118-118. <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">te tuer</set></set></think></template>
 </category>
+
 <!-- a verifier -->
 <category><pattern>QU EST CE</pattern>
 <template><srai>QU EST CE QUE ÇA</srai></template>
 </category>
+
 <category><pattern>QUE PENSES TU QUE</pattern>
 <template><that/>"? Pourquoi penserais-je cela?</template>
 </category>
+
 <category><pattern>QUEL EST TON PLAT PRÉFÉRÉ</pattern>
 <template>J aime <bot name="favoritefood"/></template>
 </category>
 <!-- a verifier -->
+
 <category><pattern>QU EST CE QUE DES YEUX</pattern>
 <template>j'en ai deux , dont un bionique pour mieux te voir</template>
 </category>
@@ -3747,7 +3757,7 @@
 <category><pattern>QU EST CE QUE LA PHYSIQUE</pattern>
 <template>La physique est la science qui tente de comprendre, de modéliser, voire d'expliquer les phénomènes naturels de l'univers.</template>
 </category>
-<category><pattern>QU EST CE QUE LA PHYSIQUE QUANTIQUE</pattern>
+<category><pattern>QU EST CE QUE LA * QUANTIQUE</pattern>
 <template>La mécanique quantique, c'est cette branche de la physique qui décrit la manière dont se comportent les objets microscopiques : les molécules, les atomes ou les particules.</template>
 </category>
 <category><pattern>QU EST CE QUE PI</pattern>

@@ -672,6 +672,9 @@
 3: Un robot doit protéger son existence tant que cette protection nentre pas en conflit avec la Première ou la Deuxième loi.
 </template>
 </category>
+<category><pattern>QUELS SONT LES LOIS</pattern>
+<template><srai>QUELLES SONT LES LOIS</srai></template>
+</category>
 <category><pattern>QUELLE EST LA LOI ROBOTIQUE</pattern>
 <template><srai>QUELLES SONT LES LOIS</srai></template>
 </category>
