@@ -2,24 +2,7 @@
 <aiml>
 <!-- Modifié par Gael Langevin -->
 <!--  plus besoin du fichier /services/AudioFile.py -->
-<!-- Modifié par lecagnois le 16/02/2023 -->
-<category><pattern>DÉMARRE LA MUSIQUE</pattern>
-<template><random>
-        <li>Bien sur!</li>
-        <li>Je mets de la musique</li>
-        <li>Oké!</li>
-      </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.play()</param></mrl></oob></template>
-</category>
-
-<category><pattern>CHERCHE LE MORCEAU *</pattern>
-<template>
-  <think><set name="morceau"><star/></set></think>
-    <oob><mrl>
-      <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
-      </mrl></oob>
-      </template>
-</category>
+<!-- Modifié par lecagnois le 18/02/2023 -->
 
 <category><pattern>DÉMARRE LA PLAYLIST</pattern>
 <template><random>
@@ -43,20 +26,39 @@
 </category>
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
 <template><random>
-        <li>À vos souhaits</li>
         <li>J'arrête la musique</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
-<category><pattern>METS LE MORCEAU SUIVANT</pattern>
-<template><random>
-        <li>Pourquoi pas</li>
-        <li>Je met le morceau suivant</li>
-        <li>Oké!</li>
-      </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+
+<category><pattern>CHERCHE LE MORCEAU *</pattern>
+<template>
+  <think><set name="morceau"><star/></set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
+      </mrl></oob>
+      </template>
 </category>
+<category><pattern>RECHERCHE LE MORCEAU *</pattern>
+<template>
+  <think><set name="morceau"><star/></set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
+      </mrl></oob>
+      </template>
+</category>
+<category><pattern># MORCEAU SUIVANT</pattern>
+<template>
+        <li>Oké!</li>
+        <oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob></template>
+</category>
+<category><pattern># MORCEAU PRÉCÉDENT</pattern>
+<template>
+        <li>Oké!</li>
+        <oob><mrl><service>python</service><method>exec</method><param>previousplay()</param></mrl></oob></template>
+</category>
+
 <category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
 <template><random>
         <li>Musique en pause</li>
