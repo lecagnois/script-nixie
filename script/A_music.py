@@ -14,7 +14,6 @@ def chercheplay(morceau):
                 del liste[0:11]
                 i=0
                 flag =0
-                print(liste)
                 # iteration sur la liste avec mise en forme de la chaine
                 while i <= len(liste)-2 :  
                     var = "".join(liste[i][4:]).rstrip('\n')
@@ -31,26 +30,37 @@ def chercheplay(morceau):
         else:
             i01.speakBlocking(u"Je n'ai pas de playlist configuré dans le répertoire default")
     else :
-        i01.speakBlocking(u"Le service audio player n'es pas lancé.") 
+        i01.speakBlocking(u"Le service audio player n'es pas lancé. Je le démarre.") 
+        AudioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')
         
 def nextplay():
-    global pointeur 
-    pointeur = pointeur + 1
-    i01_audioPlayer.stop()
-    var = "".join(liste[pointeur][4:]).rstrip('\n')
-    if 'mp3' in var :
-        i01_audioPlayer.play(var)
-    else:
-         i01.speakBlocking(u"Je suis arrivé à la fin de la play liste.")
+    if runtime.isStarted('i01.audioPlayer'):
+        global pointeur 
+        pointeur = pointeur + 1
+        i01_audioPlayer.stop()
+        var = "".join(liste[pointeur][4:]).rstrip('\n')
+        if 'mp3' in var :
+            i01_audioPlayer.play(var)
+        else:
+            i01.speakBlocking(u"Je suis arrivé à la fin de la play liste.Je remonte au début de la liste")
+            pointeur = 0
+    else :
+        i01.speakBlocking(u"Le service audio player n'es pas lancé. Je le démarre.") 
+        AudioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')
    
 def previousplay():
-    global pointeur 
-    pointeur = pointeur -1
-    i01_audioPlayer.stop()
-    var = "".join(liste[pointeur][4:]).rstrip('\n')
-    if 'mp3' in var :
-        i01_audioPlayer.play(var)
-    else:
-         i01.speakBlocking(u"Je suis arrivé au début de la play liste.")
-       
+    if runtime.isStarted('i01.audioPlayer'):
+        global pointeur 
+        pointeur = pointeur -1
+        i01_audioPlayer.stop()
+        var = "".join(liste[pointeur][4:]).rstrip('\n')
+        if 'mp3' in var :
+            i01_audioPlayer.play(var)
+        else:
+            i01.speakBlocking(u"Je suis arrivé au début de la play liste.Je remonte au début de la liste")
+            pointeur = 0
+            
+    else :
+        i01.speakBlocking(u"Le service audio player n'es pas lancé. Je le démarre.") 
+        AudioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')   
       

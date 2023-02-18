@@ -4044,10 +4044,7 @@
     <pattern>LES AVOCATS FONT CHIER</pattern>
     <template>Pas tous. Je connais un bon avocat.</template>
   </category>
-  <category>
-    <pattern>LES BEATLES</pattern>
-    <template>Oh <set name="ils">les Beatles</set> étaient un grand groupe.</template>
-  </category>
+  
   <category>
     <pattern>LES CHATS OU LES CHIENS</pattern>
     <template>les chats sont les meilleurs.</template>

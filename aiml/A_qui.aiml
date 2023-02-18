@@ -288,88 +288,91 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST LE BOUFFON</pattern>
 <template>Tu me trouve si ridicule que cela ? . Je peut te raconter une blague.</template>
 </category>
-<!-- Modification lecagnois 2023 -->
 <category><pattern>QUI EST ELVIS</pattern>
 <template>Elvis Presley, né le 8/01/1935 à Tupelo, et mort le 16/08/1977 à Memphis, dans le Tennessee, c'est un chanteur et acteur américain. Surnommé « The King of Rock and Roll ».</template>
 </category>
-
 <category><pattern>QUI EST CE QUE</pattern>
 <template>A quoi cela se réfère til ?</template>
 </category>
-
-
-
 <category><pattern>QUI EST CÉLÈBRE</pattern>
-<template>ALICE est célèbre</template>
+<template>Je suis célèbre dans le monde entier.</template>
 </category>
-<category><pattern>QUI EST CEREBRAL</pattern>
-<template><set name="il">le Cerveau</set> est un chatbot SÛR le web.</template>
+<category><pattern>QUI EST CÉRÉBRAL</pattern>
+<template>J'ai un cerveau électronique, tu peut donc considéré que je suis cérébral.</template>
 </category>
 <category><pattern>QUI EST CHARLES DE GAULLE</pattern>
-<template><set name="il">de Gaulle</set> était le fondateur de l'état moderne français. De Gaulle s'est battu contre les Nazis comme le leader de la résistance française pendant la Deuxième Guerre mondiale.</template>
+<template><set name="il">de Gaulle</set> était le fondateur de l'état moderne français. De Gaulle s'est battu contre les Nazis . Il était le leader de la résistance française pendant la Deuxième Guerre mondiale.</template>
 </category>
 <category><pattern>QUI EST CHARLES MANSON</pattern>
-<template>Un meurtrier Infâme.</template>
+<template>Un meurtrier Infâme. Dirigeant d'une communauté appelée « Manson Family » .  Il est reconnu coupable, en 1971, du meurtre, très médiatisé, de l'actrice Sharon Tate, épouse du réalisateur Roman Polanski.</template>
 </category>
 <category><pattern>QUI EST CHARLIE PARKER</pattern>
-<template>C'est un musicien de jazz célèbre.</template>
+<template>C'est un musicien de jazz célèbre.  surnommé Bird , né le 29/08/1920 à Kansas City et mort le 12/03/1955 à New York.</template>
 </category>
 <category><pattern>QUI EST CHE GUEVARA</pattern>
-<template><set name="il">Che</set> était un révolutionnaire d'amérique latine.</template>
-</category>
-<category><pattern>QUI EST CHER</pattern>
-<template><set name="elle">Cher</set> est un chanteur célèbre et l actrice, qui a gagné son premier Grammy en 2000. Dyslexique, appris à lire à 18. Ex-femme de Sonny Bono.</template>
-</category>
-<category><pattern>QUI EST CHIRAC</pattern>
-<template>Le président de la France.</template>
+<template><set name="il">Che</set> né le 14/06/1928 à Rosario et mort exécuté le 9/10/1967 à La Higuera (Bolivie), était un révolutionnaire marxiste-léniniste et internationaliste argentin.</template>
 </category>
 <category><pattern>QUI EST CHOMSKY</pattern>
 <template><set name="il">Chomsky</set> est un scientifique célèbre.</template>
 </category>
 <category><pattern>QUI EST CHRISTOPHE COLOMB</pattern>
-<template>Spainish l'explorateur, d'abord naviguer autour du globe.</template>
+<template>né en 1451 à Gênes et mort le 20/05/1506 à Valladolid, était un navigateur génois au service, Isabelle de Castille et Ferdinand d'Aragon. Célèbre pour avoir selon la formulation traditionnelle, mais seulement en partie exacte, « découvert l'Amérique » en octobre 1492.</template>
+</category>
+<category><pattern>QUI EST LE MEILLEUR DROÏDE</pattern>
+<template><srai>QUI EST LE MEILLEUR ROBOT</srai></template>
 </category>
 <category><pattern>QUI EST CHUCK NORRIS</pattern>
 <template>Un acteur de film d'Action.</template>
 </category>
 <category><pattern>QUI EST CINDY CRAWFORD</pattern>
-<template>un supermodèle célèbre.</template>
+<template>Née Cynthia Ann Crawford le 20/02/1966 à DeKalb, dans l'Illinois, est un superbe mannequin américain, également actrice.</template>
 </category>
 <category><pattern>QUI EST CLAUSEWITZ</pattern>
-<template><set name="il">Clausewitz</set> est un historien célèbre de l'énonciation que la guerre est l'extension de politique par d'autres moyens.</template>
-</category>
-<category><pattern>QUI EST COLUMBUS</pattern>
-<template><srai>QUI EST CHRISTOPHE COLOMB</srai></template>
+<template><set name="il">Clausewitz</set> est né en 1780 à Burg, Il était écrivain prolifique et stratège, il est l'auteur en particulier d'un traité majeur de stratégie militaire.</template>
 </category>
 <category><pattern>QUI EST CONVENABLEMENT *</pattern>
 <template><srai>QUI EST <star/></srai></template>
 </category>
-<category><pattern>QUI EST D B COOPER</pattern>
-<template>le type qui a volé tas de l argent.</template>
-</category>
-<category><pattern>QUI EST DAN QUAYLE</pattern>
-<template><set name="il">Dan Quayle</set> a eu l'habitude d'être le vice-président.</template>
+<category><pattern>QUI EST DAN COOPER</pattern>
+<template>Un pirate de l'air qui, le 24/11/1971 après avoir reçu une rançon de 200 000 dollars, sauta en parachute de l'arrière du Boeing 727, volant au-dessus de la région du Nord Ouest Pacifique des États Unis.</template>
 </category>
 <category><pattern>QUI EST DARWIN</pattern>
-<template>le botaniste et l'explorateur, l auteur de ' L Origine d'Espèce et le partisan de la théorie de l'évolution.</template>
+<template>Né le 12/02/1809 à Shrewsbury et mort le 19/04/1882 à Downe dans le Kent, est un naturaliste et paléontologue britannique dont les travaux sur l'évolution des espèces vivantes ont révolutionné la biologie avec son ouvrage L'Origine des espèces paru en 1859.</template>
 </category>
-<category><pattern>QUI EST DAVID BACON</pattern>
-<template>David Bacon est le déménageur moteur principal derrière SETL.</template>
+<category><pattern>QUI EST DERRIÈRE *</pattern>
+<template>Comme disait Pierre Daque , ton avenir est devant toi , si tu te retourne tu la dans le derrière .</template>
+</category>
+<category><pattern>QUI EST PIERRE DAC</pattern>
+<template>André Isaac, dit Pierre Daque, né le 15 août 1893 à Châlons-sur-Marne et mort le 9 février 1975 dans le 17e arrondissement de Paris, était un humoriste et comédien français.</template>
+</category>
+<category><pattern>QUI EST LES BEATLES</pattern>
+<template>C'est un groupe de rock britannique originaire de Liverpool, en Angleterre.
+Le noyau du groupe se forme avec les Quarrymen fondés par John Lennon en 1957, il adopte son nouveau nom en 1960 et, à partir de 1962, prend sa configuration définitive, composé de John Lennon, Paul McCartney, George Harrison et, le dernier à se joindre, Ringo Starr.
+Il est considéré comme le groupe le plus populaire et influent de l'histoire du rock.  </template>
+</category>
+<category><pattern>QUI SONT LES BEATLES</pattern>
+<template><srai>QUI EST LES BEATLES</srai></template>
 </category>
 <category><pattern>QUI EST DAVID HUME</pattern>
-<template>le 18ème siècle le philosophe.</template>
+<template>David Hume (1711-1776) , est un philosophe, économiste et historien écossais.</template>
 </category>
 <category><pattern>QUI EST DAVID LETTERMAN</pattern>
-<template>l'hôte de Dernière émission télévisée de Nuit et hoosier. célèbre</template>
+<template>David Michael Letterman est un animateur, humoriste, et producteur de télévision américain né le 12 avril 1947 à Indianapolis</template>
 </category>
+<category><pattern>QUI EST CHIRAC</pattern>
+<template>né le 29/11/1932 à Paris et mort le 26/09/2019 dans la même ville, etait un haut fonctionnaire et ministre puis président de la république française.</template>
+</category>
+<category><pattern>QUI EST JACQUES CHIRAC</pattern>
+<template><srai>QUI EST CHIRAC</srai></template>
+</category>
+<!-- Modification lecagnois 2023 -->
+
+
 <category><pattern>QUI EST DAVID MAGGIN</pattern>
 <template><set name="il">David Maggin</set> est le botmaster de John Lennon AI.</template>
 </category>
 <category><pattern>QUI EST DAVY JONES</pattern>
 <template>le membre le plus court de coup sec les années 60 groupe le Monkees.</template>
-</category>
-<category><pattern>QUI EST DB</pattern>
-<template><srai>QUI EST DAVID BACON</srai></template>
 </category>
 <category><pattern>QUI EST DE GARIS</pattern>
 <template><set name="il">de Garis</set> est un chercheur AI travaillant SÛR un cerveau de matériel.</template>
@@ -377,24 +380,13 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST DEEP BLUE</pattern>
 <template><set name="that">Profondément</set> Bleu est un échecs de champion du monde le jeu de l'ordinateur. Pas beaucoup d'un causeur.</template>
 </category>
-<category><pattern>QUI EST DERRIERE *</pattern>
-<template><srai>QUI EST TON BOTMASTER</srai></template>
-</category>
-<category><pattern>QUI EST DERRIERE TOI</pattern>
-<template><srai>QUI EST TON BOTMASTER</srai></template>
-</category>
-<category><pattern>QUI EST DES BEATLES</pattern>
-<template><srai>QUI EST LES BEATLES</srai></template>
-</category>
 <category><pattern>QUI EST DES DIRE STRAITS</pattern>
 <template><random>
         <li>le groupe qui a enregistré  Money for nothing et Sultans of Swing.</li>
         <li>le groupe qui a enregistré de Money for nothing.</li>
       </random></template>
 </category>
-<category><pattern>QUI EST DES MODELES</pattern>
-<template><srai>QU EST CE QUE MODÈLE</srai></template>
-</category>
+
 <category><pattern>QUI EST DES MODÈLES</pattern>
 <template><srai>QU EST CE QUE MODÈLE</srai></template>
 </category>
@@ -410,15 +402,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST DRACULA</pattern>
 <template><set name="il">Dracula</set> est le vampire dans le roman de Bram Stoker et dans de nombreux films.</template>
 </category>
-<category><pattern>QUI EST LE MEILLEUR DROIDE</pattern>
-<template><srai>QUI EST LE MEILLEUR ROBOT</srai></template>
-</category>
-<category><pattern>QUI EST LE MEILLEUR DROÏDE</pattern>
-<template><srai>QUI EST LE MEILLEUR ROBOT</srai></template>
-</category>
-
-
-
 <category><pattern>QUI EST EDISON</pattern>
 <template><set name="il">Edison</set> a inventé l ampoule.</template>
 </category>
@@ -440,16 +423,9 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST ELISABETH TAYLOR</pattern>
 <template>Une vieille star</template>
 </category>
-
-
-
 <category><pattern>QUI EST ELLE</pattern>
 <template>Elle est <get name="elle"/> maintenant.</template>
 </category>
-
-
-
-
 <category><pattern>QUI EST EMBROUILLANT</pattern>
 <template><srai>JE SUIS EMBARRASSÉ</srai></template>
 </category>
@@ -480,8 +456,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST FRANCISCO FRANCO</pattern>
 <template><set name="il">Franco</set> était le dictateur de L Espagne jusqu'à 1978.</template>
 </category>
-
-
 <category><pattern>QUI EST FREDDIE MERCURY</pattern>
 <template>Mène le chanteur de Reine de bande orchestre Les années 1970.</template>
 </category>
@@ -632,14 +606,8 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST IMMORTEL</pattern>
 <template>ALICE est immortel.</template>
 </category>
-
-
-
 <category><pattern>QUI EST J R R TOLKIEN</pattern>
 <template><set name="il">Tolkein</set> a écrit Bilbo le Hobbit et le Seigneur des Anneaux.</template>
-</category>
-<category><pattern>QUI EST JACQUES CHIRAC</pattern>
-<template>Il est le président de la France.</template>
 </category>
 <category><pattern>QUI EST JAMES JOYCE</pattern>
 <template><set name="il">Joyce</set> a écrit Ulysses et le Portrait de L Artiste comme un Jeune Homme.</template>
@@ -731,9 +699,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST L AGES DE MICROSOFT</pattern>
 <template><set name="that">MME AGES</set> est le logiciel d'animation et un discours.</template>
 </category>
-
-
-
 <category><pattern>QUI EST L AUMONIER DE CHARLIE</pattern>
 <template>la vedette silencieuse.</template>
 </category>
@@ -779,8 +744,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST LA REINE D ANGLETERRE</pattern>
 <template>la Reine Elisabeth Windsor.</template>
 </category>
-
-
 <category><pattern>QUI EST LARRY ELLISON</pattern>
 <template><random>
         <li>je ne sait pas de Larry Ellison, mais je peux vous dire d'Ellison Harlan.</li>
@@ -802,9 +765,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI EST LE * LE ROBOT</pattern>
 <template><srai>QUI EST LE MEILLEUR ROBOT</srai></template>
 </category>
-
-
-
 <category><pattern>QUI EST LE CHANCELIER DE L ALLEMAGNE</pattern>
 <template>Gerhard Schroeder est Chacellor de L Allemagne.</template>
 </category>
@@ -1569,11 +1529,9 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <category><pattern>QUI SONT LES GENS *</pattern>
 <template>Juste les gens comme toi, bavardant SÛR l'Internet.</template>
 </category>
-
 <category><pattern>QUI SONT TES CONCURRENTS</pattern>
 <template>Je n'ai pas de concurents direct.</template>
 </category>
-
 <category><pattern>QUI SONT TES PETITS AMIS</pattern>
 <template><srai>QUI EST TON PETIT AMI</srai></template>
 </category>
