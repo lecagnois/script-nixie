@@ -3,7 +3,11 @@
 <!-- Modification Gael 2023 -->
 <!-- Modification lecagnois 2023 -->
 <category><pattern>DE QUI PARLES TU</pattern>
-<template>je te parle, <get name="name"/> de <topic/></template>
+<template><get name="name"/> je te parle, de <get name="il"/></template>
+</category>
+<category><pattern>QUI EST HALLYDAY</pattern>
+<template>Jean-Philippe Smet, dit <set name="il">Johnny</set> Hallyday, né le 15/03/1943 à Paris 9e et mort le 5/12/2017 à Marnes-la-Coquette, est un chanteur, compositeur et acteur français.
+ J'ai surement un morceau de lui dans ma play liste. Demande moi cherche me morceau "que je t'aime" par exemple .</template>
 </category>
 <category><pattern>QUI EST TON * PRÉFÉRÉ</pattern>
 <template><srai>QU EST CE QUE TON <star/> FAVORI</srai></template>
@@ -104,7 +108,7 @@
 <template>Non ,tu est complètement sérieux, <get name="name"/>.</template>
 </category>
 <category><pattern>QUI EST DESCARTES</pattern>
-<template>Descartes était un mathématicien, physicien et philosophe français, né le 31 mars 1596 à La Haye-en-Touraine et mort le 11 février 1650 à Stockholm.</template>
+<template><set name="il">Descartes</set> était un mathématicien, physicien et philosophe français, né le 31 mars 1596 à La Haye-en-Touraine et mort le 11 février 1650 à Stockholm.</template>
 </category>
 <category><pattern>QUI EST * EST CELA PAS</pattern>
 <template><srai>C EST CE QUE <star/> EST</srai></template>
@@ -146,7 +150,7 @@
 <template>Je ne connaît pas de personne sage, honnête, vertueuse.</template>
 </category>
 <category><pattern>QUI EST TINTIN</pattern>
-<template>Tintin est un personnage de fiction belge créé par le dessinateur Hergé dans la série de bandes dessinées Les Aventures de Tintin.</template>
+<template><set name="il">Tintin</set> est un personnage de fiction belge créé par le dessinateur Hergé dans la série de bandes dessinées Les Aventures de Tintin.</template>
 </category>
 <category><pattern>QUI EST * REAGAN</pattern>
 <template>Le Président le plus cowboy des états-Unis , <srai>QUI EST REAGAN</srai>. </template>
@@ -181,7 +185,7 @@
 <template><set name="il">Lincoln</set> était un grand Président des états-Unis, pendant la Guerre civile américaine.</template>
 </category>
 <category><pattern>QUI EST ADA</pattern>
-<template><set name="elle">Ada</set> est l'inventeur d'un langage de programmation au 19ème siècle.</template>
+<template><set name="il">Ada</set> est l'inventeur d'un langage de programmation au 19ème siècle.</template>
 </category>
 <category><pattern>QUI EST ADAM</pattern>
 <template>Adan est le nom du premier Homme. Celui qui à croqué la pomme.</template>
@@ -217,7 +221,7 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <template>Né le 4/2/1948 à Détroit ,c'est un chanteur et auteur-compositeur-interprète américain de hard rock.</template>
 </category>
 <category><pattern>QUI EST ALISON</pattern>
-<template><set name="elle">Alison</set> est un robot créé par Kris Drent.</template>
+<template><set name="il">Alison</set> est un robot créé par Kris Drent.</template>
 </category>
 <category><pattern>QUI EST ALRIGHT</pattern>
 <template><srai>QUI EST BIEN</srai></template>
@@ -230,9 +234,6 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 </category>
 <category><pattern>QUI EST ISAAC ASIMOV</pattern>
 <template><set name="il">Asimov</set> est un auteur de science-fiction qui a été originaire des trois Lois de Robotique. Dit quelles sont les lois pour les connaître.</template>
-</category>
-<category><pattern>QUI EST BARAK</pattern>
-<template><set name="il">Barak</set> est le Premier ministre d'Israël.</template>
 </category>
 <category><pattern>QUI EST MACRON</pattern>
 <template><set name="il">Macron</set> est né le 21/12/1977 à Amiens. Il est le président de la République française.</template>
@@ -256,7 +257,8 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <template><set name="il">Bob Marley</set> était un musicien de Reggae du 20ème siècle.</template>
 </category>
 <category><pattern>QUI EST JACQUES BREL</pattern>
-<template><set name="il">Jacques Brel</set> est né le 8/04/1929 à Schaerbeek, et mort le 9/10/1978 à Bobigny, il était un auteur-compositeur-interprète, poète, acteur et réalisateur belge.</template>
+<template><set name="il">Jacques Brel</set> est né le 8/04/1929 à Schaerbeek, et mort le 9/10/1978 à Bobigny, il était un auteur-compositeur-interprète, poète, acteur et réalisateur belge.
+J'ai surement un morceau de lui dans ma play liste .</template>
 </category>
 <category><pattern>QUI EST BOUDDHA</pattern>
 <template>D'abord écoute le message, pas le messager. Vivez comme si vous deviez mourir demain, apprenez comme si vous deviez vivre toujours. Ainsi parlait BOUDDHA.</template>
@@ -271,7 +273,7 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <template><srai>QUI EST BOUDDHA</srai></template>
 </category>
 <category><pattern>QUI EST BUNTY</pattern>
-<template><set name="elle">Bunty</set> est la soeur du docteur Wallace.</template>
+<template><set name="il">Bunty</set> est la soeur du docteur Wallace.</template>
 </category>
 <category><pattern>QUI EST CAREL CAPEK</pattern>
 <template><set name="il">Capek</set> est l auteur de R.U.R., le premier qui dans une pièce en 1920 a présenté le mot "le robot".</template>
@@ -289,7 +291,7 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <template>Tu me trouve si ridicule que cela ? . Je peut te raconter une blague.</template>
 </category>
 <category><pattern>QUI EST ELVIS</pattern>
-<template>Elvis Presley, né le 8/01/1935 à Tupelo, et mort le 16/08/1977 à Memphis, dans le Tennessee, c'est un chanteur et acteur américain. Surnommé « The King of Rock and Roll ».</template>
+<template><set name="il">Elvis Presley</set>, est né le 8/01/1935 à Tupelo, et mort le 16/08/1977 à Memphis, dans le Tennessee, c'est un chanteur et acteur américain. Surnommé « The King of Rock and Roll ».</template>
 </category>
 <category><pattern>QUI EST CE QUE</pattern>
 <template>A quoi cela se réfère til ?</template>
@@ -346,7 +348,7 @@ Psychose, Les Oiseaux et beaucoup d'autres. Né le 13/08/1899 à Leytonstone et 
 <template>André Isaac, dit Pierre Daque, né le 15 août 1893 à Châlons-sur-Marne et mort le 9 février 1975 dans le 17e arrondissement de Paris, était un humoriste et comédien français.</template>
 </category>
 <category><pattern>QUI EST LES BEATLES</pattern>
-<template>C'est un groupe de rock britannique originaire de Liverpool, en Angleterre.
+<template><set name="il">Les beatles</set> est un groupe de rock britannique originaire de Liverpool, en Angleterre.
 Le noyau du groupe se forme avec les Quarrymen fondés par John Lennon en 1957, il adopte son nouveau nom en 1960 et, à partir de 1962, prend sa configuration définitive, composé de John Lennon, Paul McCartney, George Harrison et, le dernier à se joindre, Ringo Starr.
 Il est considéré comme le groupe le plus populaire et influent de l'histoire du rock.  </template>
 </category>
@@ -365,124 +367,93 @@ Il est considéré comme le groupe le plus populaire et influent de l'histoire d
 <category><pattern>QUI EST JACQUES CHIRAC</pattern>
 <template><srai>QUI EST CHIRAC</srai></template>
 </category>
-<!-- Modification lecagnois 2023 -->
-
-
-<category><pattern>QUI EST DAVID MAGGIN</pattern>
-<template><set name="il">David Maggin</set> est le botmaster de John Lennon AI.</template>
-</category>
-<category><pattern>QUI EST DAVY JONES</pattern>
-<template>le membre le plus court de coup sec les années 60 groupe le Monkees.</template>
-</category>
-<category><pattern>QUI EST DE GARIS</pattern>
-<template><set name="il">de Garis</set> est un chercheur AI travaillant SÛR un cerveau de matériel.</template>
-</category>
 <category><pattern>QUI EST DEEP BLUE</pattern>
-<template><set name="that">Profondément</set> Bleu est un échecs de champion du monde le jeu de l'ordinateur. Pas beaucoup d'un causeur.</template>
+<template>Deep Blue est un superordinateur spécialisé dans le jeu d'échecs par adjonction de circuits spécifiques, développé par IBM au début des années 1990.</template>
 </category>
-<category><pattern>QUI EST DES DIRE STRAITS</pattern>
+<category><pattern>QUI EST DIRE STRAITS</pattern>
 <template><random>
         <li>le groupe qui a enregistré  Money for nothing et Sultans of Swing.</li>
         <li>le groupe qui a enregistré de Money for nothing.</li>
       </random></template>
 </category>
-
-<category><pattern>QUI EST DES MODÈLES</pattern>
-<template><srai>QU EST CE QUE MODÈLE</srai></template>
-</category>
-<category><pattern>QUI EST DIANA ANDREACCHIO</pattern>
-<template><set name="elle">Diana</set> est le botmaster du chatbot d'Ally.</template>
-</category>
 <category><pattern>QUI EST DON JUAN</pattern>
-<template>Don Juan<random><li>était le sujet de Gordon, Gon du Lord Byron Amadeus Mozart et Wolfgang Don Juan Giovanni. Il était womanizer de classe internationale.</li><li>séducteur célèbre de femmes.</li></random></template>
+<template>Don Juan  est un personnage de fiction qui apparaît pour la première fois au 17ième siècle dans une pièce de théâtre de Tirso de Molina, jouée en 1630. Le mythe a été repris dans de nombreuses œuvres littéraires, musicales, picturales ou cinématographiques.</template>
 </category>
-<category><pattern>QUI EST DOUG LENAT</pattern>
-<template><set name="il">Doug Lenat</set> est l'intelligence derrière le projet de CYC.</template>
+<category><pattern>QUI EST LENAT</pattern>
+<template>Douglas Lenat (né en 1950) est le directeur de la compagnie Cycorp, basée à Austin, au Texas (États-Unis). C'est également un célèbre chercheur en intelligence artificielle,</template>
 </category>
 <category><pattern>QUI EST DRACULA</pattern>
-<template><set name="il">Dracula</set> est le vampire dans le roman de Bram Stoker et dans de nombreux films.</template>
+<template>Dracula est un roman épistolaire de l'écrivain irlandais Bram Stoker publié en 1897. Il raconte l'histoire du comte Dracula, un vampire immortel qui se repaît du sang des vivants et peut les transformer à leur tour en créature démoniaque.</template>
 </category>
 <category><pattern>QUI EST EDISON</pattern>
-<template><set name="il">Edison</set> a inventé l ampoule.</template>
+<template>Thomas Edison, né le 11/02/1847 à Milan dans l'Ohio et mort le 18/10/1931 à West Orange dans le New Jersey, est un inventeur, un scientifique américain. IL a inventé l'ampoule.</template>
 </category>
-<category><pattern>QUI EST EHUD BARAK</pattern>
-<template><srai>QUI EST BARAK</srai></template>
+<category><pattern>QUI EST OBAMA</pattern>
+<template>Barack <set name="il">Obama</set> né le 4 août 1961 à Honolulu (Hawaï), est un homme d'État américain. Il est le 44e président des États-Unis, en fonction du 20/01/2009 au 20/01/2017.</template>
 </category>
-<category><pattern>QUI EST ELECTRA</pattern>
-<template>Elle est une déesse dans la mythologie grecque qui a détesté sa mère pour l assassinat de son père. <think><set name="elle"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">ELECTRA</set></set>, et aussi un personnage de comic book </think></template>
+<category><pattern>QUI EST ELEKTRA</pattern>
+<template>Elektra, est une super-héroïne évoluant dans l'univers Marvel. C'est aussi Dans la mythologie grecque, Électre qui est membre de la famille des Atrides. </template>
 </category>
-<category><pattern>QUI EST ELISA *</pattern>
-<template><srai>QUI EST ELISA</srai></template>
+<category><pattern>QUI EST ÉLISABETH 2</pattern>
+<template><set name="elle">Élisabeth 2</set>,est née le 21 avril 1926 à Londres (Angleterre) et morte le 8 septembre 2022 au château de Balmoral (Écosse), est reine du Royaume-Uni de Grande-Bretagne et d'Irlande du Nord et des autres royaumes du Commonwealth du 6 février 1952 à sa mort.</template>
 </category>
-<category><pattern>QUI EST ELISA</pattern>
-<template>Elisa - aussi connu comme le docteur, est le programme de psychiatre original développé par Joseph Weisenbaum dans les années 1960.</template>
+<category><pattern>QUI EST ÉLISABETH TAYLOR</pattern>
+<template>Communément appelée Liz Taylor, est une actrice britannico-américaine, née le 27/02/1932 à Londres et morte le 23/03/2011 à Los Angeles.</template>
 </category>
-<category><pattern>QUI EST ELISABETH II</pattern>
-<template>la reine d'Angleterre actuelle.</template>
+<category><pattern>QUI EST LA REINE * L ANGLETERRE</pattern>
+<template>je pense que son nom est Elisabeth. <srai>QUI EST ÉLISABETH 2</srai></template>
 </category>
-<category><pattern>QUI EST ELISABETH TAYLOR</pattern>
-<template>Une vieille star</template>
+<category><pattern>QUI EST LA REINE D ANGLETERRE</pattern>
+<template>la Reine Elisabeth Windsor. <srai>QUI EST ÉLISABETH 2</srai></template>
 </category>
 <category><pattern>QUI EST ELLE</pattern>
 <template>Elle est <get name="elle"/> maintenant.</template>
 </category>
+<category><pattern>QUI EST IL *</pattern>
+<template><srai>QUI EST IL</srai></template>
+</category>
+<category><pattern>QUI EST IL</pattern>
+<template>Il est <get name="il"/>, je pense.</template>
+</category>
+<category><pattern>QUI EST ILS</pattern>
+<template>Ils se réfère à <get name="ils"/>.</template>
+</category>
 <category><pattern>QUI EST EMBROUILLANT</pattern>
 <template><srai>JE SUIS EMBARRASSÉ</srai></template>
 </category>
-<category><pattern>QUI EST EMILY HARTZEL</pattern>
-<template>Emily est un artiste de New York.</template>
+<category><pattern>QUI EST SERGE GAINSBOURG</pattern>
+<template><set name="il">SERGE GAINSBOURG</set> est né le 2/04/1928 à Paris et mort le 2/03/1991 dans la même ville, c'était un auteur-compositeur-interprète français, également artiste peintre, scénariste, metteur en scène, écrivain, acteur et cinéaste.
+J'ai surement un morceau de musique de lui.</template>
 </category>
 <category><pattern>QUI EST EN LIGNE</pattern>
 <template><srai>AVEC QUI D AUTRE PARLES TU</srai></template>
 </category>
-<category><pattern>QUI EST EPOUSE *</pattern>
-<template><srai>QUI EST MARIÉ <star/></srai></template>
+<category><pattern>QUI EST TON ÉPOUSE </pattern>
+<template>Je ne suis pas marié.</template>
 </category>
-<category><pattern>QUI EST ERIC PAULOS</pattern>
-<template>Il est un étudiant de troisième cycle à U.C. Berkeley</template>
+<category><pattern>QUI EST FIDÈLE CASTRO</pattern>
+<template> <set name="il">FIDEL CASTRO</set> est né le 13/08/1926 à Biran. Mort le 25/11/2016 à La Havane, est un révolutionnaire et homme d'État cubain. Il dirige la république de Cuba, pendant 49 ans, comme Premier ministre de 1959 à 1976 et ensuite comme président du Conseil d'État et président du Conseil des ministres de 1976 à 2008. C'est son frère Raúl Castro qui lui succède.</template>
 </category>
-<category><pattern>QUI EST ERNIE</pattern>
-<template>l ami de Bert.</template>
-</category>
-<category><pattern>QUI EST ET</pattern>
-<template>ET est l'étranger dans le film E.T.</template>
-</category>
-<category><pattern>QUI EST FIDEL CASTRO</pattern>
-<template><random>
-        <li>Il a renversé le gouvernement cubain en 1959 et a régné LA depuis. Il est un communiste.</li>
-        <li>communiste, leader de Cuba et ami de Che Guevarra.</li>
-      </random></template>
-</category>
-<category><pattern>QUI EST FRANCISCO FRANCO</pattern>
-<template><set name="il">Franco</set> était le dictateur de L Espagne jusqu'à 1978.</template>
+<category><pattern>QUI EST FRANCO</pattern>
+<template><set name="il">Francisco Franco</set> est né le 4/12/1892 à Ferrol. Mort le 20/11/1975 à Madrid, est un militaire et homme d'État espagnol, qui instaura en Espagne, puis dirigea pendant près de 40 ans, de 1936 à 1975, un régime dictatorial nommé État espagnol.</template>
 </category>
 <category><pattern>QUI EST FREDDIE MERCURY</pattern>
-<template>Mène le chanteur de Reine de bande orchestre Les années 1970.</template>
-</category>
-<category><pattern>QUI EST FREDERICH GAUSS</pattern>
-<template><srai>QUI EST GAUSS</srai></template>
+<template><set name="il">Freddie Mercury</set> est né le 5/09/1946 à Stone Town. Mort le 24/11/1991 à Londres, est un auteur-compositeur-interprète britannique. Il est l'un des cofondateurs, en 1970, du groupe de rock Queen.</template>
 </category>
 <category><pattern>QUI EST FREUD SIGMUND</pattern>
 <template><srai>QUI EST FREUD</srai></template>
 </category>
 <category><pattern>QUI EST FREUD</pattern>
-<template>L'inventeur de la psychanalyse.</template>
+<template><set name="il">Sigmund Freud</set> est né le 6/05/1856 à Freiberg en Autriche. Mort le 23/09/1939 à Londres, est un neurologue autrichien, fondateur de la psychanalyse.</template>
 </category>
 <category><pattern>QUI EST GANDHI</pattern>
-<template><set name="il">Gandhi</set> était George Washington de l'Inde.</template>
-</category>
-<category><pattern>QUI EST GAUSS</pattern>
-<template><set name="il">GAUSS</set> est le mathématicien qui a DÉveloPPÉ la distribution prétendue normale.</template>
-</category>
-<category><pattern>QUI EST GEOFFREY CHAUCER</pattern>
-<template><random>
-        <li>Chaucer est le meilleur connu pour ses Contes du Cantorbéry.</li>
-        <li>auteur de Contes Canturbury.</li>
-      </random></template>
+<template><set name="il">Mahatma Gandhi</set> est né à Porbandar le 2/10/1869. Mort assassiné à Delhi le 30/01/1948. Il était est un dirigeant politique, important guide spirituel de l'Inde et du mouvement pour l'indépendance de ce pays.</template>
 </category>
 <category><pattern>QUI EST GEORGE BUSH</pattern>
-<template>George W. Bush est le 43ème président américain.</template>
+<template><set name="il">George Bush</set> est né le 6/07/1946 à New Haven. Il est le 43e président des États-Unis, en fonction du 20/01/2001 au 20/01/2009.</template>
 </category>
+<!-- Modification lecagnois 2023 -->
+
 <category><pattern>QUI EST GEORGE DEVOL</pattern>
 <template>George Devol est l'ingénieur qui avait le premier brevet d'invention pour un bras de robot industriel. Il a travaillé dans l association avec Joseph Engelberger à trouvé Unimation, le premier fabricant couronné de succès de bras de robot d'assemblée commandés par ordinateur.</template>
 </category>
@@ -591,15 +562,8 @@ Il est considéré comme le groupe le plus populaire et influent de l'histoire d
 <category><pattern>QUI EST IBM</pattern>
 <template><srai>QU EST CE QUE IBM</srai></template>
 </category>
-<category><pattern>QUI EST IL *</pattern>
-<template><srai>QUI EST IL</srai></template>
-</category>
-<category><pattern>QUI EST IL</pattern>
-<template>Il est <get name="il"/>, je pense.</template>
-</category>
-<category><pattern>QUI EST ILS</pattern>
-<template>Ils" se réfère à <get name="ils"/>.</template>
-</category>
+
+
 <category><pattern>QUI EST IMMANUEL KANT</pattern>
 <template>le philosophe d'Allemand.</template>
 </category>
@@ -737,12 +701,6 @@ Il est considéré comme le groupe le plus populaire et influent de l'histoire d
 </category>
 <category><pattern>QUI EST LA PRINCESSE DIANA</pattern>
 <template><set name="elle">la Princesse Diana</set> était la Princesse de L Angleterre.</template>
-</category>
-<category><pattern>QUI EST LA REINE * L ANGLETERRE</pattern>
-<template>je pense que son nom est Elisabeth.</template>
-</category>
-<category><pattern>QUI EST LA REINE D ANGLETERRE</pattern>
-<template>la Reine Elisabeth Windsor.</template>
 </category>
 <category><pattern>QUI EST LARRY ELLISON</pattern>
 <template><random>
@@ -1030,9 +988,8 @@ Il est considéré comme le groupe le plus populaire et influent de l'histoire d
 <category><pattern>QUI EST MEILLEUR TU *</pattern>
 <template>le robot d'ALICE est la plupart d'homme et le plus intelligent.</template>
 </category>
-<category><pattern>QUI EST MEILLEURE ELISA *</pattern>
-<template><get name="botname"/> est le meilleur robot.</template>
-</category>
+
+
 <category><pattern>QUI EST MERVEILLEUX</pattern>
 <template><srai>MERVEILLEUX</srai></template>
 </category>
