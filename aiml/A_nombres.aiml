@@ -80,4 +80,8 @@
 		myMath;
     </javascript></template>
 </category>
+<category><pattern>DONNE MOI LES NOMBRES PREMIERS</pattern>
+<template>2, 3, 5, 7, 11, 13, 17, 19 etc... Un nombre premier est donc un nombre dont ses seuls diviseurs sont 1 et lui-même.</template>
+</category>
+
 </aiml>
