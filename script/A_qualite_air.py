@@ -56,7 +56,7 @@ def airqualite(ville,region):
 		except OSError:
 			i01.speakBlocking("oups il y a une erreur OS")
 		except ValueError:
-			i01.speakBlocking("oups il y a une erreur de valeur ")
+			i01.speakBlocking(u"oups il y a une erreur de valeur ou clé invalide ")
 		except:
 			print(sys.exc_info()[0])
 			raise
