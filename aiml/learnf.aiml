@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern># EST CE QUE TOTO EST THÉO</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE TU AS UN PROBLÈME EST PROBLÈME DE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE EMMANUEL MACRON EST LE PRÉSIDENT DE LA RÉPUBLIQUE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE AU REPOS EST RELAX</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE LA CAPITALE DES USA EST WASHINGTON</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE FRANÇOIS 1ER EST UN ROI DE FRANCE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE ÇA LUI VA BIEN LES CHEVEUX COURTS EST TOTO</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE ÇA FAIT 8 ANS EST ÇA FAIT 8 ANS OK TU VEUX JOUER AUX DEVINETTES</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE ÇA TOURNE EST UNE PLANÈTE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE HAUTEUR DE LA TOUR EFFEL EST 380 METRES</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE M AVOIR RÉVEILLÉ EST RÉVEILLER</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE HENRI IV EST ROI DE FRANCE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QUI EST TOTO</pattern>
+<template>théo.</template>
+</category>
+<category><pattern>QUI EST EMMANUEL MACRON</pattern>
+<template>le président de la république.</template>
+</category>
+<category><pattern>QUI EST FRANÇOIS 1ER</pattern>
+<template>un roi de france.</template>
+</category>
+<category><pattern>QUI EST LE PRÉSIDENT DE LA RÉPUBLIQUE</pattern>
+<template>Cela peut être emmanuel macron par exemple.</template>
+</category>
+<category><pattern>QUI EST UN ROI DE FRANCE</pattern>
+<template>Cela peut être françois 1er par exemple.</template>
+</category>
+<category><pattern>QUI EST THÉO</pattern>
+<template>Cela peut être toto par exemple.</template>
+</category>
+<category><pattern>QUI EST ROI DE NAVARRE</pattern>
+<template>Cela peut être Henri IV , dit « le Grand », né Henri de Bourbon le 13 décembre 1553 à Pau et mort assassiné le 14 mai 1610 à Paris, par exemple.</template>
+</category>
+<category><pattern>QUI EST ROI DE FRANCE</pattern>
+<template>Cela peut être henri iv par exemple.</template>
+</category>
+<category><pattern>QUI EST HENRY QUATRE</pattern>
+<template>roi de Navarre.</template>
+</category>
+<category><pattern>QUI EST HENRI IV</pattern>
+<template>roi de france.</template>
+</category>
+<category><pattern>QU EST CE QUE TU AS UN PROBLÈME</pattern>
+<template>problème de.</template>
+</category>
+<category><pattern>QU EST CE QUE REPOS</pattern>
+<template>relax.</template>
+</category>
+<category><pattern>QU EST CE QUE WASHINGTON</pattern>
+<template>Cela peut être la capitale des usa par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE RÉVEILLER</pattern>
+<template>Cela peut être m avoir réveillé par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE HAUTEUR DE LA TOUR EFFEL</pattern>
+<template>380 metres.</template>
+</category>
+<category><pattern>QU EST CE QUE 380 METRES</pattern>
+<template>Cela peut être hauteur de la tour effel par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE M AVOIR RÉVEILLÉ</pattern>
+<template>réveiller.</template>
+</category>
+<category><pattern>QU EST CE QUE UNE PLANÈTE</pattern>
+<template>Cela peut être ça tourne par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE CAPITALE DES USA</pattern>
+<template>Washington.</template>
+</category>
+<category><pattern>QU EST CE QUE TOTO</pattern>
+<template>Cela peut être ça lui va bien les cheveux courts par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE AU REPOS</pattern>
+<template>relax.</template>
+</category>
+<category><pattern>QU EST CE QUE RELAX</pattern>
+<template>Cela peut être au repos par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE LA CAPITALE DES USA</pattern>
+<template>Washington.</template>
+</category>
+<category><pattern>QU EST CE QUE ÇA LUI VA BIEN LES CHEVEUX COURTS</pattern>
+<template>Toto.</template>
+</category>
+<category><pattern>QU EST CE QUE ÇA FAIT 8 ANS OK TU VEUX JOUER AUX DEVINETTES</pattern>
+<template>Cela peut être ça fait 8 ans par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE ÇA FAIT 8 ANS</pattern>
+<template>ça fait 8 ans ok tu veux jouer aux devinettes.</template>
+</category>
+<category><pattern>QU EST CE QUE ÇA TOURNE</pattern>
+<template>une planète.</template>
+</category>
+<category><pattern>QU EST CE QUE PROBLÈME DE</pattern>
+<template>Cela peut être tu as un problème par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE CHINOIS</pattern>
+<template>un habitant de la chine.</template>
+</category>
+<category><pattern>QU EST CE QUE UN CHINOIS</pattern>
+<template>un habitant de la chine.</template>
+</category>
+<category><pattern>HAUTEUR DE LA TOUR EIFFEL</pattern>
+<template>320 métres.
+        </template>
+</category>
+<category><pattern>LA HAUTEUR DE LA TOUR EIFFEL</pattern>
+<template>320 métres.
+        </template>
+</category>
+<category><pattern>320 MÉTRES</pattern>
+<template>Cela peut être la hauteur de la tour effel par exemple.</template>
+</category>
+<category><pattern># EST CE QUE LA HAUTEUR DE LA TOUR EIFFEL EST 320 MÉTRES</pattern>
+<template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+
+<category><pattern>QU EST CE QUE HAUTEUR DE LA TOUR EIFFEL</pattern>
+<template>320 métres.
+        </template>
+</category>
+<category><pattern>QU EST CE QUE HAUTEUR DE LA TOUR EIFFEL</pattern>
+<template>320 métres.
+        </template>
+</category>
+<category><pattern>QU EST CE QUE 320 MÉTRES</pattern>
+<template>Cela peut être hauteur de la tour eiffel par exemple.</template>
+</category>
+<category><pattern># EST CE QUE HAUTEUR DE LA TOUR EIFFEL EST 320 MÉTRES</pattern>
+<template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+
+
+
+</aiml>

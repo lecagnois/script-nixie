@@ -8,6 +8,7 @@
     <srai>ANNUAIRE<star/></srai>
 </template>
 </category>
+
   <category>
     <pattern>ANNUAIRE</pattern>
     <template>
@@ -68,7 +69,6 @@
 		         <param>bdamis("<get name="sonprénom"/>","<get name="tmpamis"/>")</param>
 		       </mrl>
 		     </oob>
-    
       </template>
     </category>
 
