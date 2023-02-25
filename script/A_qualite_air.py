@@ -50,13 +50,12 @@ def airqualite(ville,region):
 			sleep(1)
 			i01.speakBlocking("la vitesse du vent est de  " + str(Mvitessevent) +" KM/H")
 					
-
 		except IOError:
 			i01.speakBlocking(u"je n'ai pas de capteur pour cette ville")
 		except OSError:
 			i01.speakBlocking("oups il y a une erreur OS")
 		except ValueError:
-			i01.speakBlocking(u"oups il y a une erreur de valeur ou clé invalide ")
+			i01.speakBlocking(u"oups, je n'ai pas de capteur pour cette ville, ou clé invalide")
 		except:
 			print(sys.exc_info()[0])
 			raise
