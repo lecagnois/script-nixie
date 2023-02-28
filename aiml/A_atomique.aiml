@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- Travaller par Gael 2023 -->
-  <!--  -->
+  <!-- Modification lecagnois 02/2023 -->
   <category>
     <pattern>* A PLU * RENCONTRER</pattern>
     <template>Ce fut agréable pour moi aussi, <get name="name" />.</template>
@@ -251,7 +251,7 @@
   </category>
   <category>
     <pattern>AUTRE</pattern>
-    <template>S'il te plaÏt sois plus spécifique.</template>
+    <template>S'il te plait sois plus spécifique.</template>
   </category>
   <category>
     <pattern>AUTREMENT DIT</pattern>

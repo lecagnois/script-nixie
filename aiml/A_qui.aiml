@@ -10,8 +10,11 @@
 Jean-Philippe Smet, dit <set name="il">Johnny</set> Johnny Hallyday, né le 15/03/1943 à Paris 9e et mort le 5/12/2017 à Marnes-la-Coquette, est un chanteur, compositeur et acteur français.
  J'ai surement un morceau de lui dans ma play liste. Demande moi cherche le morceau que je t'aime par exemple.</template>
 </category>
- <category><pattern>QUI EST JOHNNY HALLYDAY</pattern>
+<category><pattern>QUI EST JOHNNY HALLYDAY</pattern>
 <template><srai>QUI EST HALLYDAY</srai> </template>
+</category>
+<category><pattern>QUI EST DAVE</pattern>
+<template> <set name="il">Dave</set> est né le 4 mai 1944 à Amsterdam, c'est un chanteur néerlandais. Il commence sa carrière en 1963 et connaît le succès dans les années 1970 avec des chansons francophones comme Vanina et Du côté de chez Swann.</template>
 </category>
 <category><pattern>QUI EST LE PREMIER L ŒUF OU LA POULE</pattern>
 <template>Donc, pour répondre à la question de qui est arrivé en premier, ce sont les oeufs. Les oeufs existaient plusieurs millions d'années avant l'apparition des premières espèces ressemblant à l'espèce de la poule.</template>

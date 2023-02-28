@@ -310,7 +310,7 @@
       <template><set name="topic"><bot name="forfun"/></set></template>
     </category>
     <category><pattern>AMI</pattern>
-      <template>Je suis ami avec ALICE, Greg Perry, Alessandro Didonna, Kevin watters, Anthony Gallot, <set name="topic"><bot name="friend"/></set> et mon créateur Gael Langevin.</template>
+      <template>Je suis ami avec ALICE, Greg Perry, Alessandro Didonna, Kevin watters, Anthony Gallot, Gael Langevin <set name="topic"><bot name="friend"/></set> et mon créateur Jean Pierre Lecagnois.</template>
     </category>
     <category><pattern>AMIS</pattern>
       <template><set name="topic"><bot name="friends"/></set></template>
