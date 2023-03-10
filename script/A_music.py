@@ -6,7 +6,7 @@ def chercheplay(morceau):
         if os.path.exists('data/config/default/i01.audioPlayer.yml'):
                 global liste
                 global pointeur
-                #i01.speakBlocking(u"oké voici le morceau")
+                i01.speakBlocking(u"oké voici le morceau")
                 f = open('data/config/default/i01.audioPlayer.yml', 'r')
                 liste = f.readlines()
                 #supprime les 11 premiers elements de la liste

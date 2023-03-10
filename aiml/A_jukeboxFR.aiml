@@ -7,21 +7,27 @@
         <li>Je mets la musique en mode playlist.</li>
         <li>Oké! Je suis en mode playlist</li>
       </random>
+      <think><set name="lecture">ko</set></think>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
 </category>
 
 <category><pattern>DÉMARRE LA MUSIQUE</pattern>
-<template><srai>DÉMARRE LA PLAYLIST</srai></template>
+<template>
+  <think><set name="lecture">ko</set></think>
+  <srai>DÉMARRE LA PLAYLIST</srai>
+</template>
 </category>
 
 <category><pattern>DÉMARRE LA PLAYLIST *</pattern>
-<template>Je mets la playlist <star/>.
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
+<template>Je mets la playlist <star/>.<think><set name="lecture">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob>
+</template>
 </category>
 
 <category><pattern>ARRÊTE LA PLAYLIST</pattern>
-<template>J'arrête la Playlist .
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+<template>J'arrête la Playlist . <think><set name="lecture">ok</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob>
+</template>
 </category>
 
 <category><pattern>PLAYLIST SUIVANT</pattern>
@@ -29,12 +35,14 @@
         <li>Morceau suivant de la playlist.</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+</template>
 </category>
 <!-- FIN MODE PLAYLIST -->
 <!-- Ici Utilise le script A_music.py -->
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
-<template><random>
+<template><think><set name="lecture">ok</set></think>
+      <random>
         <li>J'arrête la musique</li>
         <li>Oké!</li>
       </random>
@@ -43,7 +51,8 @@
 
 <category><pattern>CHERCHE LE MORCEAU *</pattern>
 <template>
-  <think><set name="morceau"><star/></set></think>
+<think><set name="lecture">ok</set></think>
+  <think><set name="morceau"><star/></set></think> 
     <oob><mrl>
       <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
       </mrl></oob>
@@ -52,6 +61,7 @@
 
 <category><pattern>RECHERCHE LE MORCEAU *</pattern>
 <template>
+<think><set name="lecture">ok</set></think>
   <think><set name="morceau"><star/></set></think>
     <oob><mrl>
       <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
@@ -60,8 +70,15 @@
 </category>
 
 <category><pattern># MORCEAU SUIVANT</pattern>
-<template>Oké!
-        <oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob></template>
+  <template>
+    <think><get name = "lecture"></get></think>
+     <condition name="lecture" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob>
+    </condition>  
+    <condition name="lecture" value="ko">
+  <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+    </condition>  
+  </template>
 </category>
 
 <category><pattern>SYSTEM MORCEAU SUIVANT</pattern>
@@ -69,8 +86,15 @@
 </category>
 
 <category><pattern># MORCEAU PRÉCÉDENT</pattern>
-<template>Oké!
-        <oob><mrl><service>python</service><method>exec</method><param>previousplay()</param></mrl></oob></template>
+<template>
+ <think><get name = "lecture"></get></think>
+   <condition name="lecture" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>previousplay()</param></mrl></oob>
+  </condition> 
+  <condition name="lecture" value="ko">
+    Précédent ne fonctionne pas en mode Playlist. Mais uniquement en mode recherche.
+  </condition> 
+  </template>
 </category>
 
 <category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
