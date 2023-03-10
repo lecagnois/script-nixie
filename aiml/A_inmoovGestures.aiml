@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!--  -->
-<!--  -->
+<!--Modification lecagnois 03/2023  -->
 <category><pattern>METS TOI AU REPOS #</pattern>
 <template><random>
           <li>Ah, C EST moins fatiguant.</li>
@@ -76,7 +76,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>DÉTECTION DE VISAGE</pattern>
-<template>I'm looking for faces.
+<template>Je cherche des visages.
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
 </category>
 <category><pattern># REGARDE MOI #</pattern>
@@ -98,16 +98,16 @@
 <template>J'arrête mon tracking
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
 </category>
-<category><pattern>DÉMARRE LA CAMERA</pattern>
+<category><pattern>DÉMARRE LA CAMÉRA</pattern>
 <template>Je démarre ma caméra.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
 </category>
-<category><pattern>ÉTEINS LA CAMERA</pattern>
+<category><pattern>ÉTEINS LA CAMÉRA</pattern>
 <template>J'éteins ma caméra.
         <oob><mrl><service>i01</service><method>cameraOff</method></mrl></oob></template>
 </category>
-<category><pattern>ARRÊTE LA CAMERA</pattern>
-<template><srai>éTEINS LA CAMERA</srai></template>
+<category><pattern>STOPPE LA CAMÉRA</pattern>
+<template><srai>ÉTEINS LA CAMÉRA</srai></template>
 </category>
 <category><pattern>CAPTURE LES GESTUELLES</pattern>
 <template>Je mémorise les positions de mes servo moteurs.
@@ -186,8 +186,12 @@
         </oob></template>
 </category>
 <category><pattern>APPRENTISSAGE DE VISAGE</pattern>
-<template>Je démarre le module d'apprentissage des visages<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+<template>Je démarre le module d'apprentissage des visages
+        <oob>
+        <mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl>
+        </oob></template>
 </category>
+
 <category><pattern>RECONNAISSANCE FACIALE</pattern>
 <template><srai>CHERCHE LES HUMAINS</srai></template>
 </category>
@@ -233,7 +237,7 @@
         </oob></template>
 </category>
 <category><pattern>ROBOTIQUE RECHERCHE *</pattern>
-<template>D'accord C EST parti
+<template>D'accord c'est parti.
         <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star/>")</param></mrl></oob></template>
 </category>
 <category><pattern>YOUTUBE *</pattern>
@@ -338,4 +342,65 @@
 <template>Connection de ma mâchoire.
         <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
 </category>
+
+<!--Modification Gaeil  03/2023  -->
+<category>
+<pattern>ENREGISTRE CETTE PERSONNE</pattern>
+<template>Oké, quel nom dois je mémoriser pour cette personne.
+    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># QUEL NOM DOIS JE MÉMORISER #</that>
+<template><set name="memorisenameinit"><star/> est le nom que tu souhaites mémoriser , réponds par oui ou non</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># OUI #</pattern><that># LE NOM QUE TU SOUHAITES MÉMORISER #</that>
+<template>Oké je vais sauvegarder <get name="tmpname"> comme nom.</get>
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># NON #</pattern><that># LE NOM QUE TU SOUHAITES MÉMORISER #</that>
+<template>Oké, peut-tu répéter le nom.</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># PEUT-TU RÉPÉTER LE NOM #</that>
+<template><set name="memorisenameinit"><star/> est le nom que tu souhaites mémoriser , réponds par oui ou non</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># RÉPONDS PAR OUI OU NON #</that>
+<template>Peut-tu répondre, c'est nécessaire.
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
 </aiml>

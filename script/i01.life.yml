@@ -1,0 +1,43 @@
+# !!org.myrobotlab.service.config.LifeConfig
+
+# Settings for the robots life
+# False:0
+# True:1
+
+[HEALTHCHECK]
+healthCheckActivated=False
+timerValue=60000
+batteryInSystem=False
+
+[WAKE]
+unlockInsult=forgive me
+
+# ramdom move the head
+[MOVEHEADRANDOM]
+robotCanMoveHeadWhileSpeaking=True
+forceMicroOnIfSleeping=True
+
+[SLEEPMODE]
+pirWakeUp=True
+pirEnableTracking=False
+# Sleep 5 minutes after last presence detected
+sleepTimeout=300000
+# Turn off tracking 20 seconds after last presence detected
+trackingTimeout=10000
+
+[AUDIO]
+startupSound=False
+customSound=True
+audioSignalProcessing=False
+analogPinFromSoundCard=53
+howManyPollsBySecond=2
+
+[NEOPIXEL]
+boot_green=True
+download_blue=True
+error_red=True
+flash_when_speak=True
+
+[OPENCV]
+flipPicture=False
+faceRecognizerActivated=True

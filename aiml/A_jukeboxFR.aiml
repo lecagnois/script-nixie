@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- Modifié par Gael Langevin -->
+<!-- Modifié par lecagnois -->
 <!--  plus besoin du fichier /services/AudioFile.py -->
-<!-- Modifié par lecagnois le 18/02/2023 -->
-
 <category><pattern>DÉMARRE LA PLAYLIST</pattern>
 <template><random>
-        <li>Bien sur!</li>
-        <li>Je mets de la musique.</li>
-        <li>Oké!</li>
+        <li>Je mets la musique en mode playlist.</li>
+        <li>Oké! Je suis en mode playlist</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
 </category>
-<category><pattern>DÉMARRE PLAYLIST *</pattern>
-<template><random>
-        <li>Bien sur!</li>
-        <li>Je mets de la musique.</li>
-        <li>Oké!</li>
-      </random>
+
+<category><pattern>DÉMARRE LA MUSIQUE</pattern>
+<template><srai>DÉMARRE LA PLAYLIST</srai></template>
+</category>
+
+<category><pattern>DÉMARRE LA PLAYLIST *</pattern>
+<template>Je mets la playlist <star/>.
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
 </category>
+
 <category><pattern>ARRÊTE LA PLAYLIST</pattern>
-<template>J'arrête la musique .
+<template>J'arrête la Playlist .
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
+
+<category><pattern>PLAYLIST SUIVANT</pattern>
+<template><random>
+        <li>Morceau suivant de la playlist.</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+</category>
+<!-- FIN MODE PLAYLIST -->
+<!-- Ici Utilise le script A_music.py -->
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
 <template><random>
         <li>J'arrête la musique</li>
@@ -40,6 +49,7 @@
       </mrl></oob>
       </template>
 </category>
+
 <category><pattern>RECHERCHE LE MORCEAU *</pattern>
 <template>
   <think><set name="morceau"><star/></set></think>
@@ -48,14 +58,18 @@
       </mrl></oob>
       </template>
 </category>
+
 <category><pattern># MORCEAU SUIVANT</pattern>
-<template>
-        <li>Oké!</li>
+<template>Oké!
         <oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob></template>
 </category>
+
+<category><pattern>SYSTEM MORCEAU SUIVANT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob></template>
+</category>
+
 <category><pattern># MORCEAU PRÉCÉDENT</pattern>
-<template>
-        <li>Oké!</li>
+<template>Oké!
         <oob><mrl><service>python</service><method>exec</method><param>previousplay()</param></mrl></oob></template>
 </category>
 
@@ -67,6 +81,7 @@
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
 </category>
+
 <category><pattern>REMETS LA MUSIQUE</pattern>
 <template><random>
         <li>Je remets la musique</li>
