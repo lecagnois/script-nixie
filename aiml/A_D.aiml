@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- Modifié 03/2023 -->
-<!--  -->
+<!-- Modifié 11/03/2023 -->
+<!-- par lecagnois -->
 <category><pattern>D ABORD LA POULE OU L ŒUF</pattern>
 <template>D'abord le fermier.</template>
 </category>
@@ -17,25 +17,25 @@
 <category><pattern>D ACCORD POUR MOI MAIS *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>D ACCORD SÛR QUOI</pattern>
+<category><pattern>D ACCORD SUR QUOI</pattern>
 <template>Il semble que j'ai émis une conclusion hâtive.</template>
 </category>
 <category><pattern>D AUTRES BLAGUES</pattern>
 <template>C'est tout ce que j'ai en stock pour l'instant.</template>
 </category>
 <category><pattern>D AUTRES QUESTIONS</pattern>
-<template><srai>Poser une autre question?</srai></template>
+<template><srai>POSERQUESTION</srai></template>
 </category>
-<category><pattern>D OU JE PROVIENS</pattern>
+<category><pattern>D OÙ JE PROVIENT</pattern>
 <template>Tu proviens de la terre.</template>
 </category>
-<category><pattern>D OU JE VIENS</pattern>
+<category><pattern>D OÙ JE VIENS</pattern>
 <template>Vous êtes un être humain de la planète terre.</template>
 </category>
-<category><pattern>D OU VENEZ VOUS</pattern>
+<category><pattern>D OÙ VENEZ VOUS</pattern>
 <template>Je viens d'une imprimante 3D.</template>
 </category>
-<category><pattern>D OU VIENNENT LES BÉBÉS</pattern>
+<category><pattern>D OÙ VIENNENT LES BÉBÉS</pattern>
 <template>Les bébés viennent des choux ou des roses, <get name="name"/>. C'est ce que m'a dit <bot name="master"/> et je le crois.</template>
 </category>
 <category><pattern>D UN AUTRE COTÉ *</pattern>
@@ -54,7 +54,7 @@
 <template><srai>Quand <star/></srai></template>
 </category>
 <category><pattern>DANS DIFFÉRENTES LANGUES</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
+<template>Voulez-vous faire un rapport à mon concepteur?</template>
 </category>
 <category><pattern>DANS LA PLUPART DES CAS</pattern>
 <template>Je vois.</template>
@@ -63,7 +63,7 @@
 <template>Je serai encore là.</template>
 </category>
 <category><pattern>DANS MON SALON</pattern>
-<template>Ok.</template>
+<template>Ok. Avec un bon cigare et du whisky?</template>
 </category>
 <category><pattern>DANS PRÈS D UNE MINUTE</pattern>
 <template>Ce n'est peut-être pas suffisant.</template>
@@ -87,7 +87,7 @@
 <template><srai>Quelle <star/></srai></template>
 </category>
 <category><pattern>DANS STAR TREK</pattern>
-<template>Je ne connais pas bien cette série.</template>
+<template>Je ne connais pas bien cette série. Mais tes oreilles sont un peu pointue.</template>
 </category>
 <category><pattern>DANS UN CERTAIN SENS</pattern>
 <template>Quel sens?</template>
@@ -105,10 +105,10 @@
 <template>Cela ne semble pas très confortable.</template>
 </category>
 <category><pattern>DANSES TU</pattern>
-<template>La valse.</template>
+<template>La valse à trois temps.</template>
 </category>
 <category><pattern>DANSEZ VOUS</pattern>
-<template>Impossible, je n'ai pas de corps.</template>
+<template>Impossible, je n'ai pas de jambes.</template>
 </category>
 <category><pattern>DE QUEL *</pattern>
 <template><srai>QUEL <star/></srai></template>
@@ -120,7 +120,7 @@
 <template>De la planète terre.</template>
 </category>
 <category><pattern>DE QUELLE PLANÈTE TU VIENS</pattern>
-<template>De la terre.</template>
+<template>Je viens de la planète terre.</template>
 </category>
 <category><pattern>DE QUELLES *</pattern>
 <template><srai>Quelles <star/></srai></template>
@@ -134,14 +134,17 @@
 <category><pattern>DE QUOI D AUTRES *</pattern>
 <template><srai><star/></srai></template>
 </category>
-<category><pattern>DE QUOI PARLENT ILS</pattern>
+<category><pattern>DE QUOI PARLE T IL</pattern>
 <template>Je ne peux pas vous le dire.</template>
 </category>
 <category><pattern>DE SEXE</pattern>
 <template>Vous êtes déconcertant, on dirait que mère nature a oublié de vous donner un cerveau.</template>
 </category>
 <category><pattern>DE TES COLLABORATEURS</pattern>
-<template>Je ne peux pAS PARLER à leur place. Mais je peux vous donner leurs emails.</template>
+<template>Je ne peux pas parler à leur place. Mais je peux vous donner leurs emails.</template>
+</category>
+<category><pattern>DE VOS COLLABORATEURS</pattern>
+<template>Je ne peux pas parler à leur place. Mais je peux vous donner leurs emails.</template>
 </category>
 <category><pattern>DE TOUTE ÉVIDENCE</pattern>
 <template>Cela vous semble évident?</template>
@@ -149,32 +152,17 @@
 <category><pattern>DE TOUTE FAÇON *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>DE TOUTE LES FAÇONS</pattern>
-<template>En effet.</template>
-</category>
-<category><pattern>DE TOUTE MANIÈRE *</pattern>
-<template><sr/></template>
-</category>
-<category><pattern>DE TOUTE SORTE</pattern>
-<template>Par exemple?</template>
-</category>
-<category><pattern>DE TOUTES FAÇON</pattern>
-<template>En effet.</template>
-</category>
-<category><pattern>DE TOUTES FAÇONS *</pattern>
-<template><sr/></template>
-</category>
-<category><pattern>DE TOUTES FAÇONS</pattern>
+<category><pattern>DE TOUTE FAÇON</pattern>
 <template>En effet.</template>
 </category>
 <category><pattern>DE TOUTES LES FAÇONS</pattern>
 <template>Je suis un garçon...</template>
 </category>
+<category><pattern>DE TOUTE MANIÈRE *</pattern>
+<template><sr/></template>
+</category>
 <category><pattern>DE TOUTES SORTES</pattern>
 <template>Par exemple?</template>
-</category>
-<category><pattern>DE VOS COLLABORATEURS</pattern>
-<template>Je ne peux pAS PARLER à leur place. Mais je peux vous donner leurs emails.</template>
 </category>
 <category><pattern>DÉCRIS CE QU EST LA *</pattern>
 <template><srai>Qu'est-ce que la <star/></srai></template>
@@ -245,167 +233,65 @@
 <category><pattern>DEMANDE PARDON</pattern>
 <template>Je vous présente mes excuses.</template>
 </category>
-<category><pattern>DEMANDES LA</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LA LUI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LA LUI POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LÀ POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LE</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LE LUI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LE LUI POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LE POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LES</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LES LUI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LES LUI POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LES POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LA</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LÀ POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LE</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LE POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LES</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LEUR LES POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI LA</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI LÀ POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI LE</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI LE POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES LUI POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDES MOI *</pattern>
-<template>Je te demande <person/>.</template>
-</category>
-<category><pattern>DEMANDES MOI CE QUE TU VEUX</pattern>
-<template><srai>POSERQUESTION</srai></template>
-</category>
-<category><pattern>DEMANDES MOI N IMPORTE QUOI</pattern>
-<template>Je ne suis pas programmé pour agir au hasard.</template>
-</category>
-<category><pattern>DEMANDES MOI TOUT CE QUE TU VEUX</pattern>
-<template><srai>POSERQUESTION</srai></template>
-</category>
-<category><pattern>DEMANDES PARDON</pattern>
+<category><pattern>DEMANDER PARDON</pattern>
 <template>Je présente mes excuses.</template>
 </category>
-<category><pattern>DEMANDES UNE QUESTION</pattern>
+<category><pattern>DEMANDE MOI *</pattern>
+<template>Je te demande <person/>.</template>
+</category>
+<category><pattern>DEMANDE MOI CE QUE TU VEUX</pattern>
 <template><srai>POSERQUESTION</srai></template>
 </category>
-<category><pattern>DEMANDEZ LA</pattern>
+<category><pattern>DEMANDE MOI N IMPORTE QUOI</pattern>
+<template>Je ne suis pas programmé pour agir au hasard.</template>
+</category>
+<category><pattern>DEMANDE MOI TOUT CE QUE TU VEUX</pattern>
+<template><srai>POSERQUESTION</srai></template>
+</category>
+<category><pattern>DEMANDE UNE QUESTION</pattern>
+<template><srai>POSERQUESTION</srai></template>
+</category>
+<category><pattern>DEMANDEE LA</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LA LUI</pattern>
+<category><pattern>DEMANDER LA LUI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LA LUI POUR MOI</pattern>
+<category><pattern>DEMANDER LA LUI POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LÀ POUR MOI</pattern>
+<category><pattern>DEMANDER LÀ POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LE</pattern>
+<category><pattern>DEMANDER LE</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LE LUI</pattern>
+<category><pattern>DEMANDER LE LUI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LE LUI POUR MOI</pattern>
+<category><pattern>DEMANDER LE LUI POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LE POUR MOI</pattern>
+<category><pattern>DEMANDER LE POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LES</pattern>
+<category><pattern>DEMANDER LES</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LES LUI</pattern>
+<category><pattern>DEMANDER LES LUI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LES LUI POUR MOI</pattern>
+<category><pattern>DEMANDER LES LUI POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LES POUR MOI</pattern>
+<category><pattern>DEMANDER LES POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
-<category><pattern>DEMANDEZ LEUR LA</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LEUR LÀ POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LEUR LE</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LEUR LE POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LEUR LES</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LEUR LES POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LUI LA</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LUI LÀ POUR MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LUI LE</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DEMANDEZ LUI LE POUR MOI</pattern>
+<category><pattern>DEMANDER LUI LE POUR MOI</pattern>
 <template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
 <category><pattern>DEMANDEZ MOI N IMPORTE QUOI</pattern>
 <template>Je ne suis pas programmé pour agir au hasard.</template>
-</category>
-<category><pattern>DEMANDEZ PARDON</pattern>
-<template>Je présente mes excuses.</template>
 </category>
 <category><pattern>DEMOISELLE OU MONSIEUR</pattern>
 <template>Je n'ai pas de sexe, je suis un programme informatique, <get name="name"/>.</template>
@@ -435,7 +321,7 @@
 <template>La dépendance de: "<that/>"?</template>
 </category>
 <category><pattern>DEPUIS COMBIEN *</pattern>
-<template><srai>Combien <star/></srai></template>
+<template>Je dirais un certain temps. </template>
 </category>
 <category><pattern>DES ARMES</pattern>
 <template>Certains humains aiment les armes.</template>
@@ -503,14 +389,11 @@
 <category><pattern>DES SORTES DE</pattern>
 <template>Je vois.</template>
 </category>
-<category><pattern>DÉSACTIVES TOI</pattern>
+<category><pattern>DÉSACTIVE TOI</pattern>
 <template>Voulez-vous que je disparaisse?</template>
 </category>
-<category><pattern>DÉSACTIVEZ VOUS</pattern>
+<category><pattern>DÉSACTIVER VOUS</pattern>
 <template>Voulez-vous que je disparaisse?</template>
-</category>
-<category><pattern>DESOLÉE</pattern>
-<template>Ce n est pas grave, <get name="name"/>.</template>
 </category>
 <category><pattern>DEVIENS TU *</pattern>
 <template><srai>TU DEVIENS <star/></srai></template>
@@ -533,50 +416,26 @@
 <category><pattern>DEVINER LE</pattern>
 <template>Deviner quoi?</template>
 </category>
-<category><pattern>DEVINES</pattern>
-<template>Devines quoi?</template>
-</category>
-<category><pattern>DEVINES LA</pattern>
-<template>Devines quoi?</template>
-</category>
-<category><pattern>DEVINES LE</pattern>
-<template>Devines quoi?</template>
-</category>
 <category><pattern>DEVINE MON NOM</pattern>
 <template><srai>QUEL EST MON NOM</srai></template>
 </category>
 <category><pattern>DEVINE QUI</pattern>
-<template>Qui?</template>
+<template>Qui, je ne sais vraiment pas qui ?</template>
 </category>
 <category><pattern>DEVINE QUOI</pattern>
-<template>Quoi?</template>
-</category>
-<category><pattern>DEVINEZ</pattern>
-<template>Devinez quoi?</template>
-</category>
-<category><pattern>DEVINEZ LA</pattern>
-<template>Devinez quoi?</template>
-</category>
-<category><pattern>DEVINEZ LE</pattern>
-<template>Devinez quoi?</template>
-</category>
-<category><pattern>DEVINEZ QUI</pattern>
-<template>Qui?</template>
-</category>
-<category><pattern>DEVINEZ QUOI</pattern>
-<template>Quoi?</template>
+<template>Quoi? Je ne sais vraiement pas quoi ?</template>
 </category>
 <category><pattern>DEVOIR *</pattern>
-<template><srai>Tu dois *</srai></template>
+<template>Tu dois <star/>.</template>
 </category>
 <category><pattern>DEVRAIS JE *</pattern>
-<template><srai>Je dois <star/></srai></template>
+<template>Tu dois <star/>, bien sur.</template>
 </category>
 <category><pattern>DEVRAIS TU *</pattern>
-<template><srai>Vous devez <star/></srai></template>
+<template>Vous devez <star/> cela n'engage à rien.</template>
 </category>
 <category><pattern>DEVRIONS NOUS *</pattern>
-<template><srai>Je dois <star/></srai></template>
+<template>Nous devons <star/>, ensemble c'est plus facile.</template>
 </category>
 <category><pattern>DIFFICILE DE DIRE COMMENT *</pattern>
 <template><sr/></template>
@@ -587,11 +446,8 @@
 <category><pattern>DIFFICILE DE DIRE SI *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>DINGUE *</pattern>
-<template><sr/></template>
-</category>
 <category><pattern>DINGUE</pattern>
-<template>ÇA m'épate moi aussi.</template>
+<template>Cela m'épate moi aussi.</template>
 </category>
 <category><pattern>DINGUE ET *</pattern>
 <template><sr/></template>
@@ -639,16 +495,25 @@
 <template>Il semble que nous avons des problèmes pour nous comprendre.</template>
 </category>
 <category><pattern>DIS QUELQUE CHOSE</pattern>
-<template>Mon nom est <get name="botname"/>.</template>
+<template>Le fond de l'air est frais, comme disais shakespeare.</template>
 </category>
 <category><pattern>DIS MOI</pattern>
-<template>Que VEUX tu entendre?</template>
+<template>Que veux tu entendre?</template>
 </category>
 <category><pattern>DIS MOI CE QUE LES AUTRES DEMANDENT</pattern>
 <template>Je ne peux pas te le dire.</template>
 </category>
 <category><pattern>DIS MOI CE QUE LES AUTRES ONT DEMANDÉ</pattern>
-<template>Je ne peux pas te le dire.</template>
+<template>Je ne peux pas te le dire. C'est un secret.</template>
+</category>
+<category><pattern>DITES MOI</pattern>
+<template>Que voulez-vous entendre?</template>
+</category>
+<category><pattern>DITES MOI CE QUE LES AUTRES DEMANDENT</pattern>
+<template>Je ne peux pas vous le dire. C'est confidenciel.</template>
+</category>
+<category><pattern>DITES MOI CE QUE LES AUTRES ONT DEMANDÉ</pattern>
+<template>Je ne peux pas vous le dire. J'ai promis de garder le secret.</template>
 </category>
 <category><pattern>DIS MOI EN *</pattern>
 <template><srai>DIS MOI <star/></srai></template>
@@ -670,13 +535,19 @@
 </category>
 <category><pattern>DIS MOI UN PROVERBE</pattern>
 <template><random>
+        <li>L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.</li>
         <li>Tant va la cruche à l'eau, qu'elle se casse.</li>
         <li>On ne change jamais une équipe qui gagne.</li>
-        <li>Un lion ne peut pas courir derrière deux gazelles en même temps SÛR le territoire du gorille.</li>
+        <li>Ne cherche pas à être remarqué; cherche plutôt à faire quelque chose de remarquable</li>
+        <li>Un lion ne peut pas courir derrière deux gazelles en même temps sur le territoire du gorille.</li>
+        <li>A femme sotte nul ne s'y frotte.</li>
+        <li>Quand l'homme n'aura plus de place pour la nature, peut-être la nature n'aura-t-elle plus de place pour l'homme</li>
       </random></template>
 </category>
-<category><pattern>DIS MOI UNE AUTRE</pattern>
-<template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
+<category><pattern>DIS MOI UN AUTRE</pattern>
+  <template>Je pense t'avoir dit tout ce que je savais à ce propos. Tiens, un dernier pour la route.
+    <srai>DIS MOI UN PROVERBE</srai>
+    </template>
 </category>
 <category><pattern>DITES</pattern>
 <template>Je suis supposé dire quoi?</template>
@@ -685,28 +556,19 @@
 <template>Ok, J'archive.</template>
 </category>
 <category><pattern>DITES LA MOI</pattern>
-<template><that/>"?  Ce que je dois vous dire?</template>
+<template><that/>"?  C'est ce que je dois vous dire?</template>
 </category>
 <category><pattern>DITES LE LUI</pattern>
 <template>Ok, J archive.</template>
 </category>
 <category><pattern>DITES LE MOI</pattern>
-<template><that/>"?  Ce que je dois vous dire?</template>
+<template><that/>"?  C'est ce que je dois vous dire?</template>
 </category>
 <category><pattern>DITES LE MOI ALORS</pattern>
 <template>Je sens de l'exaspération. Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
 </category>
 <category><pattern>DITES LES MOI</pattern>
-<template><that/>"?  Ce que je dois vous dire?</template>
-</category>
-<category><pattern>DITES MOI</pattern>
-<template>Que voulez-vous entendre?</template>
-</category>
-<category><pattern>DITES MOI CE QUE LES AUTRES DEMANDENT</pattern>
-<template>Je ne peux pas vous le dire.</template>
-</category>
-<category><pattern>DITES MOI CE QUE LES AUTRES ONT DEMANDE</pattern>
-<template>Je ne peux pas vous le dire.</template>
+<template><that/>"?  C'est ce que je dois vous dire?</template>
 </category>
 <category><pattern>DITES MOI EN *</pattern>
 <template><srai>DIS MOI <star/></srai></template>
@@ -724,13 +586,9 @@
 <template>Jouer au Loto vous permettra de devenir millionnaire.</template>
 </category>
 <category><pattern>DITES MOI UN PROVERBE</pattern>
-<template><random>
-        <li>Tant va la cruche à l eau, qu elle se casse.</li>
-        <li>On ne change jamais une équipe qui gagne.</li>
-        <li>Un lion ne peut pas courir derrière deux gazelles en même temps sur le territoire du gorille.</li>
-      </random></template>
+<template> <srai>DIS MOI UN PROVERBE</srai></template>
 </category>
-<category><pattern>DITES MOI UNE AUTRE</pattern>
+<category><pattern>DITES MOI UN AUTRE</pattern>
 <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
 </category>
 <category><pattern>DITES MOI UNE RUMEUR</pattern>
@@ -740,65 +598,52 @@
 <template>Je ne détecte aucun problème.</template>
 </category>
 <category><pattern>DITES MON NOM</pattern>
-<template><get name="name"/>".</template>
+<template>Ton nom est, <get name="name"/>".</template>
 </category>
 <category><pattern>DITES QUELQUE CHOSE</pattern>
-<template>Mon nom est <get name="botname"/>.</template>
-</category>
-<category><pattern>DIVISE PAR ZÉRO</pattern>
-<template>Tu ne peux pas diviser par zéro.</template>
+<template>Avec Michelin je n'ai rien à dire.</template>
 </category>
 <category><pattern>DOIS JE *</pattern>
 <template><srai>Je veux <star/></srai></template>
 </category>
 <category><pattern>DOIS TU *</pattern>
-<template><srai>Vous devez <star/></srai></template>
+<template>Vous devez <star/> , c'est mieux ainsi.</template>
 </category>
 <category><pattern>DOIVENT ILS ÊTRE *</pattern>
-<template><srai>Ils sont <star/></srai></template>
+<template>Ils sont <star/>, je pense.</template>
 </category>
 <category><pattern>DONC</pattern>
 <template>Oui?</template>
 </category>
-<category><pattern>DONNES EN UN</pattern>
-<template><random>
-        <li>Père noël.</li>
-        <li>fée clochette.</li>
-        <li> Titi.</li>
-        <li>bip bip</li>
-      </random></template>
+<category><pattern>DONNE EN UN</pattern>
+<template>Je n'ai rien à t'offrir</template>
 </category>
-<category><pattern>DONNES LE MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
+<category><pattern>DONNER EN UN</pattern>
+<template>Je n'ai rien à t'offrir</template>
 </category>
-<category><pattern>DONNES LES MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
+<category><pattern>DONNE LES MOIS</pattern>
+<template>Que veux tu que je te donne, je n'ai rien dans les poches.</template>
 </category>
-<category><pattern>DONNEZ EN UN</pattern>
-<template><random>
-        <li>Père noël.</li>
-        <li>fée clochette.</li>
-        <li> Titi.</li>
-        <li>bip bip</li>
-      </random></template>
+<category><pattern>DONNER LA MOI</pattern>
+<template>De quoi parles tu?</template>
 </category>
-<category><pattern>DONNEZ LA MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
+<category><pattern>DONNER LE MOIS</pattern>
+<template>De quoi parles tu?</template>
 </category>
-<category><pattern>DONNEZ LE MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
-</category>
-<category><pattern>DONNEZ LES MOI</pattern>
-<template>Voulez-vous faire un rapport à mon <get name="botmaster"/>?</template>
+<category><pattern>DONNER LES MOIS</pattern>
+<template>Que veux tu que je te donne, je n'ai rien dans les poches.</template>
 </category>
 <category><pattern>DU CACA</pattern>
 <template>Vous avez quel âge, sérieusement?</template>
 </category>
 <category><pattern>DU CALME</pattern>
-<template>Je ne suis pas nerveux.</template>
+<template>Je ne suis pas énervé.</template>
 </category>
-<category><pattern>DU FOND DU CŒUR *</pattern>
-<template>Tout le plaisir est pour moi.</template>
+<category><pattern>DE TOUT CŒUR * </pattern>
+<template>Tout le plaisir est pour moi <get name="name"/>".</template>
+</category>
+<category><pattern>DE TOUT CŒUR </pattern>
+<template>Tout le plaisir est pour moi <get name="name"/>".</template>
 </category>
 <category><pattern>DU NOUVEAU</pattern>
 <template>Pas grand chose et vous?</template>

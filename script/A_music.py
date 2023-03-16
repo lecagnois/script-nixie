@@ -15,9 +15,9 @@ def chercheplay(morceau):
                 flag =0
                 # iteration sur la liste avec mise en forme de la chaine
                 while i <= len(liste)-2 :  
-                    var = "".join(liste[i][4:]).rstrip('\n')
+                    var = unicode("".join(liste[i][4:]).rstrip('\n'),'utf-8')
                     #if " "+morceau+" " in (" " + var + " "):
-                    if morceau.lower() in var :
+                    if (morceau.lower() in var) or (morceau.capitalize() in var):
                         i01_audioPlayer.play(var)
                         pointeur = i
                         flag = 1
@@ -37,7 +37,7 @@ def nextplay():
         global pointeur 
         pointeur = pointeur + 1
         i01_audioPlayer.stop()
-        var = "".join(liste[pointeur][4:]).rstrip('\n')
+        var = unicode("".join(liste[pointeur][4:]).rstrip('\n'),'utf-8')
         if 'mp3' in var :
             i01_audioPlayer.play(var)
             print(var+" Morceau : "+str(pointeur))
@@ -55,7 +55,7 @@ def previousplay():
         global pointeur 
         pointeur = pointeur -1
         i01_audioPlayer.stop()
-        var = "".join(liste[pointeur][4:]).rstrip('\n')
+        var = unicode("".join(liste[pointeur][4:]).rstrip('\n'),'utf-8')
         if 'mp3' in var :
             i01_audioPlayer.play(var)
             print(var+" Morceau : "+str(pointeur))
@@ -67,4 +67,15 @@ def previousplay():
     else :
         i01.speakBlocking(u"Le service audio player n'es pas lancé. Je le démarre.") 
         AudioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')   
-      
+        
+def playRandomMusic():
+    if runtime.isStarted('i01.audioPlayer'):
+        if os.path.exists('data/config/default/i01.audioPlayer.yml'):
+            audioConfig = i01_audioPlayer.getConfig().currentPlaylist
+            i01_audioPlayer.startPlaylist(audioConfig,1,0)
+           # (Nom de playlist,Nb de fois aléatoire, boolean repeat, String track)
+        else:
+            i01.warn(u"Je n'ai pas de playlist configuré dans le répertoire default")
+    else:
+        i01.speakBlocking(u"Le service audio player n'es pas lancé. Je le démarre.") 
+        AudioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')    

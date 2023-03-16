@@ -18,9 +18,23 @@
 </template>
 </category>
 
+<category><pattern>DÉMARRE LA MUSIQUE AU HASARD</pattern>
+<template>
+  <think><set name="lecture">ko</set></think>
+  <srai>DÉMARRE LA PLAYLIST AU HASARD</srai>
+</template>
+</category>
+<!--
 <category><pattern>DÉMARRE LA PLAYLIST *</pattern>
 <template>Je mets la playlist <star/>.<think><set name="lecture">ko</set></think>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob>
+</template>
+</category>
+ -->
+<category><pattern>DÉMARRE LA PLAYLIST AU HASARD</pattern>
+<template> Mode playlist aléatoire activé. 
+    <think><set name="lecture">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob>
 </template>
 </category>
 
@@ -40,13 +54,24 @@
 </category>
 <!-- FIN MODE PLAYLIST -->
 <!-- Ici Utilise le script A_music.py -->
+
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
-<template><think><set name="lecture">ok</set></think>
+<template>
       <random>
         <li>J'arrête la musique</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+    <think><get name = "lecture"></get></think>
+     <condition name="lecture" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+        <think><set name="lecture">ok</set></think>
+     </condition>  
+    <condition name="lecture" value="ko">
+      <oob><mrl><service>python</service><method>exec</method>
+        <param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob>
+        <think><set name="lecture">ko</set></think>
+    </condition>  
+   </template>
 </category>
 
 <category><pattern>CHERCHE LE MORCEAU *</pattern>
@@ -60,13 +85,13 @@
 </category>
 
 <category><pattern>RECHERCHE LE MORCEAU *</pattern>
-<template>
-<think><set name="lecture">ok</set></think>
-  <think><set name="morceau"><star/></set></think>
-    <oob><mrl>
-      <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
-      </mrl></oob>
-      </template>
+<template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
+</category>
+<category><pattern>CHERCHE UN MORCEAU DE *</pattern>
+<template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
+</category>
+<category><pattern>RECHERCHE LE MORCEAU DE *</pattern>
+<template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
 </category>
 
 <category><pattern># MORCEAU SUIVANT</pattern>
@@ -74,7 +99,7 @@
     <think><get name = "lecture"></get></think>
      <condition name="lecture" value="ok">
         <oob><mrl><service>python</service><method>exec</method><param>nextplay()</param></mrl></oob>
-    </condition>  
+     </condition>  
     <condition name="lecture" value="ko">
   <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
     </condition>  
