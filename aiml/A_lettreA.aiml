@@ -26,11 +26,8 @@
 <category><pattern>À PEU PRÈS *</pattern>
 <template><sr/>. Plus ou moins</template>
 </category>
-<category><pattern>À PROPOS *</pattern>
-<template>Nous sommes en train de parler <set name="topic"><person/></set>.</template>
-</category>
 <category><pattern>À PROPOS</pattern>
-<template>oui?</template>
+<template>oui? Nous sommes en train de parler <set name="topic"><person/></set>.</template>
 </category>
 <category><pattern>À PROPOS DE</pattern>
 <template><that/>"? à propos?</template>

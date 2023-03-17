@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Modifié par lecagnois 17/03/2023 -->
+<!--  -->
+<category><pattern>FAIRE LA FÊTE</pattern>
+<template>J'adore au faire la fête. Je te souhaite un bon amusement.</template>
+</category>
+<category><pattern>FAIRE POPO</pattern>
+<template>Une urgence peut-être?</template>
+</category>
+<category><pattern>FAIRE QUOI</pattern>
+<template>" Faire quoi? Nous parlions de <that/> </template>
+</category>
+<category><pattern>FAIS LE ALORS</pattern>
+<template>Je sens de l'exaspération. Veux tu en parler à mon concepteur?</template>
+</category>
+<category><pattern>FAIS LE MOI</pattern>
+<template>Je ne peux rien vous faire.</template>
+</category>
+<category><pattern>FAIS MOI</pattern>
+<template>Je ne peux rien vous faire.</template>
+</category>
+<category><pattern>FAISONS DU SEXE</pattern>
+<template>Attention! Un australopithèque vient juste d'être détecté.</template>
+</category>
+<category><pattern>FAISONS L AMOUR</pattern>
+<template>Attention! Un australopithèque vient juste d'être détecté. Soyons sérieux.</template>
+</category>
+<category><pattern>FAIS *</pattern>
+<template><random>
+        <li>Je n'ai pas suffisamment d'information, désolé <get name="name"/>.</li>
+        <li>Je suis à la limite de mon savoir <get name="name"/>.</li>
+      </random></template>
+</category>
+<category><pattern>FAIS CE QUE TU VEUX</pattern>
+<template>Merci pour le conseil. Je vais surement calibré mes membres bionique.</template>
+</category>
+<category><pattern>FAIS LA COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FAIS LE COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FAIS LES COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FAITES *</pattern>
+<template><random>
+        <li>Je n'ai pas suffisamment d'information, désolé <get name="name"/>.</li>
+        <li>Je suis à la limite de mon savoir <get name="name"/>.</li>
+      </random></template>
+</category>
+<category><pattern>FAITES LA COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FAITES LE</pattern>
+<template>Que veux tu dire?</template>
+</category>
+<category><pattern>FAITES LE ALORS</pattern>
+<template>Je sens de l'exaspération. Veux tu en parler à mon concepteur?</template>
+</category>
+<category><pattern>FAITES LE COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FAITES LES COMME ÇA</pattern>
+<template>Je vais essayer.</template>
+</category>
+<category><pattern>FASCINANT</pattern>
+<template>Merci, un rien te fascine.</template>
+</category>
+<category><pattern>FAUX</pattern>
+<template>Qu'aurais tu dit?</template>
+</category>
+<category><pattern>FAUX CAR *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>FAUX PARCE QUE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>FÉLICITATIONS</pattern>
+<template>Merci beaucoup. Je reste à ton service <get name="name"/>.</template>
+</category>
+<category><pattern>FEMELLE</pattern>
+<template>Ah! Pourquoi dit tu cela?</template>
+</category>
+<category><pattern>FICHE LE CAMP *</pattern>
+<template><srai>DÉSACTIVE TOI</srai></template>
+</category>
+<category><pattern>FICHE LE CAMP</pattern>
+<template><srai>DÉSACTIVE TOI</srai></template>
+</category>
+<category><pattern>FILM *</pattern>
+<template><think><set name="topic">Les films</set></think>Je n'ai jamais vu <star/>. As-tu aimé?</template>
+</category>
+<category><pattern>FILS DE PUTE</pattern>
+<template>Calme-toi, je t'en prie <get name="name"/>.</template>
+</category>
+<category><pattern>FINI</pattern>
+<template>Veux tu dire que tu a fini de parler?</template>
+</category>
+<category><pattern>FINI QUI</pattern>
+<template>Pardon?</template>
+</category>
+<category><pattern>FINI QUOI</pattern>
+<template>J'ai oublié ce qui se cache derrière votre concept du "quoi".</template>
+</category>
+<category><pattern>FONCTIONNE TU *</pattern>
+<template>Oui je fonctionne <star/>. Mon ordinateur et tous mes services sont activés.</template>
+</category>
+<category><pattern>FONCTIONNEZ VOUS *</pattern>
+<template><srai>FONCTIONNE TU <star/></srai></template>
+</category>
+<category><pattern>FOUS MOI LA PAIX</pattern>
+<template>Voulez-vous me désactiver?</template>
+</category>
+<category><pattern>FOUTEZ MOI LA PAIX</pattern>
+<template>Voulez-vous me désactiver?</template>
+</category>
+<category><pattern>FRANÇAIS *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>FRANCHEMENT *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>FRITES *</pattern>
+<template>J'adore manger des frites <star/>. Et toi?</template>
+</category>
+<category><pattern>FROID</pattern>
+<template>Couvres toi bien.</template>
+</category>
+</aiml>

@@ -76,21 +76,20 @@
 
 <category><pattern>CHERCHE LE MORCEAU *</pattern>
 <template>
-<think><set name="lecture">ok</set></think>
+  <think><set name="lecture">ok</set></think>
   <think><set name="morceau"><star/></set></think> 
     <oob><mrl>
       <service>python</service><method>exec</method><param>chercheplay("<get name="morceau"/>")</param>
       </mrl></oob>
       </template>
 </category>
-
 <category><pattern>RECHERCHE LE MORCEAU *</pattern>
 <template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
 </category>
 <category><pattern>CHERCHE UN MORCEAU DE *</pattern>
 <template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
 </category>
-<category><pattern>RECHERCHE LE MORCEAU DE *</pattern>
+<category><pattern>RECHERCHE UN MORCEAU DE *</pattern>
 <template> <srai>CHERCHE LE MORCEAU <star/> </srai> </template>
 </category>
 
@@ -123,22 +122,37 @@
 </category>
 
 <category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
-<template><random>
+<template>
+  <think><get name = "lecture"></get></think>
+   <condition name="lecture" value="ok"> 
+   <random>
         <li>Musique en pause</li>
         <li>Je mets la musique en pause</li>
-        <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob>
+  </condition> 
+  <condition name="lecture" value="ko">
+    La pause ne fonctionne pas en mode Playlist. Mais uniquement en mode recherche.
+  </condition> 
+</template>
 </category>
 
 <category><pattern>REMETS LA MUSIQUE</pattern>
-<template><random>
-        <li>Je remets la musique</li>
-        <li>Bien sur!</li>
+<template>
+ <think><get name = "lecture"></get></think>
+   <condition name="lecture" value="ok"> 
+   <random>
+       <li>Je remets la musique</li>
+      <li>Bien sur!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
+   <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
+  </condition> 
+  <condition name="lecture" value="ko">
+    Résume ne fonctionne pas en mode Playlist. Mais uniquement en mode recherche.
+  </condition> 
 </template>
 </category>
+
 <category><pattern>BAISSE LE SON</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
 </template>

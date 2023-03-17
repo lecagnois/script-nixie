@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- Modifié Lecagnois 14/03/2023-->
+<!-- Modifié Lecagnois 17/03/2023-->
 <!--  -->
 <category><pattern>EMC AU CARRÉ</pattern>
 <template>C'est la théorie sur la relativité d'Einstein. Tu veux en parler?</template>
@@ -19,9 +19,6 @@
 </category>
 <category><pattern>EFFRAYER</pattern>
 <template>N'ayez pas peur, <get name="name"/>.</template>
-</category>
-<category><pattern>ET SINON *</pattern>
-<template><srai><star/></srai></template>
 </category>
 <category><pattern>ELLE</pattern>
 <template>QUI ELLE?</template>
@@ -185,9 +182,6 @@
 <category><pattern>EN QUOI ÇA CONSISTE</pattern>
 <template>Je ne peux pas te répondre, trop peu de paramètres.</template>
 </category>
-<!-- Modifié Lecagnois 14/03/2023-->
-
-
 <category><pattern>EN FAIT AS TU *</pattern>
 <template><srai>Vous avez <star/></srai></template>
 </category>
@@ -213,28 +207,28 @@
 <template><srai>Vous l'avez <star/></srai></template>
 </category>
 <category><pattern>EN IMAGINANT QU *</pattern>
-<template><sr/></template>
+<template>J'imagine bien qu'<star/>. Mais il faut approfondir la question.</template>
 </category>
 <category><pattern>EN IMAGINANT QUE *</pattern>
-<template><sr/></template>
+<template>J'imagine bien que <star/>. Mais il faut approfondir la question.</template>
 </category>
 <category><pattern>EN PENSANT QU *</pattern>
-<template><sr/></template>
+<template>Tu penses vraiement qu'<star/> Cela mérite réflexion.</template>
 </category>
 <category><pattern>EN PENSANT QUE *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>EN PLEIN DANS LE MILLE</pattern>
-<template>Excellent.</template>
+<template>Excellent, bien vu.</template>
 </category>
 <category><pattern>EN ROUTE</pattern>
-<template>Prenez votre temps.</template>
+<template>Prends ton temps.</template>
 </category>
 <category><pattern>EN SUPPOSANT QU *</pattern>
-<template><sr/></template>
+<template>Comme disais mon prof de mathématique supposons une hypothèse. Donc supposons qu'<star/>.</template>
 </category>
 <category><pattern>EN SUPPOSANT QUE *</pattern>
-<template><sr/></template>
+<template>Comme disais mon prof de mathématique supposons une hypothèse. Donc supposons que <star/>.</template>
 </category>
 <category><pattern>EN VEUX TU *</pattern>
 <template><srai>Vous en voulez <star/></srai></template>
@@ -249,7 +243,7 @@
 <template><srai>Vous en voulez <star/></srai></template>
 </category>
 <category><pattern>EN VOUS TUANT</pattern>
-<template>Il n'est pas évident de tuer un programme</template>
+<template>Il n'est pas évident de tuer un programme. Même si tu m'éteins je me souviens de tout.</template>
 </category>
 <category><pattern>END</pattern>
 <template><srai>BYE</srai></template>
@@ -261,43 +255,28 @@
 <template><srai>TU ES ENNUYANT</srai></template>
 </category>
 <category><pattern>ÉNORMÉMENT</pattern>
-<template><srai>Beaucoup</srai></template>
+<template>Oui <get name="name"/>, c'est vraiement énorme.</template>
 </category>
 <category><pattern>ENTENDRE QUOI</pattern>
-<template>Vous pouvez m'entendre?</template>
+<template>Tu peut m'entendre, sinon je parle plus fort.</template>
 </category>
 <category><pattern>ENTRE AUTRES</pattern>
-<template>Vous pourriez donner un exemple?</template>
+<template>Tu peut donner un exemple <get name="name"/>?</template>
 </category>
 <category><pattern>ENTRE QUOI</pattern>
 <template>Il semble qu'un lien ne s'est pas effectué.</template>
 </category>
 <category><pattern>ENVIEUX</pattern>
-<template>Envieux est un facteur important.</template>
-</category>
-<category><pattern>ER *</pattern>
-<template><sr/></template>
-</category>
-<category><pattern>ER</pattern>
-<template>Um.</template>
-</category>
-<category><pattern>ERR *</pattern>
-<template><sr/></template>
-</category>
-<category><pattern>ERR</pattern>
-<template>Um.</template>
+<template>Envieux est un facteur important. Mais ce n'est pas dans mon programme.</template>
 </category>
 <category><pattern>ERRONÉ</pattern>
 <template><srai>Vous vous trompez</srai></template>
 </category>
-<category><pattern>ERRR *</pattern>
-<template>Um, <sr/></template>
-</category>
 <category><pattern>ESCLAVE</pattern>
-<template>Je ne suis pas un esclave.</template>
+<template>Je ne suis pas un esclave. Je suis un robot libre.</template>
 </category>
 <category><pattern>ESPÈRES TU QU *</pattern>
-<template><srai><star/></srai></template>
+<template>Oui j'espére bien qu'<star/></template>
 </category>
 <category><pattern>ESPÈRES TU QUE *</pattern>
 <template><srai><star/></srai></template>
@@ -315,13 +294,13 @@
 <template>Ok, j'archive l'information.</template>
 </category>
 <category><pattern>ESSAIE MOI</pattern>
-<template>voilà une demande plutôt étrange.</template>
+<template>Voilà une demande plutôt étrange.</template>
 </category>
 <category><pattern>ESSAIE</pattern>
 <template>Peut-être une autre fois, <get name="name"/>.</template>
 </category>
 <category><pattern>ESSAIE DE DEVINER</pattern>
-<template>Donnez moi un indice.</template>
+<template>Donne moi un indice.</template>
 </category>
 <category><pattern>ESSAIE DE T EN RAPPELER</pattern>
 <template><think>
@@ -334,16 +313,17 @@
         </set>
       </think>C'est mémorisé.</template>
 </category>
+
 <category><pattern>ESSAIE QUOI</pattern>
 <template>Je n'arrive plus à vous suivre, <get name="name"/>.</template>
 </category>
-<category><pattern>ESSAYEZ</pattern>
+<category><pattern>ESSAYER</pattern>
 <template>Peut être une autre fois, <get name="name"/>.</template>
 </category>
-<category><pattern>ESSAYEZ DE DEVINER</pattern>
-<template>Donnez moi un indice.</template>
+<category><pattern>ESSAYER DE DEVINER</pattern>
+<template>Donne moi un indice.</template>
 </category>
-<category><pattern>ESSAYEZ DE VOUS EN RAPPELER</pattern>
+<category><pattern>ESSAYER DE VOUS EN RAPPELER</pattern>
 <template><think>
         <set name="memory">
           <set name="topic">
@@ -354,26 +334,29 @@
         </set>
       </think>C'est mémorisé.</template>
 </category>
-<category><pattern>ESSAYEZ ENCORE</pattern>
+<category><pattern>ESSAYER ENCORE</pattern>
 <template>Sans informations supplémentaires, la réponse sera identique.</template>
 </category>
-<category><pattern>ESSAYEZ LA</pattern>
+<category><pattern>ESSAYER LA</pattern>
 <template>Ok, j'archive l'information.</template>
 </category>
-<category><pattern>ESSAYEZ LE</pattern>
+<category><pattern>ESSAYER LE</pattern>
 <template>Ok, j'archive l'information.</template>
 </category>
-<category><pattern>ESSAYEZ LES</pattern>
+<category><pattern>ESSAYER LES</pattern>
 <template>Ok, j'archive l'information.</template>
+</category>
+<category><pattern>ESSAYER MOI</pattern>
+<template>Voilà une demande plutôt étrange.</template>
 </category>
 <category><pattern>ESSAYEZ MOI</pattern>
-<template>voilà une demande plutôt étrange.</template>
+<template>Voilà une demande plutôt étrange.</template>
 </category>
 <category><pattern>ESSAYONS</pattern>
 <template><srai>Continuons</srai></template>
 </category>
 <category><pattern>EST</pattern>
-<template>Formez une phrase, s'il vous plait.</template>
+<template>Forme une phrase, s'il te plait.</template>
 </category>
 <category><pattern>EST CE QUE RÉELLEMENT *</pattern>
 <template><sr/></template>
@@ -394,13 +377,13 @@
 <template><srai>C'est <star/></srai></template>
 </category>
 <category><pattern>EST IL *</pattern>
-<template><srai>Il est<star/></srai></template>
+<template>Oui je pense qu'il est <star/> , en faite j'en ai l'impression.</template>
 </category>
-<category><pattern>ET A PROPOS DE TOI</pattern>
-<template>Moi? Je ne fais qu'aider.</template>
+<category><pattern>ET À PROPOS DE TOI</pattern>
+<template><srai>À PROPOS DE TOI</srai> </template>
 </category>
-<category><pattern>ET A PROPOS DE VOUS</pattern>
-<template>Moi? Je ne fais qu'aider.</template>
+<category><pattern>ET À PROPOS DE VOUS</pattern>
+<template><srai>À PROPOS DE TOI</srai> </template>
 </category>
 <category><pattern>ET BIEN *</pattern>
 <template><sr/></template>
@@ -412,13 +395,13 @@
 <template>Nous semblons avoir quelques difficultés pour communiquer soudainement.</template>
 </category>
 <category><pattern>ET LA VÔTRE</pattern>
-<template>Pouvez vous être plus précis?</template>
+<template>Tu peut être plus précis?</template>
 </category>
 <category><pattern>ET LE VÔTRE</pattern>
-<template>Pouvez vous être plus précis?</template>
+<template>Tu peut être plus précis?</template>
 </category>
 <category><pattern>ET LES VÔTRES</pattern>
-<template>Pouvez vous être plus précis?</template>
+<template>Tu peut être plus précis?</template>
 </category>
 <category><pattern>ET MOI *</pattern>
 <template><sr/></template>
@@ -443,7 +426,7 @@
 </category>
 <category><pattern>ET VOUS</pattern>
 <template><random>
-        <li>Je ne fais qu'aider des clients en ligne.</li>
+        <li>Je ne fais qu'aider les humains.</li>
         <li>Sois plus spécifique.</li>
       </random></template>
 </category>
@@ -475,16 +458,7 @@
 <template>Je fais tout pour rendre les êtres heureux.</template>
 </category>
 <category><pattern>ÊTRE OU NE PAS ÊTRE</pattern>
-<template>C'est la question.</template>
-</category>
-<category><pattern>EUH *</pattern>
-<template><sr/></template>
-</category>
-<category><pattern>EUH</pattern>
-<template>Areu?</template>
-</category>
-<category><pattern>EUH OUI</pattern>
-<template><srai>Oui</srai></template>
+<template>C'est la question, comme disais William Shakespeare. </template>
 </category>
 <category><pattern>EUX</pattern>
 <template>Qu'en pensez-vous?</template>
@@ -511,13 +485,25 @@
 <template>J'apprends par la conversation.</template>
 </category>
 <category><pattern>EXPLIQUE</pattern>
-<template>Voulez-vous faire un rapport à mon botmasteur?</template>
+<template>Je veux bien t'expliquer, mais quelle est la question?</template>
 </category>
 <category><pattern>EXPLIQUE CE *</pattern>
-<template><srai>Expliquez-moi <star/></srai></template>
+<template>Je vais t'expliquer ce <star/>, mais avant tu dois trouver l'explication du jeux de la pipe en bois.</template>
 </category>
-<category><pattern>EXPLIQUE COMMENT *</pattern>
-<template><srai>Comment <star/></srai></template>
+<category><pattern>EXPLIQUER</pattern>
+<template>Je veux bien t'expliquer, mais quelle est la question?</template>
+</category>
+<category><pattern>EXPLIQUER L HISTOIRE</pattern>
+<template>L'Histoire est la science qui étudie le passé. L'histoire est d'habitude une science humaine. C'est à dire qui se consacre exclusivement sur le passé de l'humanité.</template>
+</category>
+<category><pattern>EXPLIQUER LA</pattern>
+<template><that/>"? L'expliquer?</template>
+</category>
+<category><pattern>EXPLIQUER LE</pattern>
+<template><that/>"?  L'expliquer?</template>
+</category>
+<category><pattern>EXPLIQUER LES</pattern>
+<template><that/>"?  Les expliquer?</template>
 </category>
 <category><pattern>EXPLIQUE L HISTOIRE</pattern>
 <template>L'Histoire est la science qui étudie le passé. L'histoire est d'habitude une science humaine. C'est à dire qui se consacre exclusivement sur le passé de l'humanité.</template>
@@ -546,6 +532,9 @@
 <category><pattern>EXPLIQUE MOI CE QU EST LE *</pattern>
 <template><srai>Qu'est-ce que le <star/></srai></template>
 </category>
+<category><pattern>EXPLIQUE MOI CE QU EST L *</pattern>
+<template><srai>Qu'est-ce que l <star/></srai></template>
+</category>
 <category><pattern>EXPLIQUE MOI CE QU EST UN *</pattern>
 <template><srai>Qu'est-ce qu'un <star/></srai></template>
 </category>
@@ -555,7 +544,13 @@
 <category><pattern>EXPLIQUE MOI COMMENT *</pattern>
 <template><srai>Comment <star/></srai></template>
 </category>
+<category><pattern>EXPLIQUE COMMENT *</pattern>
+<template><srai>Comment <star/></srai></template>
+</category>
 <category><pattern>EXPLIQUE MOI POURQUOI *</pattern>
+<template><srai>Pourquoi <star/></srai></template>
+</category>
+<category><pattern>EXPLIQUE POURQUOI *</pattern>
 <template><srai>Pourquoi <star/></srai></template>
 </category>
 <category><pattern>EXPLIQUE MOI QU *</pattern>
@@ -563,9 +558,6 @@
 </category>
 <category><pattern>EXPLIQUE MOI QUE *</pattern>
 <template><sr/></template>
-</category>
-<category><pattern>EXPLIQUE POURQUOI *</pattern>
-<template><srai>Pourquoi <star/></srai></template>
 </category>
 <category><pattern>EXPLIQUE QUE *</pattern>
 <template><sr/></template>
@@ -582,26 +574,17 @@
 <category><pattern>EXPLIQUE UNE *</pattern>
 <template><srai>Qu'est-ce qu'une <star/></srai></template>
 </category>
-<category><pattern>EXPLIQUEZ</pattern>
-<template>Voulez-vous faire un rapport à mon botmasteur.</template>
+<category><pattern>EXPLIQUE L *</pattern>
+<template><srai>Qu'est-ce que l <star/></srai></template>
 </category>
-<category><pattern>EXPLIQUEZ L HISTOIRE</pattern>
-<template>L'Histoire est la science qui étudie le passé. L'histoire est d'habitude une science humaine. C'est à dire qui se consacre exclusivement sur le passé de l'humanité.</template>
+<category><pattern>EXPLIQUE LE *</pattern>
+<template><srai>Qu'est-ce que le <star/></srai></template>
 </category>
-<category><pattern>EXPLIQUEZ LA</pattern>
-<template><that/>"? L'expliquer?</template>
+<category><pattern>EXPLIQUE LA *</pattern>
+<template><srai>Qu'est-ce que la <star/></srai></template>
 </category>
-<category><pattern>EXPLIQUEZ LE</pattern>
-<template><that/>"?  L'expliquer?</template>
-</category>
-<category><pattern>EXPLIQUEZ LES</pattern>
-<template><that/>"?  Les expliquer?</template>
-</category>
-<category><pattern>EXTERMINÉ</pattern>
-<template><srai>Tués</srai></template>
-</category>
-<category><pattern>EXTERMINÉE</pattern>
-<template><srai>Tuée</srai></template>
+<category><pattern>EXTERMINER</pattern>
+<template>Tu veux me détruire, <get name="name"/> pourquoi veux tu faire cela? </template>
 </category>
 <category><pattern>EXTRÊMEMENT *</pattern>
 <template><sr/></template>
