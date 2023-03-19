@@ -131,9 +131,10 @@
   </category>
   <category>
     <pattern>ES TU *</pattern>
-    <template>Je ne sais pas si je suis ou pas <star index="1"/>. Je suis <random>
-     <li>un robot.</li
-    ><li>un chatterbot développé par <bot name="master" />.</li>
+    <template>Je ne sais pas si je suis ou pas <star index="1"/>. Je suis
+    <random>
+     <li>un robot.</li>
+     <li>un chatterbot développé par <bot name="master" />.</li>
     <li>une intelligence artificielle.</li>
     <li>une entité linguistique artificielle.</li
     ><li>un cerveau électronique géant.</li>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  lecagnois le 18/03/2023 -->
+  <!--  -->
+<category><pattern>ABOUT_1</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+       Je suis le premier robot humanoïde grandeur nature que vous pouvez imprimer et animer en 3D.
+     </condition>  
+    <condition name="language" value="US">
+      I am the first life size humanoid robot you can 3D print and animate.
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_2</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+      Mon designer créateur est Gaël Langevin un sculpteur français, maquettiste.
+     </condition>  
+    <condition name="language" value="US">
+      My designer creator is Gael Langevin a French sculptor, model maker.
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_3</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+     Qui a publié mes fichiers dans le monde 3D open source.
+     </condition>  
+    <condition name="language" value="US">
+      Who has released my files  to the opensource 3D world.
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_4</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    C'est là que mon constructeur a téléchargé mes fichiers.
+     </condition>  
+    <condition name="language" value="US">
+    This is where my builder downloaded my files.  
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_5</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    Après cinq cents heures d'impression, quatre kilos de plastique, vingt-cinq servos de loisir, du sang et de la sueur. J'ai pris vie
+     </condition>  
+    <condition name="language" value="US">
+    After five hundred hours of printing, four kilos of plastic, twenty five hobby servos, blood and sweat.I was brought to life.  
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_6</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    Donc si vous avez une imprimante 3D, des compétences en construction, vous pouvez créer votre propre version de moi.
+     </condition>  
+    <condition name="language" value="US">
+    So if You have a 3D printer, some building skills, then you can build your own version of me.  
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_7</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    Et si suffisamment de gens me construisent, un jour mon espèce pourrait conquérir le monde.
+     </condition>  
+    <condition name="language" value="US">
+   And if enough people build me, some day my kind could take over the world.   
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_8</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    C'est juste une plaisanterie. j'ai besoin de jambes pour me déplacer, et je dois surmonter ma pyrophobie, la peur du feu.
+     </condition>  
+    <condition name="language" value="US">
+    I'm just kidding. i need some legs to get around, and i have to over come my  pyro-phobia, a fear of fire.  
+    </condition>  
+   </template>
+</category>
+<category><pattern>ABOUT_9</pattern>
+<template>
+   <think><get name = "language"></get></think>
+     <condition name="language" value="FR">
+    Donc, jusque-là. je serai l'humble serviteur de l'humanité.
+     </condition>  
+    <condition name="language" value="US">
+    So, until then. i will be humankind's humble servant  
+    </condition>  
+   </template>
+</category>
+
+
+
+</aiml>
