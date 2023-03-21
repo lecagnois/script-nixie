@@ -13,4 +13,5 @@ execfile('data/InMoov2/A_domotique.py')
 execfile('data/InMoov2/A_tirage.py')
 execfile('data/InMoov2/A_music.py')
 execfile('data/InMoov2/A_meteo.py')
+execfile('data/InMoov2/A_reveil.py')
 

@@ -751,6 +751,25 @@
         </mrl>
       </oob></template>
 </category>
+ <category><pattern>DÉSACTIVE LES HUMEURS</pattern>
+  <template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstop()</param>
+        </mrl>
+      </oob></template>
+</category>
+
+<category><pattern>STOPPE LES HUMEURS</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstop()</param>
+        </mrl>
+      </oob></template>
+</category>
 
 <category><pattern>ALLUME LE *</pattern>
 <template><think><set name="terminal"><star/></set></think>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  par lecagnois -->
+<!--  21/03/2023 -->
+
+  <category>
+    <pattern>ACTIVER LE RÉVEIL</pattern>
+    <template>
+      <think>
+        <set name="reveil">started</set>
+      </think>
+      <think>
+        <set name="topic">reveil</set>
+      </think>
+      Je t'écoute. quelle est l'heure de réveil
+    </template>
+  </category>
+  
+  <topic name="reveil">
+    <category>
+      <pattern>#</pattern>
+      <that># QUELLE EST L HEURE DE RÉVEIL</that>
+      <template>
+        <set name="questionheure">Si l'heure de réveil est <star />, répond par oui ou non</set>
+        <think>
+          <set name="tmpreveil"><star /></set>
+        </think>
+      </template>
+    </category>
+
+    <category>
+      <pattern># OUI #</pattern>
+      <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>reveilstart("<get name="tmpreveil"/>")</param>
+		       </mrl>
+		     </oob>
+      </template>
+    </category>
+
+    <category>
+      <pattern># NON #</pattern>
+      <template>
+        On recommence alors.  Je t'écoute. quelle est l'heure de réveil ?
+      </template>
+    </category>
+    
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+         <get name="questionheure" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+
+  <category><pattern>DÉSACTIVE LE RÉVEIL</pattern>
+    <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>reveilstop()</param>
+		       </mrl>
+		     </oob>
+    </template>
+</category>
+<category><pattern>REVEIL_01</pattern>
+<template>Le format de l'heure doit être au format, heures minutes par exemple 11h30.</template>
+</category>
+</aiml>

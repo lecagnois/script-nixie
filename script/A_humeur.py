@@ -13,13 +13,16 @@ def humeurstart():
 	#AudioPlayer = runtime.getService("i01.mouth.audiofile")
 	HumerTime = Runtime.start("HumerTime","Clock")
 	HumerTime.setInterval(60000)
-	HumerTime.addListener("pulse", python.name, "HumerTime_def")		
+    #lance la fonction toutes les minutes
+	HumerTime.addListener("pulse", python.name, "HumerTime_def")
 	HumerTime.startClock()
 	i01.speak(u"humeur activé") 
 	
 def humeurstop():
     HumerTime.stopClock()
     i01.speak(u"humeur désactivé") 
+    HumerTime.stopService()
+    runtime.release('HumerTime')
 
 def HumerTime_def(timedata):
     AudioPlayer = runtime.start('i01.mouth.audioFile', 'AudioFile')
