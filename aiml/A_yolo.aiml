@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- lecagnois le 27/03/2023 -->
+  <!--  -->
+ 
+<category><pattern>ACTIVE LA RECHERCHE</pattern>
+<template>
+	  <oob>
+		<mrl>
+			<service>python</service>
+			<method>exec</method>
+			<param>openyolo()</param>
+		</mrl>
+	  </oob>
+	</template>
+</category>
+ 
+<category><pattern>QUE VOIS TU</pattern>
+<template>
+	  <oob>
+		<mrl>
+			<service>python</service>
+			<method>exec</method>
+			<param>yolocherche()</param>
+		</mrl>
+	  </oob>
+	</template>
+</category>
+ 
+<category><pattern>DÉSACTIVE LA RECHERCHE</pattern>
+<template>
+	  <oob>
+		<mrl>
+			<service>python</service>
+			<method>exec</method>
+			<param>closeyolo()</param>
+		</mrl>
+	  </oob>
+	</template>
+</category>
+ 
+    <category>
+    <pattern>YOLO_01</pattern>
+    <template>Patience j'active le service pour chercher des objets.</template>
+  </category>
+  
+  <category>
+    <pattern>YOLO_02 * </pattern>
+    <template>Je pense voir un ou une,  <star index="1" />. </template>
+  </category>
+
+  <category>
+    <pattern>YOLO_03 </pattern>
+    <template>J'arrête la caméra.</template>
+  </category>
+  
+   <category>
+    <pattern>YOLO_04 </pattern>
+    <template>Open C V n'est pas démarré.</template>
+  </category>
+  
+  <category>
+    <pattern>YOLO_05 </pattern>
+    <template>Vous devez démarré open C V et activer la recherche.</template>
+  </category>
+  
+   <category>
+    <pattern>YOLO_06 </pattern>
+    <template>Dite active la recherche, pour rechercher un nouvelle objet.</template>
+  </category>
+</aiml>

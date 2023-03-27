@@ -278,9 +278,15 @@
   </category>
 
   <category>
-    <pattern>SYSTEM openweathermapError</pattern>
+    <pattern>SYSTEM openweathermapError1</pattern>
     <template>
       Cette ville est inconnue, ou je n'ai pas bien compris.
+    </template>
+  </category>
+   <category>
+    <pattern>SYSTEM openweathermapError2</pattern>
+    <template>
+     Votre clés A P I est périmé ,ou non validé dans le service sécurity
     </template>
   </category>
 <!-- end météo -->

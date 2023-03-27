@@ -14,7 +14,8 @@ def meteo(town,periode):
          
      # verification de la cle api
     if keymeteo == None:
-        i01.speakBlocking(u"Votre clés A P I est périmé ,ou non validé dans le service sécurity")   
+        i01_chatBot.getResponse("SYSTEM openweathermapError2")
+        #i01.speakBlocking(u"Votre clés A P I est périmé ,ou non validé dans le service sécurity")   
     else:
         # l'unité est par pas de 3 heures (1) , de 1 à 40 ( aujourd'hui à 5 jours )
         # récupérer les données brutes pour demain (8) -> parce que 3*8=24H
@@ -25,7 +26,7 @@ def meteo(town,periode):
         weather.getWeatherCode()
         error = weather.getLastError()
         if error:
-            i01_chatBot.getResponse("SYSTEM openweathermapError")
+            i01_chatBot.getResponse("SYSTEM openweathermapError1")
         else:
             i01_chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(weather.getDegrees())) + " Town " + str(weather.getLocation().split(',')[0]) + " COMMENTAIRE " +  str(weather.getWeatherCode()) + " NBJOUR " + str(periode))
               
