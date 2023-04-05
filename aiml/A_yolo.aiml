@@ -1,71 +1,41 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- lecagnois le 27/03/2023 -->
-  <!--  -->
- 
-<category><pattern>ACTIVE LA RECHERCHE</pattern>
-<template>
-	  <oob>
-		<mrl>
-			<service>python</service>
-			<method>exec</method>
-			<param>openyolo()</param>
-		</mrl>
-	  </oob>
-	</template>
-</category>
- 
 <category><pattern>QUE VOIS TU</pattern>
-<template>
-	  <oob>
-		<mrl>
-			<service>python</service>
-			<method>exec</method>
-			<param>yolocherche()</param>
-		</mrl>
-	  </oob>
-	</template>
+ <template><think>
+        <!--  phrase initiale (solution de contournement, car sraix bloquant l'action ici, phrase poussée à l'intérieur d'un ensemble)-->
+          <set name="startupSentence">
+            <random>
+              <li>Veuillez patienter 5 secondes,je cherche les objets.</li>
+              <li>ça va prendre cinq secondes pour l'analyse.</li>
+              <li>Je regarde dans mon champs de vision pendant 5 secondes.</li>
+            </random>
+          </set>
+        </think>
+        <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(6)</param></mrl></oob></sraix></set>
+        <set name="valeur"><get name="yoloTotalDetected"/></set></think>
+		  <condition name="valeur"> 
+		  <li name="valeur" value="0"> Désolé je ne vois rien du tout, ou l'objet est peut-être trop loin. </li>
+		  <li name="valeur" value="1"> je vois un ou une, <get name="yoloReturn"/></li>
+          <li>Je vois <get name="yoloTotalDetected"/> choses, <get name="yoloReturn"/> dans l'ordre, de gauche à droite.</li>
+        </condition>
+ </template>
 </category>
- 
-<category><pattern>DÉSACTIVE LA RECHERCHE</pattern>
-<template>
-	  <oob>
-		<mrl>
-			<service>python</service>
-			<method>exec</method>
-			<param>closeyolo()</param>
-		</mrl>
-	  </oob>
-	</template>
-</category>
- 
-    <category>
-    <pattern>YOLO_01</pattern>
-    <template>Patience j'active le service pour chercher des objets.</template>
-  </category>
-  
-  <category>
-    <pattern>YOLO_02 * </pattern>
-    <template>Je pense voir un ou une,  <star index="1" />. </template>
-  </category>
 
-  <category>
-    <pattern>YOLO_03 </pattern>
-    <template>J'arrête la caméra.</template>
-  </category>
-  
-   <category>
-    <pattern>YOLO_04 </pattern>
-    <template>Open C V n'est pas démarré.</template>
-  </category>
-  
-  <category>
-    <pattern>YOLO_05 </pattern>
-    <template>Vous devez démarré open C V et activer la recherche.</template>
-  </category>
-  
-   <category>
-    <pattern>YOLO_06 </pattern>
-    <template>Dite active la recherche, pour rechercher un nouvelle objet.</template>
-  </category>
+<category><pattern>CHERCHE <set>articles</set> *</pattern>
+ <template><think><set name = "article"> <star index="1"/> </set></think>
+      <think>
+          <set name="startupSentence">
+            <random>
+              <li>Veuillez patienter 5 secondes,je cherche <star index="1"/> <star index="2"/>.</li>
+              <li>Je regarde dans mon champs de vision pendant 5 secondes, si je trouve  <star index="1"/> <star index="2"/>.</li>
+            </random>
+          </set>
+        </think>
+     <oob>
+	   <mrl>
+	   <service>python</service><method>exec</method><param>getYoloPosition('<star index="2"/>')</param>
+	   </mrl>
+	  </oob>
+ </template>
+</category>
 </aiml>
