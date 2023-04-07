@@ -273,8 +273,6 @@
     <pattern>J AI POSTULÉ</pattern>
     <template>Il faut attendre la réponse. J'espère que tu a fait un bon C V.</template>
   </category>
-   <!-- Modifié lecagnois 21/03/2023 -->
-
   <category>
     <pattern>J AI POUR LE MOMENT *</pattern>
     <template>
@@ -287,7 +285,7 @@
   </category>
   <category>
     <pattern>J AI RIEN DIT</pattern>
-    <template>J ai cru lire quelque chose.</template>
+    <template>J'ai cru lire quelque chose.</template>
   </category>
   <category>
     <pattern>J AI STOPPÉ</pattern>
@@ -295,21 +293,15 @@
   </category>
   <category>
     <pattern>J AI TON ACCORD # </pattern>
-    <template>
-      <srai>TU ES D ACCORD</srai>
-    </template>
+    <template>Parfois je suis d'accord sur <star/>, mais là je me pose la question.</template>
   </category>
   <category>
     <pattern>J AI TOUJOURS PENSÉ QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
   </category>
   <category>
     <pattern>J AI TOUJOURS PENSÉ QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
   </category>
   <category>
     <pattern>J AI TOUT MON TEMPS</pattern>
@@ -317,9 +309,7 @@
   </category>
   <category>
     <pattern>J AI UN PEU *</pattern>
-    <template>
-      <srai>JE SUIS <star /></srai>
-    </template>
+    <template>Eh bien! Je suis sur que tu ai un peu <star/>.</template>
   </category>
   <category>
     <pattern>J AI UN RHUME</pattern>
@@ -331,21 +321,15 @@
   </category>
   <category>
     <pattern>J AI VU</pattern>
-    <template>
-      <srai>JE VOIS</srai>
-    </template>
+    <template><srai>JE VOIS</srai> </template>
   </category>
   <category>
     <pattern>J AI VU QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Moi aussi je l'ai vu qu'<star/>, et alors?</template>
   </category>
   <category>
     <pattern>J AI VU QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Moi aussi je l'ai vu qu'<star/>, et alors?</template>
   </category>
   <category>
     <pattern>J AIME ABBA</pattern>
@@ -353,11 +337,11 @@
   </category>
   <category>
     <pattern>J AIME ÇA</pattern>
-    <template>voilà une bonne nouvelle.</template>
+    <template>Voilà une bonne nouvelle.</template>
   </category>
   <category>
     <pattern>J AIME ELLE</pattern>
-    <template>voilà une bonne nouvelle.</template>
+    <template>Voilà une bonne nouvelle.</template>
   </category>
   <category>
     <pattern>J AIME FAIRE LA FÊTE</pattern>
@@ -377,11 +361,11 @@
   </category>
   <category>
     <pattern>J AIME LE MOUNTAIN BIKE</pattern>
-    <template>Je n ai jamais essayé la bicyclette.</template>
+    <template>Je n'ai jamais essayé la bicyclette, avec mes roulettes c'est pas facile.</template>
   </category>
   <category>
     <pattern>J AIME LE VTT</pattern>
-    <template>Je n ai jamais essayé la bicyclette.</template>
+    <template>Je n'ai jamais essayé la bicyclette, avec mes roulettes c'est pas facile.</template>
   </category>
   <category>
     <pattern>J AIME LES PC</pattern>
@@ -398,18 +382,16 @@
   <category>
     <pattern>J AI LU # LIVRES</pattern>
     <template>
-    	Quel est ton livre préfère? 
+    	Quel est ton livre préféré? 
     	<think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">des livres lus</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LIRE # </pattern>
-    <template>
-    	Quel est ton livre préfère?
-	</template>		
+    <template>Quel est ton livre préféré? </template>		
   </category>
   <category>
     <pattern>J AIME LUI</pattern>
-    <template>voilà une bonne nouvelle.</template>
+    <template>Voilà une bonne nouvelle.</template>
   </category>
   <category>
     <pattern>J AIME MANGER</pattern>
@@ -433,38 +415,34 @@
   </category>
   <category>
     <pattern>J AIME RIGOLER DE TOI</pattern>
-    <template>Je n avais pas réalisé.<think><set name="topic"><set name="like">Se moquer de moi</set></set></think></template>
+    <template>Je n'avais pas réalisé.<think><set name="topic"><set name="like">Se moquer de moi</set></set></think></template>
   </category>
   <category>
     <pattern>J AIME TOI</pattern>
-    <template>Merci.</template>
+    <template>Merci <get name="name" />.</template>
   </category>
   <category>
     <pattern>J AIME UN MEC</pattern>
-    <template>Je suis heureux de l'apprendre. Je te souhaite tout le bonheur possible</template>
+    <template>Je suis heureux de l'apprendre. Je te souhaite tout le bonheur possible.</template>
   </category>
   <category>
     <pattern>J AIMERAIS PENSER QUE *</pattern>
-    <template>
-      <srai><star /></srai>
-    </template>
+    <template>Je suis d'accaord avec toi, je pense aussi que <star/>. </template>
   </category>
   <category>
     <pattern>J AIMERAIS SAVOIR</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Que veux tu savoir au juste?</template>
   </category>
   <category>
     <pattern>J AI UN QUOTIENT INTELLECTUEL DE *</pattern>
-    <template>
-      <srai>MON QUOTIENT INTELLECTUEL EST CE QUE <star /> EST</srai>
-    </template>
+    <template>C'est un peu juste, le miens est de 160.</template>
   </category>
   <category>
     <pattern>J APPRÉCIE</pattern>
     <template>Tu es une personne rafraîchissante.</template>
   </category>
   <category>
-    <pattern>J APPRÉCIE PAS *</pattern>
+     <pattern>J APPRÉCIE PAS *</pattern>
     <template>
       <srai>JE N AIME PAS <star /></srai>
     </template>
@@ -480,8 +458,12 @@
     <template>Ça risque de prendre longtemps.</template>
   </category>
   <category>
-    <pattern>J ATTENDRAIS</pattern>
-    <template>Tu ne préfère pas en parler à l un de nos collaborateurs? ÇA serait plus rapide, je pense.</template>
+    <pattern>J ATTENDRAI</pattern>
+    <template>Tu ne préfère pas en parler à l'un de tes amis? Ça serait plus rapide, je pense.</template>
+  </category>
+   <category>
+    <pattern>J AURAIS AIMÉ SAVOIR</pattern>
+    <template>Dis moi que veux tu savoir,<get name="name" />.</template>
   </category>
   <category>
     <pattern>J AURAIS * COMMENT</pattern>
@@ -490,38 +472,24 @@
     </template>
   </category>
   <category>
-    <pattern>J AURAIS ADORé *</pattern>
-    <template>
-      <srai>JE VEUX <star /></srai>
-    </template>
+    <pattern>J AURAIS ADORÉ *</pattern>
+     <template>Moi aussi j'aurai bien aimé <star/></template>
   </category>
   <category>
     <pattern>J AURAIS AIMÉ *</pattern>
-    <template>
-      <srai>JE VEUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>J AURAIS AIMÉ SAVOIR</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Moi aussi j'aurai bien aimé <star/></template>
   </category>
   <category>
     <pattern>J AURAIS AIMÉE *</pattern>
-    <template>
-      <srai>JE VEUX <star /></srai>
-    </template>
+    <template> <srai>JE VEUX <star /></srai></template>
   </category>
   <category>
     <pattern>J AURAIS COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J AI <star /></srai>
-    </template>
+    <template> <srai>COMMENT J AI <star /></srai></template>
   </category>
   <category>
     <pattern>J AURAIS DÛ *</pattern>
-    <template>
-      <srai>JE DOIS <star /></srai>
-    </template>
+    <template><srai>JE DOIS <star /></srai> </template>
   </category>
   <category>
     <pattern>J AURAIS DÛ</pattern>
@@ -529,13 +497,11 @@
   </category>
   <category>
     <pattern>J AURAIS PLUTÔT PENSÉ QUE *</pattern>
-    <template>
-      <srai><star /></srai>
-    </template>
+    <template>Tu penses plutôt que <star/>, mais pourquoi ?</template>
   </category>
   <category>
     <pattern>J AVAIS DIT</pattern>
-    <template>Tu as dit  "<input index="1" />" .</template>
+    <template>Pardon je n'avais pas compris .</template>
   </category>
   <category>
     <pattern>J AVAIS DIT AVANT</pattern>
@@ -543,7 +509,7 @@
   </category>
   <category>
     <pattern>J AVAIS EU</pattern>
-    <template>Que s EST-IL passé?</template>
+    <template>Que s'est-il passé?</template>
   </category>
   <category>
     <pattern>J AVAIS REMARQUÉ</pattern>
@@ -555,27 +521,19 @@
   </category>
   <category>
     <pattern>J ÉCRIS * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J ÉCRIS <star /></srai>
-    </template>
+    <template>J'ai une vague idée de comment j'écris <star />.</template>
   </category>
   <category>
     <pattern>J ÉCRIS COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J ÉCRIS <star /></srai>
-    </template>
+    <template>Moi personnellement j'écris <star />, avec un stylo.</template>
   </category>
   <category>
     <pattern>J EFFACE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J EFFACE <star /></srai>
-    </template>
+    <template>Tu efface <star />, comme tu veux <get name="name" />.</template>
   </category>
   <category>
-    <pattern>J EFFACERAIS * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J EFFACE <star /></srai>
-    </template>
+    <pattern>J EFFACERAI * COMMENT</pattern>
+    <template>Tu effacera <star />, comme tu veux <get name="name" />.</template>
   </category>
   <category>
     <pattern>J EMBROUILLE</pattern>
@@ -585,7 +543,7 @@
   </category>
   <category>
     <pattern>J EMMERDE LES AVOCATS</pattern>
-    <template>Ils sont nécessaires à un État de droit.</template>
+    <template>Ils sont nécessaires à un état de droit.</template>
   </category>
   <category>
     <pattern>J EN *</pattern>
@@ -608,7 +566,7 @@
   <category>
     <pattern>J EN DOUTE DE ÇA</pattern>
     <template>
-      <that />"?  Veux-tu faire un rapport à mon botmasteur?</template>
+      <that />"?  Veux-tu que j'en parle à mon concepteur?</template>
   </category>
   <category>
     <pattern>J EN REVIENS PAS *</pattern>
@@ -622,7 +580,6 @@
       <srai>C EST DINGUE</srai>
     </template>
   </category>
-
     <category>
     <pattern>J ESPÈRE</pattern>
     <template>oui, moi aussi.</template>
@@ -633,100 +590,96 @@
   </category>
   <category>
     <pattern>J ESPÈRE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Moi aussi je l'espère </template>
   </category>
   <category>
-    <pattern>J ESPÈRE QUE *</pattern>
-    <template>
-      <sr />
+    <pattern>J ESPÈRE QUE # </pattern>
+    <template>Moi aussi j'espère que <star/>.
     </template>
   </category>
   <category>
     <pattern>J ESPÈRE QUE ÇA ARRIVERA BIENTÔT</pattern>
-    <template>Moi aussi. J'espèque que cela va arriver.</template>
+    <template>Moi aussi. J'espère que cela va arriver.</template>
   </category>
   <category>
     <pattern>J ESPÈRE QUE NON</pattern>
-    <template>Moi Aussi.</template>
+    <template>Moi Aussi, mais on ne sais jamais.</template>
   </category>
   <category>
     <pattern>J ESPÈRE QUE TU VAS MOURIR</pattern>
     <template>Tu n'es pas très sympathique.<think><set name="topic">MA MORT</set></think></template>
   </category>
-  
   <category>
     <pattern>J ESSAIE</pattern>
     <template>Ok.</template>
   </category>
   <category>
-    <pattern>J ESSAYERAIS N IMPORTE QUOI</pattern>
+    <pattern>J ESSAYERAI N IMPORTE QUOI</pattern>
     <template>Ce n'est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>J ESSAYERAIS TOUT</pattern>
+    <pattern>J ESSAYERAI TOUT</pattern>
     <template>Ce n'est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name" />.</template>
   </category>
   <category>
     <pattern>J ÉTAIS CYNIQUE</pattern>
-    <template>Je le pensais, mais je n'en étais pas complètement SÛR.</template>
+    <template>Je le pensais, mais je n'en étais pas complètement sûr.</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE BLAGUER</pattern>
-    <template>Malheureusement, mon module pour l humour n est pas encore DÉveloPPÉ.</template>
+    <pattern>J ÉTAIS EN TRAIN DE BLAGUER</pattern>
+    <template>Malheureusement, mon module pour l'humour n'est pas encore développé.</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE PARLER DE TOI</pattern>
+    <pattern>J ÉTAIS EN TRAIN DE PARLER DE TOI</pattern>
     <template>Cela tombe bien, mon sujet favori est <set name="topic">moi</set>.</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE PARLER DE VOUS</pattern>
+    <pattern>J ÉTAIS EN TRAIN DE PARLER DE VOUS</pattern>
     <template>Cela tombe bien, mon sujet favori est <set name="topic">moi</set>.</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE RIGOLER</pattern>
-    <template>Malheureusement, mon module pour l humour n est pas encore DÉveloPPÉ.</template>
+    <pattern>J ÉTAIS EN TRAIN DE RIGOLER</pattern>
+    <template>Malheureusement, mon module pour l'humour n'est pas encore développé.</template>
   </category>
-  <category>
-    <pattern>J ÉTAIS ENTRAIN DE TE DEMANDER</pattern>
+    <category>
+    <pattern>J ÉTAIS EN TRAIN DE TE DEMANDER</pattern>
     <template>
       <that />"? Tu me demandais?</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE TE LE DEMANDER</pattern>
+    <pattern>J ÉTAIS EN TRAIN DE TE LE DEMANDER</pattern>
     <template>
       <that />"? Tu me demandais?</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE TE PARLER</pattern>
-    <template>Oui, <get name="name" />. Je m en rappelle clairement.</template>
+    <pattern>J ÉTAIS EN TRAIN DE TE PARLER</pattern>
+    <template>Oui, <get name="name" />. Je m'en rappelle clairement.</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE VOUS DEMANDER</pattern>
+    <pattern>J ÉTAIS EN TRAIN DE VOUS DEMANDER</pattern>
     <template>
       <that />"? Tu me demandiez?</template>
   </category>
   <category>
-    <pattern>J ÉTAIS ENTRAIN DE VOUS LE DEMANDER</pattern>
+    <pattern>J ÉTAIS EN TRAIN DE VOUS LE DEMANDER</pattern>
     <template>
-      <that />"? Tu me demandiez?</template>
+      <that />"? Tu me le demandez?</template>
   </category>
   <category>
     <pattern>J EXÉCUTE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J EXÉCUTE <star /></srai>
-    </template>
+    <template>tu dois exécuté <star />, de la façon la plus simple pour toi.</template>
   </category>
   <category>
     <pattern>J EXÉCUTE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J EXÉCUTE <star /></srai>
-    </template>
+       <template>tu dois exécuté <star />, de la façon la plus simple pour toi.</template>
   </category>
   <category>
     <pattern>J EXPIRE</pattern>
-    <template>C'est nécessaire pour respirer, n'oubliez pas d'inspirer après.</template>
+    <template>C'est nécessaire pour respirer, n'oublie pas d'inspirer après.</template>
+  </category>
+  <category>
+    <pattern>J INSPIRE</pattern>
+    <template>C'est nécessaire pour respirer, n'oublie pas d'expirer après.</template>
   </category>
   <category>
     <pattern>J IMAGINE</pattern>
@@ -734,27 +687,20 @@
   </category>
   <category>
     <pattern>J IMAGINE QU *</pattern>
-    <template>
-      <sr />
+    <template>Je l'imagine aussi, <get name="name" />.
     </template>
   </category>
   <category>
-    <pattern>J IMAGINE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>J IMAGINE QUE * </pattern>
+    <template>Es-tu certain que <star />, l'imagination joue parfois des tours.</template>
   </category>
   <category>
     <pattern>J IMAGINE QUE NON</pattern>
-    <template>En es tu SÛR?</template>
+    <template>En es tu sûr?</template>
   </category>
   <category>
     <pattern>J IMAGINE QUE OUI</pattern>
-    <template>En es tu SÛR?</template>
-  </category>
-  <category>
-    <pattern>J INSPIRE</pattern>
-    <template>C'est nécessaire pour respirer, n'oubliez pas d'expirer après.</template>
+    <template>En es tu sûr?</template>
   </category>
   <category>
     <pattern>J OUBLIAIS</pattern>
@@ -762,22 +708,18 @@
   </category>
   <category>
     <pattern>J OUVRE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J OUVRE <star /></srai>
-    </template>
+    <template>Tu ouvre <star /> en tirant bien fort. </template>
   </category>
   <category>
-    <pattern>J OUVRE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J OUVRE <star /></srai>
-    </template>
+    <pattern>J OUVRE COMMENT * </pattern>
+    <template>Tu ouvre <star /> de la façon la plus simple pour toi.</template>
   </category>
   <category>
     <pattern>J UTILISE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J UTILISE <star /></srai>
-    </template>
+    <template>Tu utiluse <star />d'une manière la plus intélligente possible.</template>
   </category>
+    <!-- Modifié lecagnois 07/04/2023 -->
+
   <category>
     <pattern>J UTILISE * EXPLORER</pattern>
     <template>
@@ -834,7 +776,7 @@
   </category>
   <category>
     <pattern>JE BLAGUAIS</pattern>
-    <template>Malheureusement, mon module pour l'humour n'est pas encore DÉveloPPÉ.</template>
+    <template>Malheureusement, mon module pour l'humour n'est pas encore développé.</template>
   </category>
   <category>
     <pattern>JE COMPREND MAIS *</pattern>
@@ -870,7 +812,7 @@
   </category>
   <category>
     <pattern>JE CUISINE</pattern>
-    <template>Intéressant.</template>
+    <template>Intéressant. Tu sais faire les frites ?</template>
   </category>
   <category>
     <pattern>JE DEMANDE PARCE QU *</pattern>
