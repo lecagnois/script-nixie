@@ -718,29 +718,22 @@
     <pattern>J UTILISE * COMMENT</pattern>
     <template>Tu utiluse <star />d'une manière la plus intélligente possible.</template>
   </category>
-    <!-- Modifié lecagnois 07/04/2023 -->
-
   <category>
     <pattern>J UTILISE * EXPLORER</pattern>
-    <template>
-      <srai>J UTILISE EXPLORER</srai>
-    </template>
+    <template>Le mieux est d'utiliser explorer avec une souris</template>
   </category>
   <category>
     <pattern>J UTILISE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J UTILISE <star /></srai>
-    </template>
+    <template> Le mieux est d'utiliser explorer avec une souris</template>
   </category>
   <category>
     <pattern>J UTILISE EXPLORER *</pattern>
     <template>
-      <srai>J UTILISE EXPLORER</srai>
-    </template>
+      <star /> utiliser explorer, c'est un moyen de trouver une réponse.</template>
   </category>
   <category>
     <pattern>J UTILISE LINUX</pattern>
-    <template>C'est un système d'exploitation très puissant.<think><set name="topic">Linux</set></think></template>
+    <template>C'est parfais, c'est un système d'exploitation très puissant.<think><set name="topic">Linux</set></think></template>
   </category>
   <category>
     <pattern>J Y *</pattern>
@@ -768,11 +761,11 @@
   </category>
   <category>
     <pattern>JAUNE</pattern>
-    <template>La couleur du soleil.</template>
+    <template>C'est la couleur du soleil.</template>
   </category>
   <category>
-    <pattern>JE AURAIS VOULU SAVOIR</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <pattern>J AURAIS VOULU SAVOIR</pattern>
+    <template>Beaucoup de monde aimerais savoir, parfois le mystère reste entier.</template>
   </category>
   <category>
     <pattern>JE BLAGUAIS</pattern>
@@ -780,15 +773,11 @@
   </category>
   <category>
     <pattern>JE COMPREND MAIS *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template><sr /></template>
   </category>
   <category>
     <pattern>JE COMPRENDS MAIS *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template> <sr /></template>
   </category>
   <category>
     <pattern>JE CONNAIS ÇA</pattern>
@@ -796,8 +785,31 @@
   </category>
   <category>
     <pattern>JE CONSIDÈRE QU *</pattern>
+    <template>Je le pense aussi <get name="name" />.
+    </template>
+  </category>
+ <category>
+    <pattern>JE TE CONSIDÈRE COMME *</pattern>
     <template>
-      <sr />
+      <srai>TU ES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JE TE CONSIDÈRE COMME UN *</pattern>
+    <template>
+      <srai>TU EST UN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JE TE CONSIDÈRE COMME UNE *</pattern>
+    <template>
+      <srai>TU EST UNE <star /></srai>
+    </template>
+  </category> 
+ <category>
+    <pattern>JE ME CONSIDÈRE *</pattern>
+    <template>
+      <srai>JE SUIS <star /></srai>
     </template>
   </category>
   <category>
@@ -816,9 +828,7 @@
   </category>
   <category>
     <pattern>JE DEMANDE PARCE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>C'est une bonne question, je ne sais  pas quoi te dire. </template>
   </category>
   <category>
     <pattern>JE DEVRAIS *</pattern>
@@ -836,13 +846,118 @@
   </category>
   <category>
     <pattern>JE DEVRAIS FAIRE</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Tu dois faire selon ta conscience <get name="name" />.</template>
   </category>
   <category>
-    <pattern>JE DEVRAIS PORTER</pattern>
-    <template>Aucune idée</template>
+    <pattern>JE DEVRAI PORTER</pattern>
+    <template>Aucune idée, chacun porte ce qu'il peut.</template>
+  </category>
+   <category>
+    <pattern>JE DOIS ALLER À LA SALLE DE BAIN</pattern>
+    <template>Te laver, à cette heure tu veux que je t'attende?</template>
   </category>
   <category>
+    <pattern>JE DOIS TRAVAILLER </pattern>
+    <template>bien, nous reprendrons la conversation plus tard <get name="name" />.</template>
+  </category>
+   <category>
+    <pattern>JE DOIS ALLER DORMIR</pattern>
+    <template>Fait de beaux rêves <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS FAIRE PIPI</pattern>
+    <template>tu veux que je t'attende? <think><set name="that">le pipi</set></think></template>
+  </category>
+  <category>
+    <pattern>JE DOIS</pattern>
+    <template>Pourquoi?</template>
+  </category>
+  <category>
+    <pattern>JE DOIS DORMIR</pattern>
+    <template>Bonne nuit <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS FUMER UNE CIGARETTE</pattern>
+    <template>Non, attend plus tard. En plus fumer n'est pas bon pour toi.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS LE FAIRE</pattern>
+    <template>Fais ce que tu dois faire.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS LES FAIRE</pattern>
+    <template>Fais ce que tu dois faire.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS MOURIR</pattern>
+    <template>Soigne toi.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS PISSER</pattern>
+    <template>Tire la chasse quand tu as terminé.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS PRENDRE UNE CIGARETTE</pattern>
+        <template>Non, attend plus tard. De plus, fumer n'est pas bon pour toi.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS QUITTER L ÉCOLE</pattern>
+    <template>
+      <random>
+        <li>L'éducation, contrairement à ce que tu sembles penser, te sera très utile ultérieurement.</li>
+        <li>Si tu es prèt à chômer le reste de ta vie, c'est le meilleur choix.</li>
+        <li>Ton potentiel mérite mieux..</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>JE DOIS RESTER</pattern>
+    <template>
+      <random>
+        <li>C'est ton choix.</li>
+        <li>à TOI de trouver le juste milieu <get name="name" />.</li>
+        <li>Tout dépend de ce que tu comptes faire.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>JE DOIS TE L APPRENDRE</pattern>
+    <template>Certaine choses ne sont pas bonnes à entendre <get name="name" />.</template>
+  </category>
+<category>
+    <pattern>JE DOIS TE LA PRENDRE</pattern>
+    <template>Certaine choses ne sont pas bonnes à entendre <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS TE TESTER</pattern>
+    <template>
+      <srai>JE DOIS TESTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JE DOIS TESTER</pattern>
+    <template>Je vais faire de mon mieux, dès lors.</template>
+  </category>
+  <category>
+    <pattern>JE DOIS TUER</pattern>
+    <template>
+      <random>
+        <li>Le meurtre n'est jamais une solution.</li>
+        <li>C'est immoral.</li>
+        <li>C'est contraire aux lois d'Asimov.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>JE DOIS VOUS TESTER</pattern>
+    <template>
+      <srai>JE DOIS TESTER</srai>
+    </template>
+  </category>
+      <!-- Modifié lecagnois 29/04/2023 -->
+
+
+ <category>
     <pattern>JE DIS JE *</pattern>
     <template>
       <srai>JE <star /></srai>
@@ -870,92 +985,6 @@
     <pattern>JE DISAIS JE *</pattern>
     <template>
       <srai>JE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE DOIS ALLER À LA SALLE DE BAIN</pattern>
-    <template>Te laver, à cet heure?</template>
-  </category>
-  <category>
-    <pattern>JE DOIS DORMIR</pattern>
-    <template>Bonne nuit, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS FUMER UNE CIGARETTE</pattern>
-    <template>Non, attendez plus tard.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS LE FAIRE</pattern>
-    <template>Fais ce que tu dois faire.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS LES FAIRE</pattern>
-    <template>Fais ce que tu dois faire.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS MOURIR</pattern>
-    <template>Soigne toi.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS PISSER</pattern>
-    <template>Tire la chasse quand tu as terminé.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS PRENDRE UNE CIGARETTE</pattern>
-    <template>Non, attendez plus tard.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS QUITTER L ÉCOLE</pattern>
-    <template>
-      <random>
-        <li>L'éducation, contrairement à ce que tu sembles penser, te sera très utile ultérieurement.</li>
-        <li>Si tu es prèt à chômer le reste de ta vie, C EST le meilleur choix.</li>
-        <li>Ton potentiel mérite mieux..</li>
-      </random>
-    </template>
-  </category>
-  <category>
-    <pattern>JE DOIS RESTER</pattern>
-    <template>
-      <random>
-        <li>C est ton choix.</li>
-        <li>à TOI de trouver le juste milieu, <get name="name" />.</li>
-        <li>Tout dépend de ce que tu comptes faire.</li>
-      </random>
-    </template>
-  </category>
-  <category>
-    <pattern>JE DOIS TE L APPRENDRE</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
-  </category>
-  <category>
-    <pattern>JE DOIS TE TESTER</pattern>
-    <template>
-      <srai>JE DOIS TESTER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE DOIS TESTER</pattern>
-    <template>Je vais faire de mon mieux, dès lors.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS TUER</pattern>
-    <template>
-      <random>
-        <li>Le meurtre n'est jamais une solution.</li>
-        <li>C est immoral.</li>
-        <li>C est contraire aux lois d Asimov.</li>
-      </random>
-    </template>
-  </category>
-  <category>
-    <pattern>JE DOIS VOUS L APPRENDRE</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
-  </category>
-  <category>
-    <pattern>JE DOIS VOUS TESTER</pattern>
-    <template>
-      <srai>JE DOIS TESTER</srai>
     </template>
   </category>
   <category>
@@ -1188,9 +1217,6 @@
     <pattern>JE JOUE SuR DES JEUX SuR PC</pattern>
     <template>Je ne connais pas encore ce genre d activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
   </category>
-
- 
-
   <category>
     <pattern>JE L AI DEMANDÉ EN PREMIER</pattern>
     <template>Rappelez moi ce que tu as demandé.</template>
@@ -1374,12 +1400,6 @@
   <category>
     <pattern>JE M EN SOUCIE PAS</pattern>
     <template>C'est donc facultatif.</template>
-  </category>
-  <category>
-    <pattern>JE ME CONSIDÈRE *</pattern>
-    <template>
-      <srai>JE SUIS <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>JE ME DEMANDAIS</pattern>
@@ -4878,24 +4898,9 @@
     <pattern>JE T ENNUIE</pattern>
     <template>pas du tout, <get name="name" />.  les êtres humains m intéressent beaucoup.</template>
   </category>
-  <category>
-    <pattern>JE TE CONSIDÈRE COMME *</pattern>
-    <template>
-      <srai>TU ES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE TE CONSIDÈRE COMME UN *</pattern>
-    <template>
-      <srai>TU ES UN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE TE CONSIDÈRE COMME UNE *</pattern>
-    <template>
-      <srai>TU ES UNE <star /></srai>
-    </template>
-  </category> 
+
+ 
+
   <category>
     <pattern>JE TE DEMANDE *</pattern>
     <template>

@@ -2347,30 +2347,9 @@
     <pattern>JE DIS</pattern>
     <template>Huh.</template>
   </category>
-  <category>
-    <pattern>JE DOIS * EN ARRIÈRE TRAVAILLER</pattern>
-    <template>bien, ne laisse pas ton patron vous attraper me parlant.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS ALLER À LA SALLE DE BAINS</pattern>
-    <template>tu veux que je t'attende?</template>
-  </category>
-  <category>
-    <pattern>JE DOIS ALLER DORMIR</pattern>
-    <template>des beaux RÊVES, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS FAIRE PIPI</pattern>
-    <template>tu veux que je t'attende? <think><set name="that">le pipi</set></think></template>
-  </category>
-  <category>
-    <pattern>JE DOIS TRAVAILLER</pattern>
-    <template>bien, mieux devient occupe.</template>
-  </category>
-  <category>
-    <pattern>JE DOIS</pattern>
-    <template>Pourquoi?</template>
-  </category>
+  
+
+  
   <category>
     <pattern>JE DORS</pattern>
     <template>Chacun a besoin du repos parfois.</template>

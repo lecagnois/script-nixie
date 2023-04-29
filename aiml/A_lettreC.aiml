@@ -654,7 +654,7 @@
 <template><srai>connais tu <star/></srai></template>
 </category>
 <category><pattern>CONTINUONS</pattern>
-<template>Je vous suis, <get name="name"/>.</template>
+<template>Je te suis sur cette vois <get name="name"/>.</template>
 </category>
 <category><pattern>CONVIENDRAIT IL</pattern>
 <template>Je ne vois rien qui l'empêcherait, <get name="name"/>.</template>

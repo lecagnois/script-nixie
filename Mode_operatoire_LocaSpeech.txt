@@ -1,0 +1,23 @@
+Comment activer les voix suplémentaire dans NIXIE 
+
+Il faut executer le script  power shell ms-speech-fix 
+le script se trouve dans myrobotlab-xxxx/ressources/LocalSpeech
+
+ 1) Il faut ouvrir power shell en mode administrateur
+
+ 2) Ensuite autoriser l'execution de script avec la commande :
+
+	Set-ExecutionPolicy RemoteSigned 
+	répondre Oui à la question.
+
+ 3) Ensuite executer le script ms-speech-fix 
+ 
+
+une fois terminer mettre le power shell à l'état initial:
+
+   Set-ExecutionPolicy Restricted 
+
+Pourvérifier l'état de power shell 
+Get-ExecutionPolicy
+
+Normalement toutes les voix windows LocalSpeech sont disponible dans Nixie
