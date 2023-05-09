@@ -84,8 +84,10 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>DONNE MOI UNE INFORMATION SPORTIVE</pattern>
-<template><oob>
+<template><set name="topic">Information Sportive</set>
+    <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
@@ -93,8 +95,10 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>DONNE MOI * INFORMATIONS SPORTIVE</pattern>
 <template><think>
+        <set name="topic">Information Sportive</set>
         <set name="nombre"><star index="1"/></set>
       </think>
       <condition>
@@ -116,8 +120,10 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>DONNE MOI UNE NOUVELLE</pattern>
-<template><oob>
+<template> <set name="topic">Information</set>
+    <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
@@ -125,17 +131,10 @@
         </mrl>
       </oob></template>
 </category>
-<category><pattern>DONNE MOI UNE INFORMATION</pattern>
-<template><oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>info("1")</param>
-        </mrl>
-      </oob></template>
-</category>
+
 <category><pattern>DONNE MOI * INFORMATIONS</pattern>
 <template><think>
+        <set name="topic">Information</set>
         <set name="nombre"><star index="1"/></set>
       </think>
       <condition>
@@ -157,15 +156,23 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>DONNE MOI UNE INFORMATION</pattern>
-<template><srai>DONNE MOI UNE NOUVELLE</srai></template>
+<template>
+    <think><set name="topic">Information</set></think>
+    <srai>DONNE MOI UNE NOUVELLE</srai>
+</template>
 </category>
+
 <category><pattern>QUALITÉ DE L AIR À *</pattern>
-<template><srai>POLLUTION À <star/></srai></template>
+<template>
+    <srai>POLLUTION À <star/></srai></template>
 </category>
+
 <category><pattern>POLLUTION À *</pattern>
 <template><think>
         <set name="ville"><star index="1"/></set>
+        <set name="topic">Qualité de l'air</set>
       </think>
       <condition>
         <li name="ville" value="nice"><think><set name="region">PACA</set></think></li>
@@ -321,9 +328,11 @@
         </mrl>
       </oob></template>
 </category>
+
 <category><pattern>PROGRAMME *</pattern>
 <template><think>
         <set name="chaine"><star index="1"/></set>
+        <set name="topic">Prohramme TV</set>
       </think>
       <condition>
         <li name="chaine" value="0"><think><set name="chaine">512</set></think></li>

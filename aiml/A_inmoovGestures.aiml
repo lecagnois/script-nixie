@@ -100,11 +100,11 @@
 </category>
 <category><pattern>DÉMARRE LA CAMÉRA</pattern>
 <template>Je démarre ma caméra.
-        <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
+       <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
 </category>
 <category><pattern>ÉTEINS LA CAMÉRA</pattern>
 <template>J'éteins ma caméra.
-        <oob><mrl><service>i01</service><method>cameraOff</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
 </category>
 <category><pattern>STOPPE LA CAMÉRA</pattern>
 <template><srai>ÉTEINS LA CAMÉRA</srai></template>

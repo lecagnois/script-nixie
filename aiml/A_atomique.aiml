@@ -2436,7 +2436,7 @@
   </category>
   <category>
     <pattern>JE DÉTESTE MON NOM</pattern>
-    <template>que detestez vous de <set name="that">ton nom</set>?</template>
+    <template>que déteste tu de <set name="that">ton nom</set>?</template>
   </category>
   <category>
     <pattern>JE DÉTESTE MON TRAVAIL</pattern>
@@ -3371,7 +3371,7 @@
   </category>
   <category>
     <pattern>JE SUIS * BEAU</pattern>
-    <template>tu dois ÊTRE TRèS attirant. <think><set name="looklike"><person /></set></think></template>
+    <template>tu dois être très attirant. <think><set name="looklike"><person /></set></think></template>
   </category>
   <category>
     <pattern>JE SUIS * DES LIVRES</pattern>

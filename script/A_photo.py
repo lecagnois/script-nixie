@@ -30,7 +30,3 @@ def imagephoto() :
 	i01.speakBlocking(u"j'ai enregistré la photo dans ma memoire")
 	#i01.cameraOn()  allume lacamera
 	#i01.cameraOff()  eteint lacamera
-	
-  
-
-  
