@@ -247,10 +247,9 @@
     <template>  
       <that />?  Veux-tu faire un rapport à mon concepteur?</template>
   </category>
-  <category>
-    <pattern>J AI PENSÉ</pattern>
-    <template>Tu es très astucieux.</template>
-  </category>
+
+ 
+
   <category>
     <pattern>J AI PEUR</pattern>
     <template>Tu n'as aucune raison d'avoir peur, <get name="name" /></template>
@@ -295,14 +294,8 @@
     <pattern>J AI TON ACCORD # </pattern>
     <template>Parfois je suis d'accord sur <star/>, mais là je me pose la question.</template>
   </category>
-  <category>
-    <pattern>J AI TOUJOURS PENSÉ QU *</pattern>
-    <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
-  </category>
-  <category>
-    <pattern>J AI TOUJOURS PENSÉ QUE *</pattern>
-       <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
-  </category>
+  
+ 
   <category>
     <pattern>J AI TOUT MON TEMPS</pattern>
     <template>C'est bien, il faut en avoir de temps en temps.</template>
@@ -495,10 +488,8 @@
     <pattern>J AURAIS DÛ</pattern>
     <template>Dans quelles circonstances?</template>
   </category>
-  <category>
-    <pattern>J AURAIS PLUTÔT PENSÉ QUE *</pattern>
-    <template>Tu penses plutôt que <star/>, mais pourquoi ?</template>
-  </category>
+
+  
   <category>
     <pattern>J AVAIS DIT</pattern>
     <template>Pardon je n'avais pas compris .</template>
@@ -1532,11 +1523,8 @@
       Je vais me renseigner, mais je pense que <star/>,  <get name="name" />. 
     </template>
   </category>
-    <!-- Modifié lecagnois 09/05/2023 -->
-
-
   <category>
-    <pattern>JE MENT</pattern>
+    <pattern>JE MENS</pattern>
     <template>S'il te plait, dis moi juste la vérité.</template>
   </category> 
   <category>
@@ -1553,15 +1541,11 @@
   </category>
   <category>
     <pattern>JE N AI PAS D ARGENT</pattern>
-    <template>Mais tu es riche d idées.</template>
+    <template>Mais tu es riche d'idées.</template>
   </category>
   <category>
     <pattern>JE N AI PAS DE PROBLÈME</pattern>
     <template>Je suis heureux de l'apprendre.</template>
-  </category>
-  <category>
-    <pattern>JE N AI PAS DE SŒURS</pattern>
-    <template>Intéressant.</template>
   </category>
   <category>
     <pattern>JE N AI PAS DE WEBCAM</pattern>
@@ -1569,14 +1553,14 @@
   </category>
   <category>
     <pattern>JE N AI PAS DIT ÇA</pattern>
-    <template>Que voulez vous dire?</template>
+    <template>Que veux tu dire?</template>
   </category>
   <category>
     <pattern>JE N AI PAS DIT QUE J ÉTAIS D ACCORD</pattern>
     <template>Ok.</template>
   </category> 
   <category>
-    <pattern>JE N AI PAS ÉTERNUé</pattern>
+    <pattern>JE N AI PAS ÉTERNUER</pattern>
     <template>A tes souhaits, quand même.</template>
   </category>
   <category>
@@ -1596,29 +1580,43 @@
     <template>Même dans une télévision, il y a de l'informatique et de l'électronique.</template>
   </category>
   <category>
-    <pattern>JE N AI PENSÉ QU *</pattern>
+    <pattern>JE N AI PAS PENSÉ QU *</pattern>
     <template>
-      <sr />
-    </template>
+     Moi je ne sais pas qu'<star/>, mais on ne sais jamais.</template>
   </category>
   <category>
-    <pattern>JE N AI PENSÉ QUE *</pattern>
+    <pattern>JE N AI PAS PENSÉ QUE *</pattern>
     <template>
-      <sr />
-    </template>
+       Moi je ne sais pas que <star/>, mais on ne sais jamais.</template>
   </category>
+ <category>
+    <pattern>J AI PENSÉ</pattern>
+    <template>Tu es très astucieux.</template>
+  </category>
+ <category>
+    <pattern>J AI TOUJOURS PENSÉ QU *</pattern>
+    <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
+  </category>
+  <category>
+    <pattern>J AI TOUJOURS PENSÉ QUE *</pattern>
+       <template>Je pense aussi qu'<star/>, j'espère que nous avons raisons?  </template>
+  </category>
+  <category>
+    <pattern>J AURAIS PLUTÔT PENSÉ QUE *</pattern>
+    <template>Tu penses plutôt que <star/>, mais pourquoi ?</template>
+  </category>
+  <!-- Modifié lecagnois 16/05/2023 -->
+ 
+
   <category>
     <pattern>JE N AIMAIS PAS *</pattern>
-    <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
-  </category>
+    <template>Moi aussi j'aime pas <star />.  </template>
+   </category>
   <category>
     <pattern>JE N AIMAIS PLUS *</pattern>
-    <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
+      <template>Moi aussi je n'aime plus <star />.  </template>
   </category>
+  
   <category>
     <pattern>JE N AIME PAS</pattern>
     <template>Ok.</template>
