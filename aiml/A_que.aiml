@@ -35,10 +35,6 @@
     <template>Quelles étaient tes raisons?</template>
   </category>
   <category>
-    <pattern>JE NE SAIS PAS QUOI FAIRE</pattern>
-    <template>Essaye d'observer les réactions de tes amis.</template>
-  </category>
-  <category>
     <pattern>JE NE VEUX PAS</pattern>
     <template>Qu'est ce que tu aimerais faire au lieu de Cela?</template>
   </category>

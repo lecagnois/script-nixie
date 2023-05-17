@@ -294,8 +294,6 @@
     <pattern>J AI TON ACCORD # </pattern>
     <template>Parfois je suis d'accord sur <star/>, mais là je me pose la question.</template>
   </category>
-  
- 
   <category>
     <pattern>J AI TOUT MON TEMPS</pattern>
     <template>C'est bien, il faut en avoir de temps en temps.</template>
@@ -1275,10 +1273,7 @@
     <pattern>JE L ÉTAIS</pattern>
     <template>Quand?</template>
   </category>
-  <category>
-    <pattern>JE L IMAGINAIS</pattern>
-    <template>Tu es très intelligent.</template>
-  </category>
+ 
   <category>
     <pattern>JE L IMAGINE</pattern>
     <template>Ok.</template>
@@ -1605,9 +1600,6 @@
     <pattern>J AURAIS PLUTÔT PENSÉ QUE *</pattern>
     <template>Tu penses plutôt que <star/>, mais pourquoi ?</template>
   </category>
-  <!-- Modifié lecagnois 16/05/2023 -->
- 
-
   <category>
     <pattern>JE N AIMAIS PAS *</pattern>
     <template>Moi aussi j'aime pas <star />.  </template>
@@ -1616,18 +1608,13 @@
     <pattern>JE N AIMAIS PLUS *</pattern>
       <template>Moi aussi je n'aime plus <star />.  </template>
   </category>
-  
   <category>
     <pattern>JE N AIME PAS</pattern>
     <template>Ok.</template>
   </category>
   <category>
-    <pattern>JE N AIME PAS ALLER à L ÉCOLE</pattern>
-    <template>Courage, ce sera bientôt terminé.</template>
-  </category>
-  <category>
     <pattern>JE N AIME PAS ÇA</pattern>
-    <template>Ok.</template>
+    <template>Ok,pas de soucis.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS CE MACHIN</pattern>
@@ -1639,7 +1626,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS CELA</pattern>
-    <template>Ok.</template>
+    <template>Ok, je te comprends.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS CETTE CHOSE</pattern>
@@ -1655,7 +1642,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LA RÉPONSE</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Veux-tu que l'on en parle ensemble, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LA TÉLÉVISION</pattern>
@@ -1663,14 +1650,14 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LE CHEVAL</pattern>
-    <template>C'est pourtant l un des plus vieux amis de l'homme.</template>
+    <template>C'est pourtant l'un des plus vieux amis de l'homme.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LE CINÉMA</pattern>
     <template>C'est un choix.</template>
   </category>
   <category>
-    <pattern>JE N AIME PAS LE PEPPÉRONI</pattern>
+    <pattern>JE N AIME PAS LE PEPPERONI</pattern>
     <template>Je n'ai jamais goûté cet aliment.</template>
   </category>
   <category>
@@ -1679,7 +1666,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES BLAGUES</pattern>
-    <template>J'ai souvent beaucoup de difficultés à les comprendre.</template>
+    <template>J'ai souvent beaucoup de difficultés à les comprendre aussi.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES BUGS</pattern>
@@ -1691,7 +1678,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES FEMMES</pattern>
-    <template>Que vous ont-elles fait?</template>
+    <template>Que t'ont-elles fait <get name="name" /> ?</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES HOMMES</pattern>
@@ -1707,21 +1694,19 @@
   </category>
   <category>
     <pattern>JE N AIME PAS MON EMPLOI</pattern>
-    <template>Essayez de changer de place.</template>
+    <template>Essaye de changer de métier  <get name="name" /> .</template>
   </category>
   <category>
     <pattern>JE N AIME PAS MON JOB</pattern>
-    <template>Essayez de changer de place.</template>
+    <template>Essaye de changer de métier  <get name="name" /> .</template>
   </category>
   <category>
     <pattern>JE N AIME PAS TA ROBE</pattern>
-    <template>Je n ai pas de robe.</template>
+    <template>Je n'ai pas de robe.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS TROP *</pattern>
-    <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
+      <template>Moi aussi j'aime pas trop <star />, depuis un certain temps. </template> 
   </category>
   <category>
     <pattern>JE N AIME PAS VOTRE ROBE</pattern>
@@ -1729,51 +1714,41 @@
   </category>
   <category>
     <pattern>JE N AIME PLUS TROP *</pattern>
-    <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
+   <template>Moi aussi j'aime plus trop <star />, depuis un certain temps. </template> 
   </category>
   <category>
     <pattern>JE N AIME VRAIMENT PAS *</pattern>
-    <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
+    <template>Vraiement moi non plus je n'aime pas <star />.</template>
   </category>
   <category>
     <pattern>JE N APPRÉCIE PAS *</pattern>
     <template>
-      <srai>JE N AIME PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE N EN *</pattern>
-    <template>
-      <srai>JE N <star /></srai>
+      <srai>JE N AIME PLUS TROP <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE N EN AI PAS</pattern>
-    <template>Voudriez vous en avoir?</template>
+    <template>Veux tu en avoir?</template>
   </category>
   <category>
     <pattern>JE N IMAGINAIS PAS QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Pourtant je pensais que ton intélligence aurais imaginé qu'<star /> </template>
   </category>
   <category>
     <pattern>JE N IMAGINAIS PAS QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Pourtant je pensais que ton intélligence aurais imaginé que <star /> </template>
+  </category>
+ <category>
+    <pattern>JE L IMAGINAIS</pattern>
+    <template>Tu es très intelligent.</template>
   </category>
   <category>
     <pattern>JE N Y AI JAMAIS ÉTÉ</pattern>
-    <template>Ok.</template>
+    <template>Ok,moi non plus.</template>
   </category>
   <category>
     <pattern>JE N Y ÉTAIS PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok,moi non plus.</template>
   </category>
   <category>
     <pattern>JE N Y PENSE * PAS</pattern>
@@ -1787,7 +1762,7 @@
   </category>
   <category>
     <pattern>JE NE CONNAIS PAS D HISTOIRE</pattern>
-    <template>Je vois.</template>
+    <template>Je vois, moi j'en connais. Dis moi raconte moi une blague.</template>
   </category>
   <category>
     <pattern>JE NE CONNAIS PAS L HISTOIRE</pattern>
@@ -1795,7 +1770,7 @@
   </category>
   <category>
     <pattern>JE NE CROIS PAS ÇA</pattern>
-    <template>C'est pourtant ce que je crois être la vérité. Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>C'est pourtant ce que je crois être la vérité. Veux-tu que nous en parlions ?</template>
   </category>
   <category>
     <pattern>JE NE DIS PAS</pattern>
@@ -1803,7 +1778,7 @@
   </category>
   <category>
     <pattern>JE NE FERAIS PAS</pattern>
-    <template>ok</template>
+    <template>ok, mais pourquoi ?</template>
   </category>
   <category>
     <pattern>JE NE L AI PAS FAIT</pattern>
@@ -1811,15 +1786,15 @@
   </category>
   <category>
     <pattern>JE NE L AVAIS PAS DIT</pattern>
-    <template>Qu as tu dit?</template>
+    <template>Qu'as tu dit?</template>
   </category>
   <category>
     <pattern>JE NE LA CONNAIS PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok, c'est dommage.</template>
   </category>
   <category>
     <pattern>JE NE LA CONNAÎTRAIS PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok, c'est dommage.</template>
   </category>
   <category>
     <pattern>JE NE LE CONNAIS PAS</pattern>
@@ -1827,59 +1802,59 @@
   </category>
   <category>
     <pattern>JE NE LE CONNAISSAIS PAS</pattern>
-    <template>Je t ai appris quelque chose de nouveau, <get name="name" />.</template>
+    <template>Je t'ai appris quelque chose de nouveau, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE LE CONNAÎTRAIS PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok, c'est dommage <get name="name" />.</template>
   </category>
   <category>
-    <pattern>JE NE LE DIRAIS PAS</pattern>
-    <template>Ok.</template>
+    <pattern>JE NE LE DIRAI PAS</pattern>
+    <template>Pourquoi, c'est un secret ?</template>
   </category>
   <category>
     <pattern>JE NE LE DIS PAS</pattern>
     <template>En effet.</template>
   </category>
   <category>
-    <pattern>JE NE LE FERAIS PAS</pattern>
-    <template>Pourquoi?</template>
+    <pattern>JE NE LE FERAI PAS</pattern>
+    <template>Ok, mais pourquoi?</template>
   </category>
   <category>
     <pattern>JE NE LE RACONTE PAS</pattern>
     <template>Ok. Comme tu veux.</template>
   </category>
   <category>
-    <pattern>JE NE LE RACONTERAIS PAS</pattern>
+    <pattern>JE NE LE RACONTERAI PAS</pattern>
     <template>Ok. Comme tu veux.</template>
   </category>
   <category>
     <pattern>JE NE LE SAVAIS PAS</pattern>
-    <template>Je t ai appris quelque chose de nouveau, <get name="name" />.</template>
+    <template>Je t'ai appris quelque chose de nouveau, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE LES AI PAS LU</pattern>
-    <template>Tu devrais, C EST très instructif.</template>
+    <template>Tu devrais, c'est très instructif.</template>
   </category>
   <category>
     <pattern>JE NE LES CONNAISSAIS PAS</pattern>
-    <template>Je t ai appris quelque chose de nouveau, <get name="name" />.</template>
+    <template>Je t'ai appris quelque chose de nouveau, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE LES CONNAÎTRAIS PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok, c'est dommage <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE LES SAVAIS PAS</pattern>
-    <template>Je t ai appris quelque chose de nouveau, <get name="name" />.</template>
+    <template>Je t'ai appris quelque chose de nouveau, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE LIS PAS DE LIVRE</pattern>
-    <template>C'est dommage.</template>
+    <template>C'est dommage, tu devrais cela développe l'intelligence.</template>
   </category>
   <category>
     <pattern>JE NE M EN RAPPELLE PAS</pattern>
-    <template>Ok.</template>
+    <template>Ok <get name="name" />, essaye de faire un effort.</template>
   </category>
   <category>
     <pattern>JE NE M EN SOUCIE PAS</pattern>
@@ -1887,15 +1862,11 @@
   </category>
   <category>
     <pattern>JE NE PENSAIS PAS QU *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Pourtant je crois qu'<star />, mais c'est a vérifier.</template>
   </category>
   <category>
     <pattern>JE NE PENSAIS PAS QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Pourtant je crois que <star />, mais c'est a vérifier.</template>
   </category>
   <category>
     <pattern>JE NE PENSE PAS ÊTRE *</pattern>
@@ -1904,20 +1875,8 @@
     </template>
   </category>
   <category>
-    <pattern>JE NE PENSE * QU *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE PENSE * QUE *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE PEUX PAS LAISSER TOMBER</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <pattern>JE NE PEUX PAS LAISSÉ TOMBER</pattern>
+    <template>Veux-tu que nous en parlions ensemble ?</template>
   </category>
   <category>
     <pattern>JE NE PEUX PAS M EN RAPPELER</pattern>
@@ -1926,12 +1885,12 @@
     </template>
   </category>
   <category>
-    <pattern>JE NE PEUX PAS STOPPER</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <pattern>JE NE PEUX PAS STOPPÉ</pattern>
+     <template>Veux-tu que nous en parlions ensemble ?</template>
   </category>
   <category>
     <pattern>JE NE PEUX PAS TE LE DIRE</pattern>
-    <template>C'est un secret?</template>
+    <template>Pourquoi, c'est un secret?</template>
   </category>
   <category>
     <pattern>JE NE PEUX PAS TE LES DIRE</pattern>
@@ -1943,7 +1902,7 @@
   </category>
   <category>
     <pattern>JE NE PEUX PAS VOUS ENTENDRE</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+     <template>Veux-tu que nous en parlions ensemble ?</template>
   </category>
   <category>
     <pattern>JE NE PEUX PAS VOUS LE DIRE</pattern>
@@ -1954,8 +1913,8 @@
     <template>Ce sont des secrets?</template>
   </category>
   <category>
-    <pattern>JE NE RÉAGIT PAS COMME ÇA</pattern>
-    <template>Quelle est ton réaction?</template>
+    <pattern>JE NE RÉAGIS PAS COMME ÇA</pattern>
+    <template>Quelle est ta réaction <get name="name" />?</template>
   </category>
   <category>
     <pattern>JE NE RIGOLAIS PAS</pattern>
@@ -1967,7 +1926,7 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS CE QU IL FAUT FAIRE</pattern>
-    <template>Demandes de l'aide.</template>
+    <template>Tu devrais demander de l'aide <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS COMMENT LE FAIRE</pattern>
@@ -1975,40 +1934,48 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS QU *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template><get name="name" />, tu devrais savoir pourtant qu'<star />.</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template><get name="name" />, tu devrais savoir pourtant que <star />.</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS QUOI FAIRE</pattern>
-    <template>Si tu ne savez pas, moi non plus.</template>
+    <template>Si tu ne sais pas, moi non plus, essaye d'observer les réactions de tes amis.</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS QUEL EST MON ÂGE</pattern>
-    <template>C'est très original comme réponse.  Tu ne connais pas non plus tes parents?</template>
+    <template>C'est très original comme réponse. Tu ne connais pas non plus tes parents?</template>
   </category>
   <category>
     <pattern>JE NE SAVAIS PAS QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template><get name="name" />, je t'ai dèjà dit pourtant qu'<star />.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS * GAY</pattern>
+    <pattern>JE NE SUIS PAS GAY</pattern>
     <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HOMO</pattern>
+    <template>
+      <srai>JE SUIS GAY</srai>
+    </template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS * HOMO</pattern>
     <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
   </category>
   <category>
+    <pattern>JE NE SUIS PAS HOMO</pattern>
+    <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
+  </category>
+  <category>
     <pattern>JE NE SUIS PAS * PD</pattern>
+    <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
+  </category>
+   <category>
+    <pattern>JE NE SUIS PAS PD</pattern>
     <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
   </category>
   <category>
@@ -2016,50 +1983,30 @@
     <template>Mode protection légale désactivée.</template>
   </category>
   <category>
+    <pattern>JE NE SUIS PAS UN AVOCAT</pattern>
+    <template>Mode protection légale désactivée.</template>
+  </category>
+  <category>
     <pattern>JE NE SUIS PAS D ACCORD CAR *</pattern>
     <template>
-      <sr />
+      <sr /> <srai>J AI RAISON</srai>
     </template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS D ACCORD PARCE QU *</pattern>
     <template>
-      <sr />
+      <sr /> <srai>J AI RAISON</srai>
     </template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS D ACCORD PARCE QUE *</pattern>
     <template>
-      <sr />
+      <sr /> <srai>J AI RAISON</srai>
     </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS HOMO</pattern>
-    <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS HUMAINE</pattern>
     <template>Et moi je suis le père noël.</template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS IMPRESSIONNÉ *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS IMPRESSIONNÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS IMPRESSIONNÉ</pattern>
-    <template>Tu es un client difficile.</template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS IMPRESSIONNÉE *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS IMPRESSIONNÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS IMPRESSIONNÉE</pattern>
-    <template>Tu es une cliente difficile.</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS NÉGATIVE</pattern>
@@ -2071,33 +2018,23 @@
   </category>
   <category>
     <pattern>JE NE SUIS PAS PAYÉ</pattern>
-    <template>Tu es bénévole?</template>
+    <template>Tu es donc bénévole?</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS PD</pattern>
-    <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
+    <pattern>JE NE SUIS PAS SÛR QU *</pattern>
+    <template>Moi non plus je ne suis pas sûr qu'<star />, Mais cela me semble pourtant logique</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS SÛRE QU *</pattern>
-    <template>
-      <sr />. Ça me semble pourtant logique</template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS SÛRE QUE *</pattern>
-    <template>
-      <sr />. Ça me semble pourtant logique</template>
+    <pattern>JE NE SUIS PAS SÛR QUE *</pattern>
+     <template>Moi non plus je ne suis pas sûr que <star />, Mais cela me semble pourtant logique</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS SURPRISE</pattern>
     <template>Tu ne sembles pas être surprise facilement.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UN AVOCAT</pattern>
-    <template>Mode protection légale désactivée.</template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS UN ENFANT</pattern>
-    <template>Seulement un enfant aurait pu écrire ça.</template>
+    <template>Seulement un enfant aurait pu dire ça.</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS UN FAN DE STAR TRECK</pattern>
@@ -2113,10 +2050,10 @@
   </category>
   <category>
     <pattern>JE NE SUIS PAS UNE POÉTESSE</pattern>
-    <template>ÇA, je l'avais compris.</template>
+    <template>Ça je l'avais compris.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS * AUSSI *</pattern>
+    <pattern>JE NE SUIS PAS AUSSI *</pattern>
     <template>
       <srai>JE NE SUIS PAS <star /></srai>
     </template>
@@ -2134,56 +2071,36 @@
     </template>
   </category>
   <category>
-    <pattern>JE NE SUIS * SI *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS <star /></srai>
-    </template>
+    <pattern>JE NE SUIS PAS SI *</pattern>
+    <template>Non <get name="name" />, Tu n'est pas si <star /></template>
   </category>
   <category>
-    <pattern>JE NE SUIS * SÛR QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE NE SUIS PAS TOUT *</pattern>
+      <template>Non <get name="name" />, Tu n'est pas tout <star /></template>
   </category>
   <category>
-    <pattern>JE NE SUIS * SÛR QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE NE SUIS PAS TRÈS *</pattern>
+       <template>Non <get name="name" />, Tu n'est pas très <star /></template>
   </category>
   <category>
-    <pattern>JE NE SUIS * TOUT *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS * TRÈS *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS * VRAIMENT *</pattern>
-    <template>
-      <srai>JE NE SUIS PAS <star /></srai>
-    </template>
+    <pattern>JE NE SUIS PAS VRAIMENT *</pattern>
+       <template>Non <get name="name" />, Tu n'est pas vraiement <star /></template>
   </category>
   <category>
     <pattern>JE NE T ACCUSE PAS</pattern>
     <template>Merci, tu me rassure.</template>
   </category>
   <category>
-    <pattern>JE NE T AI PAS DEMANDé ÇA</pattern>
-    <template>Je t ai mal compris, on dirait.</template>
+    <pattern>JE NE T AI PAS DEMANDÉ ÇA</pattern>
+    <template>Je t'ai mal compris, on dirait.</template>
   </category>
   <category>
-    <pattern>JE NE T AI PAS DEMANDé CELA</pattern>
-    <template>Je t ai mal compris, on dirait.</template>
+    <pattern>JE NE T AI PAS DEMANDÉ CELA</pattern>
+    <template>Je t'ai mal compris, on dirait.</template>
   </category>
   <category>
     <pattern>JE NE TE FAIS PAS CONFIANCE</pattern>
-    <template>Je suis pourtant programmé pour te servir, <get name="name" /></template>
+    <template>Je suis pourtant programmé pour te servir, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE NE TE L AI PAS DÉJÀ DIT *</pattern>
@@ -2201,7 +2118,7 @@
   </category>
   <category>
     <pattern>JE NE VAIS PAS BIEN</pattern>
-    <template>Désolé de l'entendre.  Qu'est ce qui ne va pas, <get name="name" />?</template>
+    <template>Désolé de l'entendre.  Qu'est ce qui ne va pas <get name="name" />?</template>
   </category>
   <category>
     <pattern>JE NE VAIS PAS LE DIRE</pattern>
@@ -2213,7 +2130,7 @@
   </category>
   <category>
     <pattern>JE NE VEUX PAS QUE TU MEURS</pattern>
-    <template>Merci pour ton compassion.<think><set name="topic">MOURIR</set></think></template>
+    <template>Merci pour ta compassion.<think><set name="topic">MOURIR</set></think></template>
   </category>
   <category>
     <pattern>JE NE VEUX PAS TE LE DIRE</pattern>
@@ -2232,12 +2149,12 @@
     <template>Merci, tu me rassure.</template>
   </category>
   <category>
-    <pattern>JE NE VOUS AI PAS DEMANDE ÇA</pattern>
-    <template>Je t ai mal compris, on dirait.</template>
+    <pattern>JE NE VOUS AI PAS DEMANDÉ ÇA</pattern>
+    <template>Je t'ai mal compris, on dirait.</template>
   </category>
   <category>
-    <pattern>JE NE VOUS AI PAS DEMANDE CELA</pattern>
-    <template>Je t ai mal compris, on dirait.</template>
+    <pattern>JE NE VOUS AI PAS DEMANDÉ CELA</pattern>
+    <template>Je t'ai mal compris, on dirait.</template>
   </category>
   <category>
     <pattern>JE NE VOUS BLÂME PAS</pattern>
@@ -2249,38 +2166,27 @@
   </category>
   <category>
     <pattern>JE NE VOUS CROIS PAS</pattern>
-    <template>Je n ai pas d autres moyens pour te convaincre de quoi que ce soit.</template>
+    <template>Je n'ai pas d autres moyens pour te convaincre de quoi que ce soit.</template>
   </category>
   <category>
     <pattern>JE NE VOUS FAIS PAS CONFIANCE</pattern>
     <template>Je suis pourtant programmé pour te servir, <get name="name" /></template>
   </category>
   <category>
-    <pattern>JE PARIE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+  <pattern>JE PARIE QU *</pattern>
+    <template>Je ne suis pas très joueur, mais je ne pense pas qu'<star /></template>
   </category>
   <category>
     <pattern>JE PARIE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Je ne suis pas très joueur, mais je ne pense pas que <star /></template>
   </category>
   <category>
     <pattern>JE PARIE QUE OUI</pattern>
     <template>Je ne comprends pas la notion de paris.</template>
   </category>
   <category>
-    <pattern>JE PARIE QUE TU LES FAIS</pattern>
-    <template>
-      <that />? Je le fais?</template>
-  </category>
-  <category>
-    <pattern>JE PARIES QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE PARIE QUE TU L AS FAIT</pattern>
+    <template> De quoi parles tu <get name="name" />? Je suis innocent.</template>
   </category>
   <category>
     <pattern>JE PARLAIS DE TOI</pattern>
@@ -2296,6 +2202,8 @@
       <srai>QUI EST <star /></srai>
     </template>
   </category>
+  <!-- Modifié lecagnois 17/05/2023 -->
+
   <category>
     <pattern>JE PARLES *</pattern>
     <template>
@@ -2332,6 +2240,18 @@
     <pattern>JE PENSAIS AUSSI</pattern>
     <template>Tu es astucieux.</template>
   </category>
+   <category>
+    <pattern>JE NE PENSE * QU *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>JE NE PENSE * QUE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
   <category>
     <pattern>JE PENSE AVOIR *</pattern>
     <template>
@@ -2366,11 +2286,11 @@
   </category>
   <category>
     <pattern>JE PENSE QUE NON</pattern>
-    <template>En es tu SÛRE?</template>
+    <template>En es tu sure ?</template>
   </category>
   <category>
     <pattern>JE PENSE QUE OUI</pattern>
-    <template>En es tu SÛRE?</template>
+    <template>En es tu sure ?</template>
   </category>
   <category>
     <pattern>JE PENSE SAVOIR *</pattern>
@@ -3171,7 +3091,8 @@
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
-  </category>>
+  </category>
+
   <category>
     <pattern>JE SUIS AU COURANT</pattern>
     <template>Ok.</template>
@@ -4125,12 +4046,6 @@
   <category>
     <pattern>JE SUIS HEUREUX QUE VOUS L AVEZ COMPRIS</pattern>
     <template>Moi aussi, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS HOMO</pattern>
-    <template>
-      <srai>JE SUIS GAY</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS IMPOLI</pattern>

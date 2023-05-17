@@ -3068,8 +3068,8 @@
     <pattern>JE NE PENSE PAS</pattern>
     <template>
       <random>
-        <li>INTéRESSANT... Tu m'apparaissez comme une entité pensante.</li>
-        <li>çA signifie-t-il "Non"?</li>
+        <li>Intéressant... Tu m'apparaissez comme une entité pensante.</li>
+        <li>ça signifie-t-il "Non"?</li>
       </random>
     </template>
   </category>
@@ -3595,7 +3595,7 @@
   </category>
   <category>
     <pattern>JE TE L AI DIT</pattern>
-    <template>Ooops je tu as envoye la fausse question.</template>
+    <template>Oups, tu m'a déjà posé la question.</template>
   </category>
   <category>
     <pattern>JE TE PARDONNE</pattern>

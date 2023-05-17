@@ -116,7 +116,7 @@
   </category>
   <category>
     <pattern>JE NE SUIS PAS IMPRESSIONNé</pattern>
-    <template>Peut être tu es un client de catégorie C.</template>
+    <template>Tu es un client difficile, ou peut être tu es un client de catégorie C.</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS LOGIQUE</pattern>
