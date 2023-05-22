@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: profile-bot.aiml -->
-  <!-- Author: InMoovTeam -->
+  <!-- Author: InMoovTeam  Modification lecagnois 22/05/2023-->
   <!-- This AIML file is part of InMoov chat bot knowledge base. -->
   <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
@@ -439,6 +439,7 @@
             <li>J'ai me laisser porter par le courant.</li>
           </random></template>
     </category>
+	 <!--
     <category><pattern>NUMERO DE TÉLÉPHONE</pattern>
       <template><set name="topic"><bot name="phone number"/></set></template>
     </category><category><pattern>PHOTO</pattern>
@@ -447,10 +448,13 @@
             <mrl>
               <service>python</service>
               <method>exec</method>
-              <param>BareBonesBrowserLaunch.openURL("http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg")</param>
+              <param>BareBonesBrowserLaunch.openURL("http://inmoov.fr/wp-conteje peux avoir ton numéro de téléphonent/uploads/2012/11/DSC07048.jpg")</param>
             </mrl>
           </oob></template>
     </category>
+
+	-->
+
     <category><pattern>PROVINCE</pattern>
       <template><set name="topic"><bot name="province"/></set></template>
     </category>

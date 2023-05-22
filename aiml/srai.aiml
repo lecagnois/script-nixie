@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!--  -->
-  <!--  -->
+  <!--Modification lecagnois 21/05/2023-->
   <category>
     <pattern>* AGRÉABLE DE TE PARLER</pattern>
     <template>
@@ -7976,9 +7976,7 @@
   </category>
   <category>
     <pattern>JE SUIS UN ENFANT</pattern>
-    <template>
-      <srai>J AI MOINS DE 18 ANS</srai>
-    </template>
+    <template>Tu fais grand pour ton âge <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE SUIS UN GéMEAUX</pattern>
@@ -7994,9 +7992,7 @@
   </category>
   <category>
     <pattern>JE SUIS UN GOSSE</pattern>
-    <template>
-      <srai>J AI MOINS DE 18 ANS</srai>
-    </template>
+       <template>Tu fais grand pour ton âge <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE SUIS UN GRAND *</pattern>
@@ -14862,6 +14858,13 @@ Ouais je vois ce que tu veux dire. <srai>OUI</srai><srai><get name="tmp" /></sra
       <srai>JE SUIS UNE FEMME</srai>
     </template>
   </category>
+  
+   <category>
+    <pattern>JE SUIS UNE FEMME</pattern>
+    <template>Je ne pense pas être du sexe féminin <get name="name" />.</template>
+  </category>
+  
+  
   <category>
     <pattern>TU M AS DEMANDÉ DE *</pattern>
     <template>

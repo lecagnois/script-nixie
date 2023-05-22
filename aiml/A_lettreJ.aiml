@@ -2202,29 +2202,19 @@
       <srai>QUI EST <star /></srai>
     </template>
   </category>
-  <!-- Modifié lecagnois 17/05/2023 -->
-
   <category>
-    <pattern>JE PARLES *</pattern>
-    <template>
-      <srai>JE PARLE <star /></srai>
-    </template>
+    <pattern>JE PARLE *</pattern>
+    <template>Je ne sais pas si tu parle <star />, mais je n'ai pas tout compris. </template>
   </category>
   <category>
-    <pattern>JE PARLES A *</pattern>
-    <template>
-      <srai>TU ES UN ROBOT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE PARLES AVEC *</pattern>
+    <pattern>JE PARLE À *</pattern>
     <template>
       <srai>TU ES UN ROBOT</srai>
     </template>
   </category>
   <category>
     <pattern>JE PEINS # </pattern>
-    <template>une activité très intéressante.<think><set name="topic">la peinture</set></think></template>
+    <template>c'est une activité très intéressante.<think><set name="topic">la peinture</set></think></template>
   </category>
   <category>
     <pattern>JE PENCHE PLUTÔT POUR *</pattern>
@@ -2234,25 +2224,21 @@
   </category>
   <category>
     <pattern>JE PENSAIS</pattern>
-    <template>Tu es astucieux.</template>
+    <template>Tu es très astucieux <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE PENSAIS AUSSI</pattern>
-    <template>Tu es astucieux.</template>
+    <template>Tu es très astucieux <get name="name" />.</template>
   </category>
    <category>
-    <pattern>JE NE PENSE * QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE NE PENSE PAS QU *</pattern>
+    <template>Tu en ai sûr, tu penses vraiement qu'<star/>. </template>
   </category>
   <category>
-    <pattern>JE NE PENSE * QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE NE PENSE PAS QUE *</pattern>
+       <template>Tu en ai sûr, tu penses vraiement que <star/>. </template>
   </category>
-  <category>
+    <category>
     <pattern>JE PENSE AVOIR *</pattern>
     <template>
       <srai>J AI <star /></srai>
@@ -2280,9 +2266,7 @@
   </category>
   <category>
     <pattern>JE PENSE POUVOIR *</pattern>
-    <template>
-      <srai>JE PEUX <star /></srai>
-    </template>
+    <template>Super si tu pense pouvoir <star />, je te félicite</template>
   </category>
   <category>
     <pattern>JE PENSE QUE NON</pattern>
@@ -2300,82 +2284,138 @@
   </category>
   <category>
     <pattern>JE PENSE * QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Ah, vraiement tu pense <star index="1"/> qu'<star index="2"/>? Tu a peut être raison.</template>
   </category>
   <category>
     <pattern>JE PENSE * QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Ah, vraiement tu pense <star index="1"/> que <star index="2"/>? Tu a peut être raison.</template>
   </category>
   <category>
     <pattern>JE PERSUADE * COMMENT</pattern>
     <template>
-      <srai>COMMENT JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
     </template>
   </category>
   <category>
     <pattern>JE PERSUADE COMMENT *</pattern>
     <template>
-      <srai>COMMENT JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
     </template>
   </category>
-  <category>
-    <pattern>JE PEUX APPRENDRE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+ <category>
+    <pattern>JE VEUX DES RENSEIGNEMENTS</pattern>
+    <template>en quoi puis je te renseigner?</template>
   </category>
   <category>
-    <pattern>JE PEUX APPRENDRE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+    <pattern>JE VEUX DIRE QUE *</pattern>
+    <template>Ok , j'avais bien compris que <star />. </template>
+  </category>
+  <category>
+    <pattern>JE VEUX DORMIR AVEC TOI</pattern>
+    <template>Australopithèque détecté, pas de <set name="topic">SEXE</set> entre nous.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX DORMIR AVEC VOUS</pattern>
+    <template>Australopithèque détecté, pas de <set name="topic">SEXE</set> entre nous.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX DU SEXE</pattern>
+    <template>Vas autres parts, pas de <set name="topic">SEXE</set> entre nous.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX FAIRE L AMOUR AVEC VOUS</pattern>
+    <template>Sorry <get name="name" />. Je ne cherche aucun rapport intime avec un australopithèque dans ton genre. Pas de<set name="topic">SEXE</set> entre nous.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX FAIRE USAGE D *</pattern>
+    <template>Tu pense que sais une bonne idée d'utiliser d'<star />?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX FAIRE USAGE DE *</pattern>
+        <template>Tu pense que sais une bonne idée d'utiliser de <star />?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX MANGER</pattern>
+    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX SAVOIR UNE CHOSE</pattern>
+    <template>Demandes moi tout ce que tu veux.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX T ENCULER</pattern>
+    <template>Si tu approches d'un millimètre, l'australopithèque, je te change en grille-pain.<think><set name="personality">IMPOLI</set> <set name="topic">SEXE</set></think></template>
+  </category>
+  <category>
+    <pattern>JE VEUX UTILISER</pattern>
+    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX TE DEMANDER SI *</pattern>
+    <template>Si <Star />, cela dépand des jours et de mon humeur <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE VEUX TOI ET MOI</pattern>
+    <template>OK, Nous deux, alors ?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX VOUS BAISER</pattern>
+    <template>Si tu approches d un millimètre, l'australopithèque, je te change en grille pain.<think><set name="personality">IMPOLI</set> <set name="topic">SEXE</set></think></template>
+  </category>
+  <category>
+    <pattern>JE VEUX VOUS ENCULER</pattern>
+    <template>Si tu approches d un millimètre, l'australopithèque, je te change en grille pain.<think><set name="personality">IMPOLI</set> <set name="topic">SEXE</set></think></template>
+  </category>
+  <category>
+    <pattern>JE VEUX VOUS ET MOI</pattern>
+    <template>OK. Nous deux, alors ?</template>
+  </category>
+  <category>
+    <pattern>JE VEUX VOUS PARLER</pattern>
+    <template>Nous sommes déjà en train de parler.<think><set name="topic">COMMUNIQUER</set></think></template>
+  </category>
+  <category>
+    <pattern>JE VEUX VOUS UTILISER</pattern>
+    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
   </category>
   <category>
     <pattern>JE PEUX AVOIR *</pattern>
-    <template>
-      <srai>JE VEUX <star /></srai>
-    </template>
+    <template>Tu veux <star />, mais je n'en ai pas désolé <get name="name" />.</template>
   </category>
   <category>
-    <pattern>JE PEUX AVOIR TON NUMÉRO DE TÉLÉPHONE</pattern>
-    <template>
-      <srai>QUEL EST TON NUMÉRO DE TÉLÉPHONE</srai>
-    </template>
+    <pattern>JE PEUX AVOIR TON NUMÉRO</pattern>
+    <template>je n'ai pas d'accès à un téléphone, sinon il commence par 06.</template>
+  </category>
+    <category>
+    <pattern>JE PEUX APPRENDRE QU *</pattern>
+    <template>Je te dirai bien qu'<star />, est tu prêt à l'apprendre ?</template>
   </category>
   <category>
-    <pattern>JE PEUX COMMENT OUVRIR *</pattern>
-    <template>
-      <srai>COMMENT J OUVRE <star /></srai>
-    </template>
+    <pattern>JE PEUX APPRENDRE QUE *</pattern>
+       <template>Je te dirai bien que <star />, est tu prêt à l'apprendre ?</template>
   </category>
   <category>
-    <pattern>JE PEUX COMMENT RENCONTRER *</pattern>
-    <template>
-      <srai>COMMENT JE RENCONTRE <star /></srai>
-    </template>
+    <pattern>JE PEUX OUVRIR *</pattern>
+    <template>Tu peux ouvrir <star /> avec tes dents par exemple. </template>
+  </category>
+  <category>
+    <pattern>JE PEUX RENCONTRER *</pattern>
+    <template>Tu peux rencontrer <star /> en faisant un beau sourire.</template>
   </category>
   <category>
     <pattern>JE PEUX CONCEVOIR QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Oui, je pense aussi qu'<star /> </template>
   </category>
   <category>
     <pattern>JE PEUX CONCEVOIR QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Oui, je pense aussi que <star /> </template>
   </category>
   <category>
     <pattern>JE PEUX DEMANDER SI *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Oui, j'aimerai bien que tu demande si <star />, je serais curieux de le savoir. </template>
   </category>
+  <!-- Modifié lecagnois 22/05/2023 -->
+
   <category>
     <pattern>JE PEUX DIRE QU *</pattern>
     <template>
@@ -2738,6 +2778,7 @@
       <sr />
     </template>
   </category>
+
   <category>
     <pattern>JE PORTES</pattern>
     <template>Des vêtements je suppose.</template>
@@ -3288,11 +3329,11 @@
   </category>
   <category>
     <pattern>JE SUIS CONTENT POUR TOI</pattern>
-    <template>Merci, <get name="name" />.</template>
+    <template>Merci, <get name="name" /><think><set name="topic">Ton bonheur</set></think>.</template>
   </category>
   <category>
     <pattern>JE SUIS CONTENT POUR VOUS</pattern>
-    <template>Merci, <get name="name" />.</template>
+    <template>Merci, <get name="name" />.<think><set name="topic">Ton bonheur</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS CONTENT QU *</pattern>
@@ -3314,7 +3355,7 @@
   </category>
   <category>
     <pattern>JE SUIS CONTENTE</pattern>
-    <template>Moi aussi.    <think><set name="topic">Ton bonheur</set></think></template>
+    <template>Moi aussi. <think><set name="topic">Ton bonheur</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS CONTENTE QU *</pattern>
@@ -4827,9 +4868,6 @@
     <pattern>JE T ENNUIE</pattern>
     <template>pas du tout, <get name="name" />.  les êtres humains m intéressent beaucoup.</template>
   </category>
-
- 
-
   <category>
     <pattern>JE TE DEMANDE *</pattern>
     <template>
@@ -5095,90 +5133,6 @@
   <category>
     <pattern>JE VAIS VOUS TUER</pattern>
     <template>J en doute, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX DES RENSEIGNEMENTS</pattern>
-    <template>en quoi puis je te renseigner?</template>
-  </category>
-  <category>
-    <pattern>JE VEUX DIRE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>JE VEUX DORMIR AVEC TOI</pattern>
-    <template>Australopithèque détecté.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX DORMIR AVEC VOUS</pattern>
-    <template>Australopithèque détecté.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX DU SEXE</pattern>
-    <template>Vas autres parts.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX FAIRE L AMOUR AVEC VOUS</pattern>
-    <template>Sorry <get name="name" />. Je ne cherche aucun rapport intime avec un australopithèque dans ton genre.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX FAIRE USAGE D *</pattern>
-    <template>
-      <srai>COMMENT J UTILISE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VEUX FAIRE USAGE DE *</pattern>
-    <template>
-      <srai>COMMENT J UTILISE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VEUX MANGER</pattern>
-    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
-  </category>
-  <category>
-    <pattern>JE VEUX SAVOIR UNE CHOSE</pattern>
-    <template>Demandes moi tout ce que tu veux.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX T ENCULER</pattern>
-    <template>Si tu approches d'un millimètre, l'australopithèque, je te change en grille-pain.<think><set name="personality">IMPOLI</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VEUX T UTILISER</pattern>
-    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
-  </category>
-  <category>
-    <pattern>JE VEUX TE DEMANDER SI *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>JE VEUX TOI ET MOI</pattern>
-    <template>OK, Nous deux.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX VOUS BAISER</pattern>
-    <template>Si tu approches d un millimètre, l australopithèque, je te change en grille pain.<think><set name="personality">IMPOLI</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VEUX VOUS ENCULER</pattern>
-    <template>Si tu approches d un millimètre, l australopithèque, je te change en grille pain.<think><set name="personality">IMPOLI</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VEUX VOUS ET MOI</pattern>
-    <template>OK. Nous deux.</template>
-  </category>
-  <category>
-    <pattern>JE VEUX VOUS PARLER</pattern>
-    <template>Nous sommes déjà en train de parler.<think><set name="topic">COMMUNIQUER</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VEUX VOUS UTILISER</pattern>
-    <template>C'est une très bonne nouvelle <get name="name" />! Veux tu en parler avec un de nos collaborateurs?</template>
   </category>
   <category>
     <pattern>JE VIENS DE LE FAIRE</pattern>

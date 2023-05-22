@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: profile-user-srai.aiml -->
-  <!-- Author: InMoovTeam -->
+  <!-- Author: InMoovTeam  Modification lecagnois 22/05/2023-->
   <!-- This AIML file is part of InMoov chat bot knowledge base. -->
   <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
@@ -382,7 +382,7 @@
     </template>
 </category>
 <category>
-    <pattern>JE NE vais pas à L ÉCOLE # </pattern>
+    <pattern>JE NE VAIS PAS À L ÉCOLE # </pattern>
     <template>
       	<srai>JE NE SUIS PAS ÉTUDIANT</srai>
     </template>

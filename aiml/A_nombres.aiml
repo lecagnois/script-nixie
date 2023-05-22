@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!--  -->
-<!--  -->
+<!-- Modification lecagnois 21/05/2023  -->
 <category><pattern># TABLES DE MULTIPLICATION</pattern>
 <template>oui , mon maitre ma apris a compter , interroge moi</template>
 </category>
