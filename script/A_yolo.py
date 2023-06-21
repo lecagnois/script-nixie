@@ -19,15 +19,21 @@ def onClassification(data):
 
 def startYoloInventory(duration):
   global classifications, last_item_found
+  # declaration de classification pour la premiere recherche
+  classifications = {}
   i01.speakBlocking(i01_chatBot.getPredicate("startupSentence"))
+  #sleep(5)
   #if runtime.isStarted('i01.neoPixel'):
     #i01_neoPixel.setAnimation("Color Wipe", 25, 5, 10, 15)
   #Lance function to start & stop yolo filter
   enableYoloFor(duration)
+  
   # cherche la valeur dans la class
   collectionString=""
   for key, value in classifications.items():
     collectionString=collectionString+" "+key+", "
+    print('object detected: ',collectionString)
+  if len(collectionString) == 0:collectionString="none"
   i01_chatBot.setPredicate("yoloTotalDetected",str(len(classifications)))
   return collectionString
 
@@ -70,4 +76,3 @@ def enableYoloFor(duration):
     i01_opencv.disableFilter("yolo")
     i01_opencv.removeFilter('yolo')
     i01_opencv.stopCapture()
-    i01.cameraOff()

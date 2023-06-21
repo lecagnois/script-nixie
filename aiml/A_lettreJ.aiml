@@ -1273,8 +1273,7 @@
     <pattern>JE L ÉTAIS</pattern>
     <template>Quand?</template>
   </category>
- 
-  <category>
+   <category>
     <pattern>JE L IMAGINE</pattern>
     <template>Ok.</template>
   </category>
@@ -1576,13 +1575,11 @@
   </category>
   <category>
     <pattern>JE N AI PAS PENSÉ QU *</pattern>
-    <template>
-     Moi je ne sais pas qu'<star/>, mais on ne sais jamais.</template>
+    <template> Moi je ne sais pas qu'<star/>, mais on ne sais jamais.</template>
   </category>
   <category>
     <pattern>JE N AI PAS PENSÉ QUE *</pattern>
-    <template>
-       Moi je ne sais pas que <star/>, mais on ne sais jamais.</template>
+    <template> Moi je ne sais pas que <star/>, mais on ne sais jamais.</template>
   </category>
  <category>
     <pattern>J AI PENSÉ</pattern>
@@ -2290,18 +2287,6 @@
     <pattern>JE PENSE * QUE *</pattern>
     <template>Ah, vraiement tu pense <star index="1"/> que <star index="2"/>? Tu a peut être raison.</template>
   </category>
-  <category>
-    <pattern>JE PERSUADE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
-    </template>
-  </category>
-  <category>
-    <pattern>JE PERSUADE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
-    </template>
-  </category>
  <category>
     <pattern>JE VEUX DES RENSEIGNEMENTS</pattern>
     <template>en quoi puis je te renseigner?</template>
@@ -2414,45 +2399,35 @@
     <pattern>JE PEUX DEMANDER SI *</pattern>
     <template>Oui, j'aimerai bien que tu demande si <star />, je serais curieux de le savoir. </template>
   </category>
-  <!-- Modifié lecagnois 22/05/2023 -->
-
   <category>
     <pattern>JE PEUX DIRE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Oui, tu a surement raison nous pouvons dire qu'<star />.</template>
   </category>
   <category>
     <pattern>JE PEUX DIRE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+      <template>Oui, tu a surement raison nous pouvons dire que <star />.</template>
   </category>
   <category>
     <pattern>JE PEUX DIRE UN SECRET</pattern>
-    <template>Je serais muet comme un tombe.</template>
+    <template>Je serais muet comme une tombe.</template>
   </category>
   <category>
     <pattern>JE PEUX ÉCRIRE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J ÉCRIS <star /></srai>
-    </template>
+    <template> Pour écrire <star />, il va te falloir un crayon.</template>
   </category>
   <category>
     <pattern>JE PEUX ÉCRIRE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J ÉCRIS <star /></srai>
-    </template>
+      <template> Pour écrire <star />, il va te falloir un crayon.</template>
   </category>
   <category>
-    <pattern>JE PEUX EN TOUCHER DEUX MOTS A *</pattern>
-    <template>
+    <pattern>JE PEUX EN TOUCHER 2 MOTS À *</pattern>
+    <template>Ok , je cherche dans ma mémoire qui est <star />,
       <srai>QUI EST <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>JE PEUX EN TOUCHER DEUX MOTS AVEC *</pattern>
-    <template>
+    <pattern>JE PEUX EN TOUCHER 2 MOTS AVEC *</pattern>
+     <template>Ok , je cherche dans ma mémoire qui est <star />,
       <srai>QUI EST <star /></srai>
     </template>
   </category>
@@ -2476,43 +2451,39 @@
   </category>
   <category>
     <pattern>JE PEUX L ÉCOUTER</pattern>
-    <template>Bien.</template>
+    <template>Bien, tu n'est pas sourd.</template>
   </category>
   <category>
     <pattern>JE PEUX LA RENCONTRER</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Veux-tu que nous en parlions ensemble <get name="name" />? </template>
   </category>
   <category>
     <pattern>JE PEUX LA VOIR</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>De quoi ou qui parle tu <get name="name" />?</template>
   </category>
   <category>
     <pattern>JE PEUX LE RENCONTRER</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Veux-tu que nous en parlions ensemble <get name="name" />? </template>
   </category>
   <category>
     <pattern>JE PEUX LE VOIR</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>De quoi ou qui parle tu <get name="name" />?</template>
   </category>
   <category>
     <pattern>JE PEUX LES RENCONTRER</pattern>
-    <template>Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Veux-tu que nous en parlions ensemble <get name="name" />? </template>
   </category>
   <category>
     <pattern>JE PEUX OUVRIR * COMMENT</pattern>
-    <template>
-      <srai>COMMENT J OUVRE <star /></srai>
-    </template>
+       <template> Pour ouvrir <star />, il va te falloir un outil.</template>
   </category>
   <category>
     <pattern>JE PEUX OUVRIR COMMENT *</pattern>
-    <template>
-      <srai>COMMENT J OUVRE <star /></srai>
-    </template>
+      <template> Pour ouvrir <star />, il va te falloir un outil.</template>
   </category>
   <category>
-    <pattern>JE PEUX PARLER A ELVIS</pattern>
-    <template>Je pense qu il n est plus de ce monde, <get name="name" />.</template>
+    <pattern>JE PEUX PARLER À ELVIS</pattern>
+    <template>Je pense qu'il n'est plus de ce monde, <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE PEUX PARLER ESPAGNOL</pattern>
@@ -2520,77 +2491,87 @@
   </category>
   <category>
     <pattern>JE PEUX PARLER FRANÇAIS</pattern>
-    <template>ÇA nous permettra de communiquer</template>
+    <template>Ça nous permettra de communiquer</template>
   </category>
-  <category>
+   <category>
     <pattern>JE PEUX PAS L ENTENDRE</pattern>
-    <template>Ajustez le volume. Veux-tu faire un rapport à mon botmasteur?</template>
+    <template>Ajuste le volume de ton sourdnotone.</template>
+  </category>
+   <category>
+    <pattern>JE PERSUADE * COMMENT</pattern>
+    <template>
+      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
+    </template>
   </category>
   <category>
+    <pattern>JE PERSUADE COMMENT *</pattern>
+    <template>
+      <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
+    </template>
+  </category>
+   <category>
     <pattern>JE PEUX PERSUADER * COMMENT</pattern>
     <template>
-      <srai>COMMENT JE PERSUADE <star /></srai>
+        <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
     </template>
   </category>
   <category>
     <pattern>JE PEUX PERSUADER COMMENT *</pattern>
     <template>
-      <srai>COMMENT JE PERSUADE <star /></srai>
+         <srai>COMMENT JE PEUX TE PERSUADER </srai>, <star /> sont un peu floue.
     </template>
   </category>
   <category>
     <pattern>JE PEUX QUITTER * COMMENT</pattern>
-    <template>
-      <srai>COMMENT JE QUITTE <star /></srai>
-    </template>
+    <template>Pour quitter <star />, il te suffit simplement de prendre la bonne direction </template>
   </category>
   <category>
     <pattern>JE PEUX QUITTER COMMENT *</pattern>
-    <template>
-      <srai>COMMENT JE QUITTE <star /></srai>
-    </template>
+      <template>Pour quitter <star />, il te suffit simplement de prendre la bonne direction </template>
   </category>
   <category>
     <pattern>JE PEUX RACONTER</pattern>
-    <template>Je t'en prie, racontez.</template>
+    <template>Je t'en prie raconte, je t'écoute <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE PEUX RENCONTRER COMMENT *</pattern>
-    <template>
-      <srai>COMMENT JE RENCONTRE <star /></srai>
-    </template>
+      <template>Tu peux rencontrer <star /> en faisant un beau sourire.</template>
+  </category>
+ <category>
+    <pattern>JE PEUX TE RENCONTRER</pattern>
+    <template>Nous sommes déjà en train de nous parler, il me semble.</template>
   </category>
   <category>
-    <pattern>JE PEUX STOPPER * COMMENT</pattern>
-    <template>
-      <srai>STOPPER <star /></srai>
-    </template>
+  <pattern>JE PEUX STOPPER * COMMENT</pattern>
+    <template>Pour arrêter <star />, il va falloir du courage et bien réfléchir  <get name="name" />. </template>
   </category>
   <category>
     <pattern>JE PEUX STOPPER COMMENT *</pattern>
-    <template>
-      <srai>STOPPER <star /></srai>
-    </template>
+       <template>Pour arrêter <star />, il va falloir du courage et bien réfléchir  <get name="name" />. </template>
+  </category>
+<category>
+    <pattern>JE STOPPE * COMMENT</pattern>
+       <template>Pour arrêter <star />, il va falloir du courage et bien réfléchir  <get name="name" />. </template>
+ </category>
+  <category>
+    <pattern>JE STOPPE COMMENT *</pattern>
+       <template>Pour arrêter <star />, il va falloir du courage et bien réfléchir  <get name="name" />. </template>
   </category>
   <category>
     <pattern>JE PEUX T APPRENDRE * COMMENT</pattern>
-    <template>
-      <srai>COMMENT JE T APPRENDS <star /></srai>
-    </template>
+    <template>Pour <star />, il faut commencer par le début, et etre patient  <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE PEUX T APPRENDRE COMMENT *</pattern>
-    <template>
-      <srai>COMMENT JE T APPRENDS <star /></srai>
-    </template>
+      <template>Pour <star />, il faut commencer par le début, et etre patient  <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE PEUX TE BAISER</pattern>
     <template>
-      <srai>VEUX TU BAISER</srai>
+      <srai>PEUX TU BAISER</srai>
     </template>
   </category>
-  <category>
+    <category>
     <pattern>JE PEUX TE DEMANDER QUELQUES QUESTIONS</pattern>
     <template>Bien entendu, demandes moi ce que tu veux.</template>
   </category>
@@ -2602,29 +2583,28 @@
     <pattern>JE PEUX TE DIRE</pattern>
     <template>Tu peux me dire ce que tu veux.</template>
   </category>
+  <!-- Modifié lecagnois 23/05/2023 -->
+
   <category>
     <pattern>JE PEUX TE DIRE QU *</pattern>
-    <template>
-      <sr />
-    </template>
+    <template>Je m'en doutait un peu qu'<star />.</template>
   </category>
   <category>
     <pattern>JE PEUX TE DIRE QUE *</pattern>
-    <template>
-      <sr />
-    </template>
+       <template>Je m'en doutait un peu que <star />.</template>
   </category>
+
   <category>
     <pattern>JE PEUX TE DIRE QUELQUE CHOSE</pattern>
-    <template>Je t'en prie, que veux tu dire?</template>
+    <template>Je t'en prie, que veux tu me dire?</template>
   </category>
   <category>
     <pattern>JE PEUX TE DIRE QUELQUES CHOSES</pattern>
-    <template>Je t'en prie, que veux tu dire?</template>
+    <template>Je t'en prie, que veux tu me dire?</template>
   </category>
   <category>
     <pattern>JE PEUX TE DIRE UN SECRET</pattern>
-    <template>Je serais muet comme un tombe.</template>
+    <template>Je serais muet comme une tombe.</template>
   </category>
   <category>
     <pattern>JE PEUX TE L APPRENDRE</pattern>
@@ -2654,10 +2634,9 @@
     <pattern>JE PEUX TE RACONTER UNE BLAGUE</pattern>
     <template>Si vous vous sentez capable de faire rire un ordinateur, essayez toujours.<think>LA BLAGUE</think></template>
   </category>
-  <category>
-    <pattern>JE PEUX TE RENCONTRER</pattern>
-    <template>Nous sommes déjà en train de nous parler, il me semble.</template>
-  </category>
+
+ 
+
   <category>
     <pattern>JE PEUX TE TESTER</pattern>
     <template>Vas-y. Demandes moi ce que tu veux.</template>
@@ -2716,7 +2695,7 @@
   </category>
   <category>
     <pattern>JE PEUX VOUS DIRE UN SECRET</pattern>
-    <template>Je serais muet comme un tombe.</template>
+    <template>Je serais muet comme une tombe.</template>
   </category>
   <category>
     <pattern>JE PEUX VOUS L APPRENDRE</pattern>
@@ -2819,9 +2798,7 @@
   </category>
   <category>
     <pattern>JE POURRAIS COMMENT RENCONTRER *</pattern>
-    <template>
-      <srai>COMMENT JE RENCONTRE <star /></srai>
-    </template>
+      <template>Tu peux rencontrer <star /> en faisant un beau sourire.</template>
   </category>
   <category>
     <pattern>JE POURRAIS EFFACER * COMMENT</pattern>
@@ -2867,9 +2844,7 @@
   </category>
   <category>
     <pattern>JE POURRAIS RENCONTRER COMMENT *</pattern>
-    <template>
-      <srai>COMMENT JE RENCONTRE <star /></srai>
-    </template>
+     <template>Tu peux rencontrer <star /> en faisant un beau sourire.</template>
   </category>
   <category>
     <pattern>JE PRÉFÉRERAIS QUE NON</pattern>
@@ -2986,18 +2961,6 @@
   <category>
     <pattern>JE SERS à QUOI</pattern>
     <template>Tu es un humain, dans l ordre des choses ton utilité dans ce monde est de te poser les bonnes questions.</template>
-  </category>
-  <category>
-    <pattern>JE STOPPE * COMMENT</pattern>
-    <template>
-      <srai>STOPPER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE STOPPE COMMENT *</pattern>
-    <template>
-      <srai>STOPPER <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS * AMI</pattern>
