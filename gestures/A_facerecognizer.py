@@ -1,24 +1,19 @@
-# Modification lecagnois  07/05/2023
+# Modification lecagnois  22/06/2023
 def facerecognizer(): 
-  #vous devez former au moins 2 FACES !
-  if runtime.isStarted('i01.opencv'):
+  #you need to train at least 2 FACES !
+  if not runtime.isStarted('i01.opencv'):
+    errorSpokenFunc('OPENCVNOWORKY')
+    i01.info(u"Activation du service OpenCv") 
+    opencv = runtime.start('i01.opencv', 'OpenCV')
+  else:
+    i01.speakBlocking(u"Je démarre le module d'analyse des visages.")
     i01_opencv.capture()
-    #i01.cameraOn()
     i01_opencv.addFilter("FaceRecognizer")
     i01_opencv.setActiveFilter("FaceRecognizer")
     fr = i01_opencv.getFilter("FaceRecognizer")
     fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-    fr.train()# il faut un certain temps pour s entrainer et etre capable de reconnaitre le visage
+    fr.train()# it takes some time to train and be able to recognize face
     fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
     python.subscribe("i01.opencv", "publishRecognizedFace")
-    # wait for X
-    #sleep(1)
-    #classifications.clear()
-    #python.unsubscribe('i01.opencv', 'publishRecognizedFace')
-    #01_opencv.disableFilter("FaceRecognizer")
-    #i01_opencv.removeFilter('FaceRecognizer')
-    #i01_opencv.stopCapture()
 
-  else:
-    errorSpokenFunc('OPENCVNOWORKY')
   i01.finishedGesture()

@@ -433,18 +433,7 @@
 		<srai>Je vis à <star index="3"/></srai>
 	</template>
 </category>
-<category>
-	<pattern> # je suis à la maison # </pattern>
-	<template>
-		<srai>MY LOCATION IS à la maison</srai>
-	</template>
-</category>
-<category>
-	<pattern> # je suis au travail  # </pattern>
-	<template>
-		<srai>MY LOCATION IS au travail</srai>
-	</template>
-</category>
+
 <category>
 	<pattern> # je suis dans le salon # </pattern>
 	<template>

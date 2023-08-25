@@ -267,7 +267,6 @@
             <li>Enchanté, <get name="tmpname"/>.</li>
         </random>
     <think>
-        <set name="name"><get name="tmpname"/></set>
         <set name="newinituser"></set>
         <set name="topic">changement de nom</set>
     </think>
@@ -280,6 +279,7 @@
          </oob>
 </template>
 </category></topic>
+
 
 <topic name="NEWINITUSER">
 <category><pattern># NON #</pattern><that># SI TON NOUVEAU NOM EST #</that>
