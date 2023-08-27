@@ -7799,19 +7799,12 @@
       <srai>JE SERAI <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS SÛR QU IL *</pattern>
-    <template>
-      <srai>IL <star /></srai>
-    </template>
-  </category>
-  <category>
+   <category>
     <pattern>JE SUIS SURTOUT *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
   </category>
-
   <category>
     <pattern>JE SUIS SÉRIEUSEMENT *</pattern>
     <template>

@@ -1192,7 +1192,7 @@
         <think>         
             <set name="gender"><star index="3"/></set>
          </think>
-        Heureux de le savoir.
+        Heureux de savoir que tu est un homme <star index="4" />.
         <condition name="gender" value="femme">
             <random>
                 <li>Madame ou Mademoiselle?</li>
@@ -1205,12 +1205,12 @@
             <random>
                 <li>beaucoup de mes interlocuteurs sont des hommes, de quoi VEUX tu parler.</li>
                 <li>Bonjour Monsieur.</li>
-                <li>de quoi VEUX tu parler.</li>
+                <li>de quoi veux tu parler.</li>
                 <li>Monsieur <get name="name" /> donc.</li>
             </random>               
         </condition>
         <condition name="gender" value="androgyne">
-                <li>Beaucoup de gens disent qu'ils le sont.</li>
+                <li>Beaucoup de gens disent qu'ils sont  <star index="4" />. .</li>
         </condition>                 
     </template>
 </category>
