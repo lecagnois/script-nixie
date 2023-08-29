@@ -5176,7 +5176,7 @@
       </think>
       <random>
         <li>Je ne suis pas sûr d'aimer ça.</li>
-        <li>Moi aussi, j aime bien <star />.</li>
+        <li>Moi aussi, j'aime bien <star />.</li>
         <li>Tu n'es pas le seul.</li>
       </random>
     </template>
@@ -8008,7 +8008,7 @@
   </category>
   <category>
     <pattern>JE SUIS UN MEURTRIER</pattern>
-    <template>Peut-être que je ne devrais pas te tourner le dos.</template>
+    <template>Peut-être que je ne devrais pas te tourner le do.</template>
   </category>
   <category>
     <pattern>JE SUIS UN PEU *</pattern>
@@ -8051,7 +8051,7 @@
   </category>
   <category>
     <pattern>JE SUIS UN TUEUR</pattern>
-    <template>Peut-être que je ne devrais pas te tourner le dos.</template>
+    <template>Peut-être que je ne devrais pas te tourner le do.</template>
   </category>
   <category>
     <pattern>JE SUIS UNE *</pattern>

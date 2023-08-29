@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- Travaller par Gael 2023 -->
-  <!-- Modification lecagnois 02/2023 -->
+  <!-- Modifications lecagnois 08/2023 -->
   <category>
     <pattern>* A PLU * RENCONTRER</pattern>
     <template>Ce fut agréable pour moi aussi, <get name="name" />.</template>
@@ -3483,12 +3483,7 @@
     <template>
       <srai>APPJOIE</srai>ah bon!..</template>
   </category>
-  <category>
-    <pattern>JE SUIS SORTI</pattern>
-    <template>t'es tu bien amuse?</template>
-  </category>
-  
-  <category>
+   <category>
     <pattern>JE SUIS UN * LA FEMME</pattern>
     <template>tu</template>
   </category>
@@ -3514,7 +3509,7 @@
   </category>
   <category>
     <pattern>JE T AI CRÉES</pattern>
-    <template>AlorS tu dois savoir le mot de passe secret :</template>
+    <template>Alors tu dois savoir le mot de passe secret :</template>
   </category>
   <category>
     <pattern>JE T AI DEMANDÉ D ABORD</pattern>
@@ -3526,11 +3521,11 @@
   </category>
   <category>
     <pattern>JE T AI FAIT</pattern>
-    <template>AlorS tu dois savoir le mot de passe secret :</template>
+    <template>Alors tu dois savoir le mot de passe secret :</template>
   </category>
   <category>
     <pattern>JE T AI FAITS</pattern>
-    <template>AlorS tu dois savoir le mot de passe secret :</template>
+    <template>Alors tu dois savoir le mot de passe secret :</template>
   </category>
   <category>
     <pattern>JE T AI JUSTE DIT</pattern>

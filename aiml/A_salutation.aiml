@@ -98,7 +98,7 @@
         <li>Jusqu'à la prochaine fois <get name="name"/>.</li>
         <li>Merci d'avoir discuté <get name="name"/>.</li>
       </random>
-      <srai>DISCONNECT</srai></template>
+      <srai>FAIS DODO</srai></template>
 </category>
 <category><pattern>BON AU REVOIR *</pattern>
 <template><srai>AU REVOIR</srai></template>
@@ -131,7 +131,7 @@
         <li>A plus tard <get name="name"/>.</li>
         <li>Merci d'avoir discuté <get name="name"/>.</li>
       </random>
-      <srai>DISCONNECT</srai></template>
+      <srai>FAIS DODO</srai></template>
 </category>
 <category><pattern>BUENOS DIAS</pattern>
 <template><srai>BONJOUR</srai></template>

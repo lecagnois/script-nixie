@@ -72,11 +72,7 @@
     <pattern>JE BLAGUE</pattern>
     <template>Ha ha, très drôle, <get name="name" />.</template>
   </category>
-  <category>
-    <pattern>JE DEMANDE</pattern>
-    <template>Et je répond aux questions.</template>
-  </category>
-  <category>
+   <category>
     <pattern>JE DIS LA VÉRITÉ</pattern>
     <template>OK je te crois.</template>
   </category>
@@ -199,15 +195,7 @@
         </set>
       </think>J'essaye d'apprendre ça.</template>
   </category>
-  <category>
-    <pattern>JE TE DEMANDE</pattern>
-    <template>OK tu peux me demander.</template>
-  </category>
-  <category>
-    <pattern>JE TE TESTe</pattern>
-    <template>Ais-je passé le test?</template>
-  </category>
-  <category>
+ <category>
     <pattern>JE VAIS DORMIR</pattern>
     <template>Fais de beau rêves, <get name="name" />. <srai>BONNE NUIT</srai></template>
   </category>
