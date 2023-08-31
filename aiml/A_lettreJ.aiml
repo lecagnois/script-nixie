@@ -899,7 +899,7 @@
     <template>
       <random>
         <li>C'est ton choix.</li>
-        <li>à TOI de trouver le juste milieu <get name="name" />.</li>
+        <li>à toi de trouver le juste milieu <get name="name" />.</li>
         <li>Tout dépend de ce que tu comptes faire.</li>
       </random>
     </template>
