@@ -14,7 +14,7 @@ def tirage():
         # print (tirage)
         # transforme la chaine en list
         resultat = (tirage.split())
-        print(resultat)
+        #print(resultat)
         #recherche index annee dans la liste resultat pour trouver les numéros
         pos=(resultat.index(annee))
         i01.speakBlocking(u"voici les numéros du dernier tirage du loto")

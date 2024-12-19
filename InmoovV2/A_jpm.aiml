@@ -3,6 +3,86 @@
 <!--  aiml pour buste uniquement -->
 <!-- modification pour tete v2 le 15/12/2024 -->
 
+<!--  annuvaire donne la date les saints et les anniversaire des amis fichier bdamis.csv-->
+<category><pattern>ANNIVERSAIRE</pattern>
+<template>
+		<oob>                   
+			<mrl>             
+				<service>python</service>   
+				<method>exec</method>      
+				<param>anniversaire()</param>
+			</mrl>            
+		</oob>
+		<srai>APPSMILE</srai>
+		</template>
+</category>
+<category>
+<pattern> * D'ANNIVERSAIRE DE *</pattern>
+<template> 
+		<oob>                   
+			<mrl>             
+				<service>python</service>   
+				<method>exec</method>      
+				<param>chercheamis("<star index="2"/>")</param>
+			</mrl>            
+		</oob>
+		<srai>APPSMILE</srai>
+		</template>
+</category>
+<category><pattern> * L'ANNIVERSAIRE DE *</pattern>
+<template>  <srai>* D'ANNIVERSAIRE DE * </srai></template>
+</category>
+<!--  fait un tirage du loto et donne le dernier tirage du net avec comparaison des resultats fichier loto.csv-->
+<category><pattern> * NUMÉRO DU LOTO</pattern>
+<template>  <srai>* NUMÉROS DU LOTO </srai></template>
+</category>
+<category><pattern> * NUMÉROS DU LOTO</pattern>
+<template>
+	<oob><mrl>                
+		<service>python</service>   
+		<method>exec</method>      
+		<param>loto(u"Voci les numéros a jouer au loto, ","Le ",u"Et le numméro chance le, ","Je vous souhaite bonne chance. ",49,5,10)</param>
+	</mrl></oob>
+	<srai>APPSMILE</srai>
+</template>
+</category>
+<category><pattern>TIRAGE DU LOTO</pattern>
+<template><oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>tirage()</param>
+				 </mrl>
+			</oob>
+		  <srai>APPACCOMPLICE</srai>	
+	</template>
+</category>
+<category><pattern>* LE DERNIER TIRAGE DU LOTO</pattern>
+<template><srai>TIRAGE DU LOTO</srai></template>
+</category>
+<category><pattern>* RÉSULTATS DU LOTO</pattern>
+<template><srai>TIRAGE DU LOTO</srai></template>
+</category>
+<category><pattern>* RÉSULTAT DU LOTO</pattern>
+<template><srai>TIRAGE DU LOTO</srai></template>
+</category>
+<!--  Donne votre planning a partir du fichier planning.csv -->
+<category><pattern>PLANNING</pattern>
+<template><oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>planning()</param>
+				 </mrl>
+			</oob>
+	<srai>APPTHINKING</srai>
+</template>
+</category>
+<category><pattern> * MON PLANNING</pattern>
+<template><srai>PLANNING</srai></template>
+</category>
+
+
 <category><pattern>DONNE MOI UNE INFORMATION SPORTIVE</pattern>
 <template><set name="topic">Information Sportive</set>
     <oob>
@@ -353,90 +433,7 @@
       </oob></template>
 </category>
 
-<category><pattern>ANNIVERSAIRE</pattern>
-<template>
-		<oob>                   
-			<mrl>             
-				<service>python</service>   
-				<method>exec</method>      
-				<param>anniversaire()</param>
-			</mrl>            
-		</oob></template>
-</category>
 
-<category>
-<pattern> * D'ANNIVERSAIRE DE *</pattern>
-<template> 
-		<oob>                   
-			<mrl>             
-				<service>python</service>   
-				<method>exec</method>      
-				<param>chercheamis("<star index="2"/>")</param>
-			</mrl>            
-		</oob></template>
-</category>
-
-
-<category><pattern> * NUMÉRO DU LOTO</pattern>
-<template>  <srai>* NUMÉROS DU LOTO </srai></template>
-</category>
-
-<category><pattern> * NUMÉROS DU LOTO</pattern>
-<template>
-	<oob><mrl>                
-		<service>python</service>   
-		<method>exec</method>      
-		<param>loto(u"Voci les numéros a jouer au loto, ","Le ",u"Et le numméro chance le, ","Je vous souhaite bonne chance. ",49,5,1)</param>
-	</mrl></oob>
-	<srai>APPSMILE</srai>
-</template>
-</category>
-
-<category><pattern>RÉSULTATS DU LOTO</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>tirage()</param>
-				 </mrl>
-			</oob></template>
-</category>
-<category><pattern>TIRAGE DU LOTO</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>tirage()</param>
-				 </mrl>
-			</oob></template>
-</category>
-<category><pattern>DONNE MOI LE DERNIER TIRAGE DU LOTO</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>tirage()</param>
-				 </mrl>
-			</oob></template>
-</category>
-<category><pattern>PLANNING</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>planning()</param>
-				 </mrl>
-			</oob></template>
-</category>
-<category><pattern>DONNE MOI MON PLANNING</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>planning()</param>
-				 </mrl>
-			</oob></template>
-</category>
 
 <category><pattern>PRENDRE UNE PHOTO</pattern>
 <template><oob>                 

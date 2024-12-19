@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 import random
 import os
+import time
 
 def loto(phrase,the,chance,fin,nb_boules_principales, nb_tirages_principaux, nb_boules_complementaires) :
     table1 = []
@@ -8,22 +9,20 @@ def loto(phrase,the,chance,fin,nb_boules_principales, nb_tirages_principaux, nb_
     # Tirage aléatoire et tri des numéros principaux
     numeros_principaux = sorted(random.sample(range(1, nb_boules_principales + 1), nb_tirages_principaux))
     # Tirage aléatoire du numéro complémentaire
-    numero_complementaire = random.randint(1, nb_boules_complementaires)
-
-    # Affichage des numéros un par un avec une petite pause
+    complementaire = random.randint(1, nb_boules_complementaires)
+    
+    # Affichage des numéros un par et aliment table1 pour le fichier loto.csv
     i01.speakBlocking(phrase)
     for numero in numeros_principaux:
         #print(numero)
         i01.speakBlocking(the+str(numero))
-        time.sleep(1)  # Pause d'une seconde entre chaque numéro
         table1.append(numero) 
            
-    i01.speakBlocking(chance+ str(numero_complementaire))
-    #print(u"Et le numéro complémentaire est le : "+ str(numero_complementaire))
-    table1.append(numero_complementaire)
+    table1.append(complementaire)
     print(table1)
-  
-     
+    i01.speakBlocking(chance)
+    i01.speakBlocking(str(complementaire))
+   
     # vérification si existe fichier loto.csv si oui on ajoute numeros 
     if os.path.exists('data/loto.csv'):
         valeurs = [[str(table1[0]),str(table1[1]),str(table1[2]),str(table1[3]),str(table1[4]),str(table1[5]),date]]
