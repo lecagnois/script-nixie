@@ -216,9 +216,6 @@
 <category><pattern>QUEL EST TON HISTOIRE PRÉFÉRÉE</pattern>
 <template><srai>raconte moi une blague</srai></template>
 </category>
-<category><pattern>QUEL EST TON HOROSCOPE</pattern>
-<template><srai>horoscope</srai></template>
-</category>
 <category><pattern>QUEL EST TON IP</pattern>
 <template>Pourquoi te dirais je ça . Je peut te dire que cela commence par 192</template>
 </category>

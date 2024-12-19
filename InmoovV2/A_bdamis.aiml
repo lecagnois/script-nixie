@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: A_bdamis.aiml -->
+  <!-- lecagnois le 18/12/2024 routine pour alimenter la base bdamis.csv -->
+
+   <category>
+    <pattern>ANNUAIRE</pattern>
+    <template>
+      <think><set name="annuaire">started</set></think>
+      <think><set name="topic">annuaire</set></think>
+      Bonjour, Je t'écoute. quel est ton prénom ?
+    </template>
+  </category>
+
+  <category><pattern>CRÉER UN ANNUAIRE</pattern>
+      <template> <srai>ANNUAIRE</srai></template>
+  </category>
+  
+<topic name="ANNUAIRE">
+    <category>
+      <pattern>#</pattern>
+      <that># quel est ton prénom #</that>
+      <template>
+        <set name="questionannuaire">Si ton prénom est <star />, répond par oui ou non</set>
+        <think><set name="tmpprenom"><star /></set> </think>
+      </template>
+    </category>
+  </topic>
+  
+ <topic name="ANNUAIRE">
+    <category>
+      <pattern>#</pattern>
+      <that># Puis-je avoir ta date de naissance #</that>
+      <template>
+        <set name="questionannuaire">Si ta date de naissance est <star />, répond par oui ou non</set>
+        <think><set name="tmpdate"><star /></set> </think>
+      </template>
+    </category>
+  </topic>
+
+ <topic name="ANNUAIRE">
+   <category>
+      <pattern># OUI #</pattern>
+      <that># Si ton prénom est #</that>
+      <template>
+          Puis-je avoir ta date de naissance. 
+      </template>
+    </category>
+</topic>
+
+<topic name="ANNUAIRE">
+   <category>
+      <pattern># OUI #</pattern>
+      <that># Si ta date de naissance est #</that>
+      <template>
+        <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>bdamis(u"<get name="tmpprenom" />","<get name="tmpdate" />")</param>
+        </mrl>
+      </oob>
+      </template>
+    </category>
+</topic>
+
+<topic name="ANNUAIRE">
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si ton prénom est #</that>
+      <template>
+        On recommence alors. Je t'écoute, quel est ton prénom ?
+      </template>
+    </category>
+  </topic>
+
+<topic name="ANNUAIRE">
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si ta date de naissance est #</that>
+      <template>
+        On recommence alors. Puis-je avoir ta date de naissance ?
+      </template>
+    </category>
+  </topic>
+
+ <topic name="ANNUAIRE">
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questionannuaire" />
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>ADD_FRIENDS</pattern>
+    <template>J'ai ajouté <get name="tmpprenom" /> a la liste de tes amis. Tu devra compléter avec son id et son mail.</template>
+  </category>
+   <category>
+    <pattern>FIRST_NAME_ALREADY_EXISTS</pattern>
+    <template>jai déjà le prénom de <get name="tmpprenom" />, je ne peux pas l'ajouter.</template>
+  </category>
+
+</aiml>

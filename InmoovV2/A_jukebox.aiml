@@ -337,7 +337,6 @@
     <srai>APPSMILE</srai>
     </template>
   </category>
-
  <category>
     <pattern>* MUSIQUE DE JAZZ</pattern>
     <template>Voici de la musique de jazz
@@ -392,7 +391,6 @@
     <srai>APPSMILE</srai>
     </template>
   </category>
-
   <category>
     <pattern>* MUSIQUE DE FILM</pattern>
     <template>Voici de la musique de films
@@ -406,7 +404,6 @@
     <srai>APPSMILE</srai>
     </template>
   </category>
-
   <category>
     <pattern>STOP LA RADIO</pattern>
     <template>Voilà, la radio est éteinte.
@@ -420,14 +417,12 @@
     <srai>APPSMILE</srai>
     </template>
   </category>
-  
-  <category>
+    <category>
     <pattern>ARRÊTE LA RADIO</pattern>
     <template>
     <srai>STOP LA RADIO</srai>
     </template>
   </category>
-
   <category>
     <pattern>STOPPE LA RADIO</pattern>
     <template>
@@ -435,13 +430,11 @@
     </template>
   </category>
  <category>
- 
-    <pattern>STOPPE LA MUSIQUE</pattern>
+     <pattern>STOPPE LA MUSIQUE</pattern>
     <template>
     <srai>STOP LA RADIO</srai>
     </template>
   </category>
-
   <category>
     <pattern>ÉTEINS LA RADIO</pattern>
     <template>

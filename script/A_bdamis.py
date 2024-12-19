@@ -15,7 +15,7 @@ def bdamis(nom,date):
         for ligne in reader:
             print(ligne[0])
             if (nom.upper() == ligne[0]):
-                i01.speakBlocking(u"jai déjà le prénom de "+nom + u" je ne peux pas l'ajouter")
+                i01.speakBlocking(u"jai déjà le prénom de "+nom + u" je ne peux pas l'ajouter à la base de donnée.")
                 flag = 1
         f.close()
         #ajout des donnees si prenom inexistant   
@@ -32,7 +32,7 @@ def bdamis(nom,date):
                 ligne = ";".join(valeur) + "\n"
                 f.write(ligne)
             f.close()
-            i01.speakBlocking(u"J'ai ajouté "+nom+ u" a la liste de tes amis. Tu devra compléter avec son id et son mail")  
+            i01.speakBlocking(u"J'ai ajouté "+nom+ u" a la liste de tes amis. Tu devra compléter avec son mail.")  
                 
     else:
         #création du fichier bdamis
@@ -51,5 +51,5 @@ def bdamis(nom,date):
             ligne = ";".join(valeur) + "\n"
             f.write(ligne)
         f.close()
-        i01.speakBlocking(u"J'ai ajouté " +nom+ u" a la liste de tes amis")   
+        i01.speakBlocking(u"J'ai ajouté " +nom+ u" a la liste de tes amis. Tu devra compléter avec son mail.")   
     
