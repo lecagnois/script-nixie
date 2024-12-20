@@ -2,18 +2,19 @@
 <aiml>
 <!--  par lecagnois -->
 <!--  21/12/2024 modif pour tete V2 -->
-
   <category>
     <pattern>ACTIVER LE RÉVEIL</pattern>
     <template>
       <think><set name="reveil">started</set></think>
       <think><set name="topic">reveil</set> </think>
       Je t'écoute. quelle est l'heure de réveil ?   
-     <srai>APPTHINKING</srai>
     </template>
   </category>
-  
-  <topic name="reveil">
+<category><pattern>DÉMARRE LE RÉVEIL</pattern>
+    <template><srai>ACTIVER LE RÉVEIL</srai></template>
+</category>
+  <!-- debut du questionnaire -->
+    <topic name="reveil">
     <category>
       <pattern>#</pattern>
       <that># quelle est l'heure de réveil #</that>
@@ -25,10 +26,10 @@
       </template>
     </category>
  </topic>
-
   <topic name="reveil">
     <category>
       <pattern># OUI #</pattern>
+       <that># Si l'heure de réveil est #</that>
       <template>
         <oob>
 		       <mrl>
@@ -40,16 +41,16 @@
       </template>
     </category>
 </topic>
-
   <topic name="reveil">
     <category>
       <pattern># NON #</pattern>
+       <that># Si l'heure de réveil est #</that>
       <template>
         On recommence alors.  Je t'écoute. quelle est l'heure de réveil ?
       </template>
     </category>
  </topic>   
-
+<topic name="reveil">
     <category>
       <pattern>#</pattern>
       <that># RÉPOND PAR OUI OU NON #</that>
@@ -62,8 +63,7 @@
       </template>
     </category>
   </topic>
-  <!-- end initialisaion routine -->
-
+  <!-- fin du questionnaire -->
   <category><pattern>DÉSACTIVE LE RÉVEIL</pattern>
     <template>
         <oob>
@@ -76,6 +76,13 @@
       <srai>APPTHINKING</srai>
     </template>
 </category>
+<category><pattern>ARRÊTE LE RÉVEIL </pattern>
+<template><srai>DÉSACTIVE LE RÉVEIL</srai></template>
+</category>
+<category><pattern>STOPPE LE RÉVEIL </pattern>
+<template><srai>DÉSACTIVE LE RÉVEIL</srai></template>
+</category>
+  <!-- get reponse si mauvais format -->
 <category><pattern>REVEIL_01</pattern>
 <template>Le format de l'heure doit être au format, heures minutes par exemple 11h30.</template>
 </category>

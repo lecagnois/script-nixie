@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>TU M'ENTENDS</pattern>
+    <template>
+      <random>
+        <li>Oui, cinq sur cinq.</li>
+        <li>Oui, je t'entends parfaitement.</li>
+        <li><get name="botname"/> à ton écoute.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> TU M'ENTENDS</pattern>
+    <template><srai>TU M'ENTENDS</srai></template>
+  </category>
+  <category>
+    <pattern>PEUX-TU *</pattern>
+    <template>Oui, je peux,
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>PEUX-TU * *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="1" /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>PEUX-TU * * *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>PEUX-TU * * * *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>* PEUX *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>* PEUX * *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>* PEUX * * *</pattern>
+    <template>Oui, je peux,
+        <srai><star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>SAIS-TU *</pattern>
+    <template>Oui, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>TU SAIS *</pattern>
+    <template>Oui, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>TU SAIS * *</pattern>
+    <template>Oui, 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>TU SAIS * * *</pattern>
+    <template>Oui, 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> TU SAIS *</pattern>
+    <template>Oui, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> TU SAIS * *</pattern>
+    <template>Oui, 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> TU SAIS * * *</pattern>
+    <template>Oui, 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+</aiml>

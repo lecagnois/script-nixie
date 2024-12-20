@@ -17,20 +17,29 @@
 		</template>
 </category>
 <category>
-<pattern> * D'ANNIVERSAIRE DE *</pattern>
+<pattern> * D'ANNIVERSAIRE DE * </pattern>
 <template> 
 		<oob>                   
 			<mrl>             
 				<service>python</service>   
 				<method>exec</method>      
-				<param>chercheamis("<star index="2"/>")</param>
+				<param>chercheamis("<star index="2" />")</param>
 			</mrl>            
 		</oob>
 		<srai>APPSMILE</srai>
 		</template>
 </category>
 <category><pattern> * L'ANNIVERSAIRE DE *</pattern>
-<template>  <srai>* D'ANNIVERSAIRE DE * </srai></template>
+<template> 
+		<oob>                   
+			<mrl>             
+				<service>python</service>   
+				<method>exec</method>      
+				<param>chercheamis("<star index="2" />")</param>
+			</mrl>            
+		</oob>
+		<srai>APPSMILE</srai>
+		</template>
 </category>
 <!--  fait un tirage du loto et donne le dernier tirage du net avec comparaison des resultats fichier loto.csv-->
 <category><pattern> * NUMÉRO DU LOTO</pattern>
@@ -81,9 +90,8 @@
 <category><pattern> * MON PLANNING</pattern>
 <template><srai>PLANNING</srai></template>
 </category>
-
-
-<category><pattern>DONNE MOI UNE INFORMATION SPORTIVE</pattern>
+<!--  Donne des informations -->
+<category><pattern>DONNE-MOI UNE INFORMATION SPORTIVE</pattern>
 <template><set name="topic">Information Sportive</set>
     <oob>
         <mrl>
@@ -94,7 +102,7 @@
       </oob></template>
 </category>
 
-<category><pattern>DONNE MOI * INFORMATIONS SPORTIVE</pattern>
+<category><pattern>DONNE-MOI * INFORMATIONS SPORTIVE</pattern>
 <template><think>
         <set name="topic">Information Sportive</set>
         <set name="nombre"><star index="1"/></set>
@@ -118,8 +126,7 @@
         </mrl>
       </oob></template>
 </category>
-
-<category><pattern>DONNE MOI UNE NOUVELLE</pattern>
+<category><pattern>DONNE-MOI UNE NOUVELLE</pattern>
 <template> <set name="topic">Information</set>
     <oob>
         <mrl>
@@ -129,8 +136,7 @@
         </mrl>
       </oob></template>
 </category>
-
-<category><pattern>DONNE MOI * INFORMATIONS</pattern>
+<category><pattern>DONNE-MOI * INFORMATIONS</pattern>
 <template><think>
         <set name="topic">Information</set>
         <set name="nombre"><star index="1"/></set>
@@ -154,19 +160,25 @@
         </mrl>
       </oob></template>
 </category>
-
-<category><pattern>DONNE MOI UNE INFORMATION</pattern>
+<category><pattern>DONNE-MOI UNE INFORMATION</pattern>
 <template>
     <think><set name="topic">Information</set></think>
-    <srai>DONNE MOI UNE NOUVELLE</srai>
+    <srai>DONNE-MOI UNE NOUVELLE</srai>
 </template>
 </category>
-
-<category><pattern>QUALITÉ DE L AIR À *</pattern>
+<!--  Donne la qualite de l air  -->
+<category><pattern>QUALITÉ DE L'AIR À *</pattern>
 <template>
     <srai>POLLUTION À <star/></srai></template>
 </category>
-
+<category><pattern>QUELLE EST LA QUALITÉ DE L'AIR À *</pattern>
+<template>
+    <srai>POLLUTION À <star/></srai></template>
+</category>
+<category><pattern>DONNE-MOI LA QUALITÉ DE L'AIR À *</pattern>
+<template>
+    <srai>POLLUTION À <star/></srai></template>
+</category>
 <category><pattern>POLLUTION À *</pattern>
 <template><think>
         <set name="ville"><star index="1"/></set>
@@ -324,8 +336,50 @@
           <method>exec</method>
           <param>airqualite('<get name="ville"/>','<get name="region"/>')</param>
         </mrl>
-      </oob></template>
+      </oob>
+	   <srai>APPHAPPY</srai>
+	  </template>
 </category>
+<!--  Active les humeur avec horloge toutes les heures  -->
+<category><pattern>ACTIVE LES HUMEURS</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstart()</param>
+        </mrl>
+      </oob>
+	  <srai>APPHAPPY</srai>  
+</template>
+</category>
+<category><pattern>DÉMARRE LES HUMEURS</pattern>
+<template><srai>ACTIVE LES HUMEURS</srai></template>
+</category>
+<category><pattern>STOP HUMEUR</pattern>
+<template><oob>
+	    <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>humeurstop()</param>
+        </mrl>
+      </oob>
+	 <srai>APPHAPPY</srai>    
+</template>
+</category>
+<category><pattern>STOP LES HUMEURS</pattern>
+<template><srai>STOP HUMEUR</srai></template>
+</category>
+<category><pattern>DÉSACTIVE LES HUMEURS</pattern>
+<template><srai>STOP HUMEUR</srai></template>
+</category>
+<category><pattern>STOPPE LES HUMEURS</pattern>
+<template><srai>STOP HUMEUR</srai></template>
+</category>
+<category><pattern>ARRÊTE LES HUMEURS</pattern>
+<template><srai>STOP HUMEUR</srai></template>
+</category>
+
+
 
 <category><pattern>PROGRAMME *</pattern>
 <template><think>
@@ -455,54 +509,6 @@
 			</oob></template>
 </category>
 
-
-<category><pattern>ACTIVE LES HUMEURS</pattern>
-<template><oob>
-	    <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>humeurstart()</param>
-        </mrl>
-      </oob></template>
-</category>
-
-<category><pattern>STOP HUMEUR</pattern>
-<template><oob>
-	    <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>humeurstop()</param>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>STOP LES HUMEURS</pattern>
-<template><oob>
-	    <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>humeurstop()</param>
-        </mrl>
-      </oob></template>
-</category>
- <category><pattern>DÉSACTIVE LES HUMEURS</pattern>
-  <template><oob>
-	    <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>humeurstop()</param>
-        </mrl>
-      </oob></template>
-</category>
-
-<category><pattern>STOPPE LES HUMEURS</pattern>
-<template><oob>
-	    <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>humeurstop()</param>
-        </mrl>
-      </oob></template>
-</category>
 
 <category><pattern>ALLUME LE *</pattern>
 <template><think><set name="terminal"><star/></set></think>

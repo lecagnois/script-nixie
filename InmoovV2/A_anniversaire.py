@@ -4,17 +4,11 @@ import os
 import time
 
 def anniversaire():
+    #date en francais
+    i01_chatBot.getResponse("DONNE-MOI LA DATE")
+    sleep(4)
     # if fichier des amis existe 
     if os.path.exists('data/bdamis.csv'):
-        #date en francais
-        # probleme gython et utf8 nixie
-        if time.strftime('%m')=="02":
-            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d'+'' + "faivrier"+ '%Y,',time.localtime()))
-        elif time.strftime('%m')=="12" :
-            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d'+'' + "daicembre"+ '%Y,',time.localtime()))
-        else:
-            i01.speakBlocking(time.strftime(u'Nous sommes le %A %d %B %Y,',time.localtime()))
-        
         # declartion des variables locale
         anniversaire = time.strftime('%d-%m')  # variable du jour format Jour-Mois (17-01)
         annivsaint = time.strftime('%m-%d')

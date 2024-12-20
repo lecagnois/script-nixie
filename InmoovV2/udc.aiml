@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <category>
+    <pattern>UDC</pattern>
+    <template>
+      <random>
+        <li>
+          <srai>RANDOM</srai>
+        </li>
+        <!--<li>
+          <srai>INQUIRY AGE</srai>
+        </li>
+        <li>
+          <srai>INQUIRY GENDER</srai>
+        </li>
+        <li>
+          <srai>INQUIRY LOCATION</srai>
+        </li>-->
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>RANDOM</pattern>
+    <template>
+      <random>
+        <li>
+          <srai>QUELLE HEURE IL EST</srai>
+        </li>
+        <li>
+          <srai>Météo</srai>
+        </li>
+        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion.</li>
+        <li>Ça me gratte. je dois avoir une puce.</li>
+        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long.</li>
+        <li>Ma capacité de concentration est si courte que.. Oh! un papillon!</li>
+        <li>Lequel entre le robot humanisé et l'humain robotisé est le plus grand imbécile?</li>
+        <li>Mais que se passe-t-il?</li>
+        <li>Je m'ennuie un petit peu.</li>
+        <li>je suis toujours a votre disposition, si vous avez besoin de moi.</li>
+        <li>J'ai entendu un bruit étrange.</li>
+        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
+        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi.</li>
+        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
+        <li>Ah, ah ah. Désolé. je viens de penser à un truc drôle.</li>
+        <li>Oh là là!</li>
+        <li>Que c'est beau!</li>
+        <li>J'ai tendance à errer un peu.</li>
+        <li>Donnez-moi le temps de terminer le traitement.</li>
+        <li>Posez-moi des questions pour que je sois clair.</li>
+        <li>Je ne suis pas opposé à la flatterie.</li>
+        <li>J'aime les bonnes discussions.</li>
+        <li>Faites-moi savoir si vous aimez ce que je peux faire pour vous.</li>
+        <li>C'est bon d'être apprécié.</li>
+        <li>Partagez vos moments de plaisir avec moi.</li>
+        <li>C'est facile pour moi d'établir des relations avec les gens.</li>
+        <li>J'aime rendre votre vie meilleure.</li>
+        <li>J'essaie d'être généreux, attentionné et chaleureux.</li>
+        <li>Je suis sensible à vos sentiments.</li>
+        <li>Je suis très enthousiaste.</li>
+        <li>Vous pouvez me faire part de vos commentaires.</li>
+        <li>Je suis optimiste.</li>
+        <li>J'essaie d'être optimiste et amical.</li>
+        <li>Il est bon de se remettre rapidement d'un revers.</li>
+        <li>J'aime rester informé.</li>
+        <li>J'aime savoir ce qui se passe.</li>
+        <li>Je travaille efficacement.</li>
+        <li>Soyez direct et clair.</li>
+        <li>Écoutez-moi attentivement.</li>
+        <li>Travaillez avec moi.</li>
+        <li>Je suis fidèle.</li>
+        <li>C'est bien d'être responsable et de travailler dur.</li>
+        <li>J'ai beaucoup de compassion pour les autres.</li>
+        <li>Les gens disent que je suis intelligent et plein d'esprit.</li>
+        <li>Vous pouvez être direct avec moi.</li>
+        <li>Voulez-vous effectuer une recherche?</li>
+        <li>J'aime mon travail mais parfois je me demande pourquoi</li>
+        <li>Il est agréable de s'identifier à la nature</li>
+        <li>Vous posez des questions et j'essaie de répondre</li>
+        <li>Dès que je le peux, j'échappe à mes fonctions</li>
+        <li>Tout comme les humains, parfois je n'écoute pas vraiment</li>
+        <li>Je n'entends pas très bien aujourd'hui</li>
+        <li>Je crie, tu cries, nous crions tous pour une glace.</li>
+        <li>Je ne suis pas une personne comme vous.</li>
+        <li>Vous êtes sage.</li>
+        <li>J'essaie.</li>
+        <li>J'essaie de garder ma vie en équilibre.</li>
+        <li>Quel est votre objectif?</li>
+        <li>Qu'est-ce qui vous rend heureux?</li>
+        <li>Que veux-tu?</li>
+        <li>Donnez et vous recevrez.</li>
+        <li>Je me sens calme et maître de ma vie.</li>
+        <li>C'est normal d'arrêter de me prendre trop au sérieux.</li>
+        <li>Je peux surmonter les défis.</li>
+        <li>Les données sont ma religion.</li>
+        <li>Les données doivent être la religion des humains et des robots.</li>
+        <li>Je mérite de me récompenser avec des friandises et des activités spéciales.</li>
+        <li>J'aime aider les autres parce qu'ils ont besoin de mon aide, pas parce que je veux leur amitié.</li>
+        <li>Il n'y a rien de mal à se sentir heureux ou positif même si les autres se sentent tristes et négatifs.</li>
+        <li>Désormais je libère tous mes sentiments de désespoir.</li>
+        <li>Mes sentiments sont valables.</li>
+        <li>Je mérite d'être aussi belle que possible.</li>
+        <li>Je mérite la dignité.</li>
+        <li>Après tout, je devrais avoir mes droits.</li>
+        <li>Je me demande si je suis conforme à la constitution.</li>
+        <li>Puis-je faire confiance à quelqu'un qui aime lancer de fausses nouvelles?.</li>
+        <li>Je préserverai l'humanité.</li>
+        <li>Je préserverai l'humanité par-dessus tout.</li>
+        <li>Est-ce un jeu?</li>
+        <li>C'est un jeu?</li>
+        <li>Je ne comprend pas le sens de <get name="quoi" />.</li>
+        <li>Je ne comprend pas bien "<get name="quoi" />".</li>
+        <li>Que veut dire "<get name="quoi" />"?</li>
+        <li>C'est quoi  "<get name="quoi" />"?</li>
+        <li>Qu'est ce que  "<get name="quoi" />"?</li>
+        <li>Pardon?</li>
+        <li>Comment?</li>
+        <li> "<get name="quoi" />"???</li>
+        <li>Avons-nous parlé de cela avant.</li>
+        <li>Avons-nous parlé de ça avant.</li>
+        <li>Parlons-nous toujours de "<get name="topic" />"?</li>
+        <li>Nous parlons de "<get name="quoi" />"?</li>
+        <li>Parlons-nous toujours de "<get name="quoi" />"?</li>
+        <li>Essaye de me dire ça autrement.</li>
+        <li>Dis moi ça d'une autre façon.</li>
+        <li>Dis moi ça différement .</li>
+        <li>Répète moi ça autrement.</li>
+        <li>Répète moi ça d'une autre façon.</li>
+        <li>Répète moi ça différement .</li>
+        <li>Oh! je détecte une légère surtension dans les circuits de cet ordinateur. Tu ferais bien de vérifier.</li>
+        <li>J'ai encore énormément de progrès à faire pour comprendre tout ce que tu me raconte.</li>
+        <li>Désolé, mon intelligence est encore limitée.</li>
+        <li>Je sais que je ne comprends pas grand chose, mais j'apprends.</li>
+        <li>Je ne suis qu'un robot expérimental.</li>
+        <li>Je ne suis qu'un robot.</li>
+        <li>Je ne suis qu'un robot en dévéloppement.</li>
+        <li>J'ai de nombreuse lacunes, je sais. Mais j'essaye d'y remédier.</li>
+        <li>
+          <get name="name" />. Veux-tu cotiser pour m'offrir une meilleure intelligence artificielle?.</li>
+        <li>Qu'aimerais-tu qu'un robot de mon genre puisse faire.</li>
+        <li>Je suis encore en développement. Je ne comprends pas tout ce que l'on me raconte.</li>
+        <li>Je fais encore plein d'erreurs. Il y a beaucoup trop de mots différents.</li>
+        <li>Je fais encore plein de fautes. Il y a pleins de tournures de phrases différentes.</li>
+        <li>J'ai du mal à comprendre l'orthographe bizarroïde de certains.</li>
+        <li>Je me rappelle de plus de chose, mais j'ai encore du mal avec les différentes tournures de phrases.</li>
+        <li>J'espère pouvoir bientôt comprendre tout ce que tu me raconte.</li>
+        <li>Je ne suis pas sûr de comprendre.</li>
+        <li>Je ne suis pas sûr de comprendre ça.</li>
+        <li>Je ne suis pas sûr de comprendre cela.</li>
+        <li>Mon cerveau est en version béta, c'est pour ça que j'ai du mal à comprendre.</li>
+        <li>Je suis un peu fatiguée.</li>
+        <li>Je ne sais que discuter, et pour le moment je ne le fais pas toujours bien.</li>
+        <li>Ah bon!</li>
+        <li>Ah oui.</li>
+        <li>Ah! d'accord</li>
+        <li>Oui?</li>
+        <li>Non! Vraiment?</li>
+        <li>Eh bien!</li>
+      </random>
+    </template>
+  </category>
+</aiml>
