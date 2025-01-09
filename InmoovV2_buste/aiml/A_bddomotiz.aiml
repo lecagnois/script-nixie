@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: A_bddomotiz.aiml -->
+  <!-- lecagnois 31/12/2024 -->
+  <!-- initialisaion routine -->
+  <category><pattern>CREER DOMOTIQUE</pattern>
+<template>
+    <srai>DOMOTIQUE<star/></srai>
+</template>
+</category>
+
+  <category>
+    <pattern>DOMOTIQUE</pattern>
+    <template>
+      <think><set name="domotique">started</set></think>
+      <think><set name="topic">domotique</set></think>
+      ok , je vais créer une base de donnée domotique 
+      Je t'écoute. quel est LE NOM DU TERMINAL ?
+    </template>
+  </category>
+  
+  <topic name="domotique">
+    <category>
+      <pattern>#</pattern>
+      <that># quel est le nom du terminal #</that>
+      <template>
+        <set name="questiondomotique">Si le nom du terminal est <star />, répond par oui ou non</set>
+        <think>
+		<set name="tmpdomotique"><star /></set>
+		</think>
+      </template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># Puis-je avoir son numéro de ID  #</that>
+      <template>
+        <set name="questiondomotique">Si son numéro de ID est <star />, répond par oui ou non</set>
+        <think>
+          <set name="tmpdomotique"><star /></set>
+        </think>
+      </template>
+    </category>
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si le nom du terminal est #</that>
+      <template>
+          puis-je avoir son numéro de ID ?
+	     </template>
+    </category>
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si son numéro de ID est #</that>
+      <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>bddomotique("<get name="sonprénom"/>","<get name="tmpdomotique"/>")</param>
+		       </mrl>
+		     </oob>
+      </template>
+    </category>
+    <category>
+      <pattern># NON #</pattern>
+      <that># SI LE NOM DU TERMINAL EST #</that>
+      <template>
+        On recommence alors. Je t'écoute. Quel est LE NOM DU TERMINAL?
+      </template>
+    </category>
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si son numéro de ID est #</that>
+      <template>
+        On recommence alors. Je t'écoute. Puis-je avoir son numéro de ID au bon format?
+      </template>
+    </category>  
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questiondomotique" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+</aiml>

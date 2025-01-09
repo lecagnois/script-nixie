@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  par lecagnois -->
+<!--  21/12/2024 modif pour tete V2 -->
+  <category>
+    <pattern>ACTIVER LE RÉVEIL</pattern>
+    <template>
+      <think><set name="reveil">started</set></think>
+      <think><set name="topic">reveil</set> </think>
+      Je t'écoute. quelle est l'heure de réveil ?   
+    </template>
+  </category>
+<category><pattern>DÉMARRE LE RÉVEIL</pattern>
+    <template><srai>ACTIVER LE RÉVEIL</srai></template>
+</category>
+<category><pattern>ACTIVE LE RÉVEIL</pattern>
+    <template><srai>ACTIVER LE RÉVEIL</srai></template>
+</category>
+
+  <!-- debut du questionnaire -->
+    <topic name="reveil">
+    <category>
+      <pattern>#</pattern>
+      <that># quelle est l'heure de réveil #</that>
+      <template>
+        <set name="questionheure">Si l'heure de réveil est <star />, répond par oui ou non</set>
+        <think>
+          <set name="tmpreveil"><star /></set>
+        </think>
+      </template>
+    </category>
+ </topic>
+  <topic name="reveil">
+    <category>
+      <pattern># OUI #</pattern>
+       <that># Si l'heure de réveil est #</that>
+      <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>reveilstart("<get name="tmpreveil"/>")</param>
+		       </mrl>
+		     </oob>
+      </template>
+    </category>
+</topic>
+  <topic name="reveil">
+    <category>
+      <pattern># NON #</pattern>
+       <that># Si l'heure de réveil est #</that>
+      <template>
+        On recommence alors.  Je t'écoute. quelle est l'heure de réveil ?
+      </template>
+    </category>
+ </topic>   
+<topic name="reveil">
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+         <get name="questionheure" />
+      </template>
+    </category>
+  </topic>
+  <!-- fin du questionnaire -->
+  <category><pattern>DÉSACTIVE LE RÉVEIL</pattern>
+    <template>
+        <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>reveilstop()</param>
+		       </mrl>
+		     </oob>
+      <srai>APPTHINKING</srai>
+    </template>
+</category>
+<category><pattern>ARRÊTE LE RÉVEIL </pattern>
+<template><srai>DÉSACTIVE LE RÉVEIL</srai></template>
+</category>
+<category><pattern>STOPPE LE RÉVEIL </pattern>
+<template><srai>DÉSACTIVE LE RÉVEIL</srai></template>
+</category>
+  <!-- get reponse si mauvais format -->
+<category><pattern>REVEIL_01</pattern>
+<template>Le format de l'heure doit être au format, heures minutes par exemple 11h30.</template>
+</category>
+</aiml>
