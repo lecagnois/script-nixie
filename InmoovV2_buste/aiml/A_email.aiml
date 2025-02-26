@@ -107,7 +107,7 @@
 
 <!-- Lire les mails d un ami-->
  <category><pattern>LIRE LES MAILS DE *</pattern>
-<template>
+<template> <think><set name="destinataire"><star/></set></think>
 			<oob>
 				<mrl>
 				   <service>python</service>
@@ -123,7 +123,7 @@
 </template>
 </category>
  
-<!-- Gestion des reponses du fichier A_messagerie.py avec expressions-->
+<!-- Gestion des reponses du fichier A_Email.py avec expressions-->
 <category><pattern>EMAIL_OK</pattern>
 <template>Email envoyé avec succès ! <srai>APPHAPPY</srai> </template>
 </category>
@@ -135,6 +135,12 @@
 </category>
 <category><pattern>AMIS_OK</pattern>
 <template> <get name="destinataire"/>, fais parti de tes amis . <srai>APPHAPPY</srai></template>
+</category>
+<category><pattern>AMIS_OK_PHOTO</pattern>
+<template> <get name="destinataire"/>, fais parti de tes amis , Je lui transmet ta photo. <srai>APPHAPPY</srai></template>
+</category>
+<category><pattern>YEUX_OFF</pattern>
+<template> <get name="destinataire"/>, Je ne vois rien ,allume la caméra. <srai>APPSAD</srai></template>
 </category>
 <category><pattern>AMIS_KO</pattern>
 <template> <get name="destinataire"/>, n'existe pas dans mon annuaire .<srai>APPSAD</srai> </template>

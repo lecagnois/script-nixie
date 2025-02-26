@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: A_planing.aiml -->
+  <!-- lecagnois le 23/02/2025 routine pour alimenter la base planning.csv avec expressions tete V2-->
+  
+  <!--  Donne votre planning a partir du fichier planning.csv -->
+<category><pattern>PLANNING</pattern>
+<template><oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>Lire_planning()</param>
+				 </mrl>
+			</oob>
+	<srai>APPTHINKING</srai>
+</template>
+</category>
+  <category><pattern>LIRE * PLANNING</pattern>
+      <template> <srai>PLANNING</srai></template>
+  </category>
+    <category><pattern>DONNE-MOI * PLANNING</pattern>
+      <template> <srai>PLANNING</srai></template>
+  </category>
+
+  <category><pattern>CRÉER UN RENDEZ-VOUS</pattern>
+      <template> <srai>CRÉER UN PLANNING</srai></template>
+  </category>
+  <category><pattern>PRENDRE UN RENDEZ-VOUS</pattern>
+      <template> <srai>CRÉER UN PLANNING</srai></template>
+  </category>
+  <category><pattern>AJOUTER UN RENDEZ-VOUS</pattern>
+      <template> <srai>CRÉER UN PLANNING</srai></template>
+  </category>
+   <category>
+    <pattern>CRÉER UN PLANNING</pattern>
+    <template>
+      <think><set name="PLANNING">started</set></think>
+      <think><set name="topic">planning</set></think>
+      Je t'écoute. quelle date pour ton planning ?
+    </template>
+  </category>
+
+<topic name="PLANNING">
+    <category>
+      <pattern>#</pattern>
+      <that># quelle date pour ton planning #</that>
+      <template>
+        <set name="questionplanning">Si la date est <star />, répond par oui ou non</set>
+        <think><set name="tmpdate" ><star /></set> </think>
+      </template>
+    </category>
+  </topic>
+
+ <topic name="PLANNING">
+    <category>
+      <pattern>#</pattern>
+      <that># Puis-je avoir l'heure et le motif #</that>
+      <template>
+        <set name="questionplanning">Si l'heure et le motif est <star />, répond par oui ou non</set>
+        <think><set name="tmpheure"><star /></set> </think>
+      </template>
+    </category>
+  </topic>
+
+ <topic name="PLANNING">
+   <category>
+      <pattern># OUI #</pattern>
+      <that># Si la date est #</that>
+      <template>
+          Puis-je avoir l'heure et le motif. 
+      </template>
+    </category>
+</topic>
+
+<topic name="PLANNING">
+   <category>
+      <pattern># OUI #</pattern>
+      <that># Si l'heure et le motif est  #</that>
+      <template>
+        <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>Ajout_planning(u"<get name="tmpdate" />",u"<get name="tmpheure" />")</param>
+        </mrl>
+      </oob>
+      </template>
+    </category>
+</topic>
+
+<topic name="PLANNING">
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si la date est #</that>
+      <template>
+        On recommence alors. Je t'écoute, quelle date pour ton planning?
+      </template>
+    </category>
+ </topic>
+
+<topic name="PLANNING">
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si l'heure et le motif est  #</that>
+      <template>
+        On recommence alors. Puis-je avoir l'heure et le motif ?
+      </template>
+    </category>
+  </topic>
+
+ <topic name="PLANNING">
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questionannuaire" />
+      </template>
+    </category>
+  </topic>
+  
+  <!-- Gestion des reponses du fichier a_planning.py -->
+  <category>
+    <pattern>BD_PLANNING_KO</pattern>
+    <template>La base de donnée n'existe pas, je vais la créer.
+        <srai>APPHAPPY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADD_PLANNING</pattern>
+    <template>J'ai ajouté <get name="tmpheure" />, dans votre planning.
+        <srai>APPHAPPY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DATE_KO</pattern>
+    <template>Cette Date est impossible, ou incomplète ?
+        <srai>APPSAD</srai>
+    </template>
+  </category>
+   <category> 
+   <pattern>DEMAIN_NO_RDV</pattern>
+    <template>demain pas de rendez vous ?
+        <srai>APPSAD</srai>
+    </template>
+  </category>
+  <category> 
+   <pattern>RDV_NUL</pattern>
+    <template>Rien ce jour . ?
+        <srai>APPSAD</srai>
+    </template>
+  </category>
+
+</aiml>

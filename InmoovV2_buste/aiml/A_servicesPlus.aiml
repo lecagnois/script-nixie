@@ -75,21 +75,7 @@
 <category><pattern>* RÉSULTAT DU LOTO</pattern>
 <template><srai>TIRAGE DU LOTO</srai></template>
 </category>
-<!--  Donne votre planning a partir du fichier planning.csv -->
-<category><pattern>PLANNING</pattern>
-<template><oob>
-				<mrl>
-				   <service>python</service>
-				   <method>exec</method>
-				   <param>planning()</param>
-				 </mrl>
-			</oob>
-	<srai>APPTHINKING</srai>
-</template>
-</category>
-<category><pattern> * MON PLANNING</pattern>
-<template><srai>PLANNING</srai></template>
-</category>
+
 <!--  Donne des informations depuis le site news api.org -->
 <category><pattern>DONNE-MOI UNE INFORMATION SPORTIVE</pattern>
 <template><set name="topic">Information Sportive</set>
@@ -397,22 +383,22 @@
 		<li name="chaine" value="neuf"><think><set name="chaine">521</set></think>ok voici W 9</li>
 		<li name="chaine" value="10"><think><set name="chaine">10</set></think>ok voici TMC</li>
 		<li name="chaine" value="11"><think><set name="chaine">11</set></think>ok voici TFX</li>
-		<li name="chaine" value="12"><think><set name="chaine">12</set></think>ok voici NRJ 12</li>		
-		<li name="chaine" value="13"><think><set name="chaine">13</set></think>ok voici LCP</li>		
-		<li name="chaine" value="14"><think><set name="chaine">14</set></think>ok voici FRANCE 4</li>		
-		<li name="chaine" value="15"><think><set name="chaine">15</set></think>ok voici BFM TV</li>		
-		<li name="chaine" value="16"><think><set name="chaine">16</set></think>ok voici ces new</li>		
-		<li name="chaine" value="17"><think><set name="chaine">17</set></think>ok voici ces star</li>	
-		<li name="chaine" value="18"><think><set name="chaine">18</set></think>ok voici GULLI</li>				
-		<li name="chaine" value="19"><think><set name="chaine">19</set></think>ok voici FRANCE O</li>		
-		<li name="chaine" value="20"><think><set name="chaine">20</set></think>ok voici TF1 SERIE</li>	
-		<li name="chaine" value="21"><think><set name="chaine">21</set></think>ok voici L'EQUIPE</li>				
-		<li name="chaine" value="22"><think><set name="chaine">22</set></think>ok voici 6 TER</li>		
-		<li name="chaine" value="23"><think><set name="chaine">23</set></think>ok voici LA 23</li>	
-		<li name="chaine" value="24"><think><set name="chaine">24</set></think>ok voici RMC DECOUVERTE</li>				
-		<li name="chaine" value="25"><think><set name="chaine">25</set></think>ok voici CHERIE 25</li>	
-		<li name="chaine" value="26"><think><set name="chaine">26</set></think>ok voici LCI</li>	
-	    <li name="chaine" value="27"><think><set name="chaine">27</set></think>ok voici FRANCE INFO</li>		
+		<li name="chaine" value="12"><think><set name="chaine">12</set></think>ok voici NRJ 12</li>
+		<li name="chaine" value="13"><think><set name="chaine">13</set></think>ok voici LCP</li>
+		<li name="chaine" value="14"><think><set name="chaine">14</set></think>ok voici FRANCE 4</li>
+		<li name="chaine" value="15"><think><set name="chaine">15</set></think>ok voici BFM TV</li>
+		<li name="chaine" value="16"><think><set name="chaine">16</set></think>ok voici ces new</li>
+		<li name="chaine" value="17"><think><set name="chaine">17</set></think>ok voici ces star</li>
+		<li name="chaine" value="18"><think><set name="chaine">18</set></think>ok voici GULLI</li>
+		<li name="chaine" value="19"><think><set name="chaine">19</set></think>ok voici FRANCE O</li>
+		<li name="chaine" value="20"><think><set name="chaine">20</set></think>ok voici TF1 SERIE</li>
+		<li name="chaine" value="21"><think><set name="chaine">21</set></think>ok voici L'EQUIPE</li>
+		<li name="chaine" value="22"><think><set name="chaine">22</set></think>ok voici 6 TER</li>
+		<li name="chaine" value="23"><think><set name="chaine">23</set></think>ok voici LA 23</li>
+		<li name="chaine" value="24"><think><set name="chaine">24</set></think>ok voici RMC DECOUVERTE</li>
+		<li name="chaine" value="25"><think><set name="chaine">25</set></think>ok voici CHERIE 25</li>
+		<li name="chaine" value="26"><think><set name="chaine">26</set></think>ok voici LCI</li>
+	    <li name="chaine" value="27"><think><set name="chaine">27</set></think>ok voici FRANCE INFO</li>
 		<li name="chaine" value="suivant"><think><set name="chaine">402</set></think>ok voici la chaîne suivante</li>
 		<li name="chaine" value="précédent"><think><set name="chaine">403</set></think>ok voici chaîne précédente</li>
 		<li name="chaine" value="vidéo"><think><set name="chaine">393</set></think>ok voici la vidéo à la demande</li>
@@ -479,8 +465,8 @@
 		<li name="curseur" value="à gauche"><think><set name="curseur">105</set></think>ok</li>
 		<li name="curseur" value="à droite"><think><set name="curseur">106</set></think>ok</li>
 		<li name="curseur" value="retour"><think><set name="curseur">158</set></think>ok</li>
-		<li name="curseur" value="valide"><think><set name="curseur">352</set></think>ok</li>	
-        <li name="curseur" value="menu"><think><set name="curseur">139</set></think>ok</li>			
+		<li name="curseur" value="valide"><think><set name="curseur">352</set></think>ok</li>
+        <li name="curseur" value="menu"><think><set name="curseur">139</set></think>ok</li>
 	   </condition>
       <oob>
         <mrl>
@@ -490,7 +476,8 @@
         </mrl>
       </oob></template>
 </category>
-<!-- Prends des phtotos et envoye des photos par mail -->
+
+<!-- Prends des phtotos et envoyer des photos par mail -->
 <category><pattern>PRENDS UNE PHOTO</pattern>
 <template><oob>                 
 			<mrl>                
@@ -530,7 +517,7 @@
 			</mrl>              
 		</oob></template>
 </category>
-<category><pattern>¨PRENDS UNE PHOTO ET L'ENVOYER À *</pattern>
+<category><pattern>PRENDS UNE PHOTO ET L'ENVOYER À *</pattern>
 <template><think><set name="destinataire"><star/></set></think>
 			<oob>
 				<mrl>
@@ -540,6 +527,18 @@
 				 </mrl>
 			</oob></template>
 </category>
+<category><pattern>PRENDRE UNE PHOTO ET L'ENVOYER À *</pattern>
+<template><think><set name="destinataire"><star/></set></think>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>photoa("<get name="destinataire"/>")</param>
+				 </mrl>
+			</oob></template>
+</category>
+
+
 <!-- Pour serveur domotique domotiz sur le raspberry -->
 <category><pattern>ALLUME LE *</pattern>
     <template><think><set name="terminal"><star/></set></think>
