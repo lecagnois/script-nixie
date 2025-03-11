@@ -807,11 +807,11 @@
     </template>
   </category>
   <category>
-    <pattern>ANALYSE DE VISAGE</pattern>
+    <pattern>ANALYSE * VISAGE</pattern>
     <template>Je démarre le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
   </category>
   <category>
-    <pattern>ARRÊTE L ANALYSE DE VISAGE</pattern>
+    <pattern>ARRÊTE L'ANALYSE * VISAGE</pattern>
     <template>J'arrête le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
   </category>
   <category>
@@ -1091,7 +1091,7 @@
 
   <category>
     <pattern>ENREGISTRE CETTE PERSONNE</pattern>
-    <template>Oké, quel nom dois je mémoriser pour cette personne.
+    <template>Quel nom dois je mémoriser pour cette personne ?
     <think><set name="memoriseinit">started</set></think><think><set name="topic">memoriseinit</set></think></template>
   </category>
 
@@ -1123,14 +1123,14 @@
           <param>YesName(u"<get name="memorisename" />"), i01_chatBot.startSession(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","firstname",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","name",u"<get name="tmpname" />"), i01_chatBot.savePredicates()</param>
       </mrl>
     </oob>
-    
-   <oob>
+	   <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>bdamis(u"<get name="tmpname" />","00 00 0000")</param>
         </mrl>
       </oob>
+	
    </template>
     </category>
 
